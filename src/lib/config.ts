@@ -29,6 +29,9 @@ export const siteConfig = {
   // Analytics
   ga4Id: process.env.NEXT_PUBLIC_GA4_ID || "",
 
+  // Google Search Console Verification
+  googleSiteVerification: process.env.NEXT_PUBLIC_GSC_VERIFICATION || "",
+
   // Navigation
   navLinks: [
     { label: "Home", href: "/" },

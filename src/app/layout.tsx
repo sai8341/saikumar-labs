@@ -78,6 +78,16 @@ export const metadata: Metadata = {
     icon: "/logo.jpg",
     apple: "/logo.jpg",
   },
+  verification: {
+    google: siteConfig.googleSiteVerification || undefined,
+  },
+  ...(siteConfig.googleSiteVerification
+    ? {
+        other: {
+          "google-site-verification": siteConfig.googleSiteVerification,
+        },
+      }
+    : {}),
 };
 
 // JSON-LD Structured Data
@@ -96,6 +106,7 @@ const jsonLd = {
         email: siteConfig.email,
         telephone: siteConfig.phone,
         contactType: "customer service",
+        availableLanguage: ["English", "Telugu", "Hindi"],
       },
       sameAs: Object.values(siteConfig.social),
     },
@@ -116,10 +127,13 @@ const jsonLd = {
         "Business Automation",
         "Digital Marketing",
         "Follow-up Systems",
+        "SEO Services",
+        "Google Business Profile Setup",
       ],
       provider: {
         "@id": `${siteConfig.url}/#organization`,
       },
+      priceRange: "$$",
     },
     {
       "@type": "WebSite",
@@ -129,6 +143,48 @@ const jsonLd = {
       publisher: {
         "@id": `${siteConfig.url}/#organization`,
       },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: `${siteConfig.url}/?q={search_term_string}`,
+        "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What does SaiKumar Labs do?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "SaiKumar Labs helps service businesses (coaches, clinics, salons, consultants) fix their lead flow. We build connected systems that capture leads, track enquiries, and automate follow-up — so you get more clients without chasing every lead manually.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How is this different from hiring a web designer or a marketing agency?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Most agencies build you a website OR run ads. We build the system between them — the funnel, tracking, and follow-up that actually converts visitors into paying clients. It's not about looking good; it's about getting results.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What kind of businesses do you work with?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We work with service-based businesses — coaches, consultants, clinics, salons, agencies, and local service providers across India who get enquiries but struggle to convert them consistently.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How much does it cost?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Every business is different. We offer a free lead flow review first, then give you an honest recommendation. No packages, no pressure — just what your business actually needs.",
+          },
+        },
+      ],
     },
   ],
 };
