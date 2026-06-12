@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import ContactContent from "./ContactContent";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact — Free Lead Flow Review for Your Business",
   description:
-    "Get in touch with SaiKumar Labs. Book a free lead flow review for your service business. WhatsApp, email, or use our contact form.",
+    "Book a free lead flow review for your service business. WhatsApp, email, or contact form — we respond within 24 hours. Serving Hyderabad, Bangalore & all of India.",
   openGraph: {
-    title: "Contact | SaiKumar Labs",
+    title: "Contact SaiKumar Labs — Free Lead Flow Review",
     description:
       "Book a free lead flow review. WhatsApp, email, or use our contact form.",
   },

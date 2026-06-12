@@ -28,15 +28,21 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: [
-    "lead systems",
-    "service business",
-    "lead generation",
-    "business automation",
-    "enquiry management",
-    "follow-up system",
-    "website development India",
-    "digital marketing",
-    "lead capture",
+    "lead generation for service business India",
+    "lead management system small business",
+    "business automation India",
+    "follow-up automation leads",
+    "WhatsApp lead follow-up system",
+    "website development coaches India",
+    "lead capture system clinics",
+    "landing page lead generation",
+    "Google Business Profile setup",
+    "Meta Business Manager setup India",
+    "lead funnel for service business",
+    "salon booking system WhatsApp",
+    "clinic appointment follow-up",
+    "digital marketing Hyderabad",
+    "lead generation Bangalore",
     "SaiKumar Labs",
   ],
   authors: [{ name: "SaiKumar Labs" }],
@@ -111,16 +117,17 @@ const jsonLd = {
       sameAs: Object.values(siteConfig.social),
     },
     {
-      "@type": "ProfessionalService",
+      "@type": ["ProfessionalService", "LocalBusiness"],
       "@id": `${siteConfig.url}/#service`,
       name: "SaiKumar Labs",
       url: siteConfig.url,
       description:
-        "Lead systems and business systems for service businesses — more enquiries, better follow-up, fewer missed leads.",
-      areaServed: {
-        "@type": "Country",
-        name: "India",
-      },
+        "Lead systems and business automation for service businesses in India — more enquiries, better follow-up, fewer missed leads. Serving Hyderabad, Bangalore, and all of India.",
+      areaServed: [
+        { "@type": "Country", name: "India" },
+        { "@type": "City", name: "Hyderabad" },
+        { "@type": "City", name: "Bangalore" },
+      ],
       serviceType: [
         "Lead Generation Systems",
         "Website Development",
@@ -129,6 +136,10 @@ const jsonLd = {
         "Follow-up Systems",
         "SEO Services",
         "Google Business Profile Setup",
+        "Meta Business Manager Setup",
+        "WhatsApp Lead Follow-up",
+        "Landing Page Development",
+        "AI Automation Solutions",
       ],
       provider: {
         "@id": `${siteConfig.url}/#organization`,
@@ -142,11 +153,6 @@ const jsonLd = {
       name: "SaiKumar Labs",
       publisher: {
         "@id": `${siteConfig.url}/#organization`,
-      },
-      potentialAction: {
-        "@type": "SearchAction",
-        target: `${siteConfig.url}/?q={search_term_string}`,
-        "query-input": "required name=search_term_string",
       },
     },
     {
@@ -173,15 +179,47 @@ const jsonLd = {
           name: "What kind of businesses do you work with?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "We work with service-based businesses — coaches, consultants, clinics, salons, agencies, and local service providers across India who get enquiries but struggle to convert them consistently.",
+            text: "We work with service-based businesses — coaches, consultants, clinics, salons, agencies, and local service providers across India, including Hyderabad and Bangalore, who get enquiries but struggle to convert them consistently.",
           },
         },
         {
           "@type": "Question",
-          name: "How much does it cost?",
+          name: "How much does a lead system cost?",
           acceptedAnswer: {
             "@type": "Answer",
             text: "Every business is different. We offer a free lead flow review first, then give you an honest recommendation. No packages, no pressure — just what your business actually needs.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you only build websites?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. A website is just one part of a lead system. We also set up tracking (GA4, Search Console), lead capture funnels, WhatsApp follow-up workflows, Meta ad accounts, and AI automation — everything connected into one system.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How long does it take to set up a lead system?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "It depends on what your business needs. A simple website with tracking can be done in 1-2 weeks. A full lead system with funnels, automation, and follow-up workflows typically takes 3-4 weeks.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you work with businesses outside Hyderabad and Bangalore?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, we work with service businesses across India. Everything we build is digital, so location doesn't matter. We've helped coaches, clinics, and salons in multiple cities.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What if I already have a website but it's not getting leads?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "That's exactly what we fix. Most service businesses have a website that looks fine but doesn't convert visitors into enquiries. We audit your current setup, identify the leaks, and build the missing pieces — tracking, CTAs, follow-up, and funnels.",
           },
         },
       ],

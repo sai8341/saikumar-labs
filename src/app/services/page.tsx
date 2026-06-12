@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import ServicesContent from "./ServicesContent";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Lead Generation & Business Automation Services India",
   description:
-    "Lead systems, online presence setup, tracking & analytics, lead capture, and follow-up automation for service businesses. See how SaiKumar Labs helps you get more enquiries.",
+    "Website development, lead capture funnels, Google Business Profile setup, Meta ads, WhatsApp follow-up automation & AI solutions for coaches, clinics, and salons in Hyderabad, Bangalore & India.",
   openGraph: {
-    title: "Services | SaiKumar Labs",
+    title: "Lead Generation & Business Automation Services | SaiKumar Labs",
     description:
-      "Lead systems, online presence setup, tracking & analytics, lead capture, and follow-up automation for service businesses.",
+      "Website development, lead funnels, tracking, and automation for service businesses across India.",
   },
 };
 

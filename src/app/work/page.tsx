@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import WorkContent from "./WorkContent";
 
 export const metadata: Metadata = {
-  title: "Work",
+  title: "Case Studies — Lead Systems for Coaches, Clinics & Salons",
   description:
-    "See real examples of lead systems we've designed for coaches, clinics, and salons. Each case study shows the problem, solution, and outcome.",
+    "See how we built lead capture systems, booking funnels, and WhatsApp follow-up workflows for coaches, clinics, and salons in India. Real problems, real solutions, real outcomes.",
   openGraph: {
-    title: "Our Work | SaiKumar Labs",
+    title: "Case Studies — Lead Systems That Work | SaiKumar Labs",
     description:
-      "Real examples of lead systems designed for service businesses — from problem to outcome.",
+      "Lead system case studies for coaches, clinics, and salons — from problem to outcome.",
   },
 };
 

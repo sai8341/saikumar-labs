@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import AboutContent from "./AboutContent";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About — From Code to AI-Powered Lead Systems",
   description:
-    "SaiKumar Labs was built from a simple observation: most service businesses lose leads not because of bad marketing, but because of broken systems. Learn our story.",
+    "SaiKumar Labs combines coding, digital marketing, and AI automation to build lead systems for service businesses in India. No fluff — just honest, practical systems that work.",
   openGraph: {
-    title: "About | SaiKumar Labs",
+    title: "About SaiKumar Labs — Code + Marketing + AI = Lead Systems",
     description:
-      "From coding to digital marketing to AI automation — how SaiKumar Labs was built to help service businesses get more leads.",
+      "How SaiKumar Labs was built to help service businesses in Hyderabad, Bangalore, and India get more leads.",
   },
 };
 
