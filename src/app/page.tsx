@@ -235,20 +235,20 @@ export default function HomePage() {
         <div className="absolute top-1/4 right-0 w-96 h-96 bg-gold-400/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold-400/5 rounded-full blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 section-padding">
-          <div className="max-w-4xl mx-auto text-center pt-8 md:pt-16">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-20 lg:py-24">
+          <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-gold-700 bg-cream-200 rounded-full border border-gold-400/30">
+              <span className="inline-block px-3 py-1 mb-4 md:mb-6 text-xs md:text-sm font-medium text-gold-700 bg-cream-200 rounded-full border border-gold-400/30">
                 Lead Systems for Service Businesses
               </span>
             </motion.div>
 
             <motion.h1
-              className="mb-6"
+              className="mb-4 md:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -258,7 +258,7 @@ export default function HomePage() {
             </motion.h1>
 
             <motion.p
-              className="text-xl md:text-2xl text-charcoal-600 mb-10 max-w-2xl mx-auto leading-relaxed"
+              className="text-base md:text-xl lg:text-2xl text-charcoal-600 mb-6 md:mb-10 max-w-2xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -269,7 +269,7 @@ export default function HomePage() {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col sm:flex-row items-center gap-3 justify-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -277,30 +277,30 @@ export default function HomePage() {
               <Button
                 href="/contact"
                 variant="primary"
-                size="lg"
+                size="md"
                 trackLabel="hero_cta"
                 id="hero-cta"
               >
                 Book a Free Review
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4" />
               </Button>
               <Button
                 href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`}
                 variant="outline"
-                size="lg"
+                size="md"
                 external
                 trackLabel="hero_whatsapp"
                 id="hero-whatsapp"
                 onClick={() => analytics.whatsappClick("hero")}
               >
-                <MessageCircle className="w-5 h-5" />
+                <MessageCircle className="w-4 h-4" />
                 WhatsApp Us
               </Button>
             </motion.div>
 
             {/* Trust line */}
             <motion.p
-              className="mt-8 text-sm text-gray-custom-400"
+              className="mt-6 text-xs md:text-sm text-gray-custom-400"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.5 }}
