@@ -235,33 +235,33 @@ export default function HomePage() {
         <div className="absolute top-1/4 right-0 w-96 h-96 bg-gold-400/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-gold-400/5 rounded-full blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-20 lg:py-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-20 lg:py-24">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.5 }}
             >
-              <span className="inline-block px-3 py-1 mb-4 md:mb-6 text-xs md:text-sm font-medium text-gold-700 bg-cream-200 rounded-full border border-gold-400/30">
+              <span className="inline-block px-3 py-1 mb-3 sm:mb-4 md:mb-6 text-xs md:text-sm font-medium text-gold-700 bg-cream-200 rounded-full border border-gold-400/30">
                 Lead Systems for Service Businesses
               </span>
             </motion.div>
 
             <motion.h1
-              className="mb-4 md:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
-              initial={{ opacity: 0, y: 30 }}
+              className="mb-3 sm:mb-4 md:mb-6 text-[1.75rem] leading-tight sm:text-4xl md:text-5xl lg:text-6xl"
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
             >
               Stop Losing Leads.{" "}
               <span className="text-gold-500">Start Growing.</span>
             </motion.h1>
 
             <motion.p
-              className="text-base md:text-xl lg:text-2xl text-charcoal-600 mb-6 md:mb-10 max-w-2xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 30 }}
+              className="text-sm sm:text-base md:text-xl lg:text-2xl text-charcoal-600 mb-5 sm:mb-6 md:mb-10 max-w-2xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               We help service businesses fix lead leaks and turn their online
               presence into a system that brings more enquiries, better
@@ -269,15 +269,16 @@ export default function HomePage() {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row items-center gap-3 justify-center"
-              initial={{ opacity: 0, y: 30 }}
+              className="flex flex-row items-center gap-2.5 sm:gap-3 justify-center"
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             >
               <Button
                 href="/contact"
                 variant="primary"
-                size="md"
+                size="sm"
+                className="sm:px-6 sm:py-3 sm:text-base"
                 trackLabel="hero_cta"
                 id="hero-cta"
               >
@@ -287,7 +288,8 @@ export default function HomePage() {
               <Button
                 href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`}
                 variant="outline"
-                size="md"
+                size="sm"
+                className="sm:px-6 sm:py-3 sm:text-base"
                 external
                 trackLabel="hero_whatsapp"
                 id="hero-whatsapp"
@@ -300,10 +302,10 @@ export default function HomePage() {
 
             {/* Trust line */}
             <motion.p
-              className="mt-6 text-xs md:text-sm text-gray-custom-400"
+              className="mt-4 sm:mt-6 text-xs md:text-sm text-gray-custom-400"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
             >
               For coaches, consultants, clinics, salons & local businesses in
               India
