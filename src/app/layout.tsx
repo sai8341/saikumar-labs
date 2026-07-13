@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -8,14 +8,8 @@ import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import ScrollDepthTracker from "@/components/analytics/ScrollDepthTracker";
 import { siteConfig } from "@/lib/config";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const outfit = Outfit({
-  variable: "--font-outfit",
+const plusJakarta = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta",
   subsets: ["latin"],
   display: "swap",
 });
@@ -109,7 +103,6 @@ const jsonLd = {
       description: siteConfig.description,
       contactPoint: {
         "@type": "ContactPoint",
-        email: siteConfig.email,
         telephone: siteConfig.phone,
         contactType: "customer service",
         availableLanguage: ["English", "Telugu", "Hindi"],
@@ -233,7 +226,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
+    <html lang="en" className={`${plusJakarta.variable}`}>
       <head>
         <script
           type="application/ld+json"

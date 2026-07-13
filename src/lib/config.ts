@@ -13,11 +13,10 @@ export const siteConfig = {
   ogImage: "/og-image.jpg",
 
   // Contact
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919876543210",
+  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919390123367",
   whatsappMessage:
     "Hi SaiKumar Labs, I'd like to discuss how you can help my business get more enquiries.",
-  email: "hello@saikumarlabs.com",
-  phone: "+91 98765 43210",
+  phone: "+91 93901 23367",
 
   // Social
   social: {

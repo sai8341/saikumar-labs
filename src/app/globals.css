@@ -42,8 +42,8 @@
   --color-accent-secondary: var(--accent-secondary);
   --color-brand-gold: var(--brand-gold);
 
-  --font-sans: var(--font-inter);
-  --font-heading: var(--font-inter); /* Using Inter for both for a tech vibe */
+  --font-sans: var(--font-plus-jakarta);
+  --font-heading: var(--font-plus-jakarta); /* Using Plus Jakarta Sans for both for a modern geometric vibe */
 }
 
 /* ============================================
@@ -63,7 +63,7 @@ html {
 body {
   background-color: var(--background);
   color: var(--text-secondary);
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-plus-jakarta), system-ui, -apple-system, sans-serif;
   line-height: 1.7;
 }
 
@@ -72,7 +72,7 @@ body {
    ============================================ */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-family: var(--font-plus-jakarta), system-ui, -apple-system, sans-serif;
   font-weight: 600;
   line-height: 1.2;
   color: var(--foreground);

@@ -82,22 +82,7 @@ export default function ContactContent() {
                   Other Ways to Reach Us
                 </h3>
 
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-gold-400/30 transition-colors group"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-cream-200 flex items-center justify-center group-hover:bg-gold-400/20 transition-colors">
-                    <Mail className="w-5 h-5 text-gold-600" />
-                  </div>
-                  <div>
-                    <span className="text-xs text-gray-custom-400 block">
-                      Email
-                    </span>
-                    <span className="text-sm font-medium text-charcoal-900">
-                      {siteConfig.email}
-                    </span>
-                  </div>
-                </a>
+
 
                 <a
                   href={`tel:${siteConfig.phone}`}

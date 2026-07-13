@@ -82,15 +82,6 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="flex items-center gap-2.5 text-sm text-text-secondary hover:text-foreground transition-colors"
-                >
-                  <Mail className="w-4 h-4" />
-                  {siteConfig.email}
-                </a>
-              </li>
-              <li>
-                <a
                   href={`tel:${siteConfig.phone}`}
                   className="flex items-center gap-2.5 text-sm text-text-secondary hover:text-foreground transition-colors"
                 >
