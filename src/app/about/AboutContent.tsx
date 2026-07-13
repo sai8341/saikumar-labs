@@ -24,7 +24,7 @@ const journey = [
     icon: Code,
     phase: "Started in Coding",
     description:
-      "It began with curiosity about how things work. I learned to code, build websites, and understand the technical side of the internet. This gave me a strong foundation — I don't just plan systems, I can build them.",
+      "It began with curiosity about how things work. I learned to code, build websites, and understand the technical side of the internet. This gave me a strong foundation - I don't just plan systems, I can build them.",
   },
   {
     icon: Megaphone,
@@ -36,13 +36,13 @@ const journey = [
     icon: Bot,
     phase: "Moved into AI & Automation",
     description:
-      "Next came the realisation that even businesses getting leads were losing them — because follow-up was manual, slow, and inconsistent. I explored automation and AI to build systems that handle the follow-up automatically.",
+      "Next came the realisation that even businesses getting leads were losing them - because follow-up was manual, slow, and inconsistent. I explored automation and AI to build systems that handle the follow-up automatically.",
   },
   {
     icon: Layers,
     phase: "Combined Everything into Lead Systems",
     description:
-      "Now I bring all three together — coding, marketing, and automation — to build lead systems for service businesses. Not just a website. Not just ads. A connected system that captures, tracks, and follows up with every lead.",
+      "Now I bring all three together - coding, marketing, and automation - to build lead systems for service businesses. Not just a website. Not just ads. A connected system that captures, tracks, and follows up with every lead.",
   },
 ];
 
@@ -69,7 +69,7 @@ const values = [
     icon: Heart,
     title: "Built for Real Businesses",
     description:
-      "We work with coaches, clinics, salons, and consultants — real service businesses that need real results.",
+      "We work with coaches, clinics, salons, and consultants - real service businesses that need real results.",
   },
 ];
 
@@ -99,7 +99,7 @@ export default function AboutContent() {
               </p>
               <p className="text-lg text-gray-custom-500 leading-relaxed">
                 The website looks fine. The ads are running. But there&apos;s no
-                clear funnel, no tracking, and no follow-up. Leads come in — and
+                clear funnel, no tracking, and no follow-up. Leads come in - and
                 quietly disappear. That&apos;s the gap we fix.
               </p>
             </motion.div>
@@ -135,7 +135,7 @@ export default function AboutContent() {
           <SectionHeading
             badge="The Journey"
             title="How I Got Here"
-            subtitle="The path to building lead systems wasn't a straight line — it was a series of skills and realisations that came together."
+            subtitle="The path to building lead systems wasn't a straight line - it was a series of skills and realisations that came together."
           />
 
           <div className="space-y-8">
@@ -222,7 +222,7 @@ export default function AboutContent() {
             </h2>
             <p className="text-lg text-gray-custom-400 mb-8">
               No pitch. No pressure. Just an honest conversation about how your
-              lead flow works — and where it can be better.
+              lead flow works - and where it can be better.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button

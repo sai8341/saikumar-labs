@@ -17,7 +17,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "SaiKumar Labs — Lead Systems for Service Businesses",
+    default: "SaiKumar Labs - Lead Systems for Service Businesses",
     template: "%s | SaiKumar Labs",
   },
   description: siteConfig.description,
@@ -46,20 +46,20 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "SaiKumar Labs — Lead Systems for Service Businesses",
+    title: "SaiKumar Labs - Lead Systems for Service Businesses",
     description: siteConfig.description,
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "SaiKumar Labs — Lead Systems for Service Businesses",
+        alt: "SaiKumar Labs - Lead Systems for Service Businesses",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SaiKumar Labs — Lead Systems for Service Businesses",
+    title: "SaiKumar Labs - Lead Systems for Service Businesses",
     description: siteConfig.description,
     images: ["/og-image.jpg"],
   },
@@ -115,7 +115,7 @@ const jsonLd = {
       name: "SaiKumar Labs",
       url: siteConfig.url,
       description:
-        "Lead systems and business automation for service businesses in India — more enquiries, better follow-up, fewer missed leads. Serving Hyderabad, Bangalore, and all of India.",
+        "Lead systems and business automation for service businesses in India - more enquiries, better follow-up, fewer missed leads. Serving Hyderabad, Bangalore, and all of India.",
       areaServed: [
         { "@type": "Country", name: "India" },
         { "@type": "City", name: "Hyderabad" },
@@ -156,7 +156,7 @@ const jsonLd = {
           name: "What does SaiKumar Labs do?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "SaiKumar Labs helps service businesses (coaches, clinics, salons, consultants) fix their lead flow. We build connected systems that capture leads, track enquiries, and automate follow-up — so you get more clients without chasing every lead manually.",
+            text: "SaiKumar Labs helps service businesses (coaches, clinics, salons, consultants) fix their lead flow. We build connected systems that capture leads, track enquiries, and automate follow-up - so you get more clients without chasing every lead manually.",
           },
         },
         {
@@ -164,7 +164,7 @@ const jsonLd = {
           name: "How is this different from hiring a web designer or a marketing agency?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Most agencies build you a website OR run ads. We build the system between them — the funnel, tracking, and follow-up that actually converts visitors into paying clients. It's not about looking good; it's about getting results.",
+            text: "Most agencies build you a website OR run ads. We build the system between them - the funnel, tracking, and follow-up that actually converts visitors into paying clients. It's not about looking good; it's about getting results.",
           },
         },
         {
@@ -172,7 +172,7 @@ const jsonLd = {
           name: "What kind of businesses do you work with?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "We work with service-based businesses — coaches, consultants, clinics, salons, agencies, and local service providers across India, including Hyderabad and Bangalore, who get enquiries but struggle to convert them consistently.",
+            text: "We work with service-based businesses - coaches, consultants, clinics, salons, agencies, and local service providers across India, including Hyderabad and Bangalore, who get enquiries but struggle to convert them consistently.",
           },
         },
         {
@@ -180,7 +180,7 @@ const jsonLd = {
           name: "How much does a lead system cost?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Every business is different. We offer a free lead flow review first, then give you an honest recommendation. No packages, no pressure — just what your business actually needs.",
+            text: "Every business is different. We offer a free lead flow review first, then give you an honest recommendation. No packages, no pressure - just what your business actually needs.",
           },
         },
         {
@@ -188,7 +188,7 @@ const jsonLd = {
           name: "Do you only build websites?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "No. A website is just one part of a lead system. We also set up tracking (GA4, Search Console), lead capture funnels, WhatsApp follow-up workflows, Meta ad accounts, and AI automation — everything connected into one system.",
+            text: "No. A website is just one part of a lead system. We also set up tracking, lead capture funnels, WhatsApp follow-up workflows, Meta ad accounts, and AI automation - everything connected into one system.",
           },
         },
         {
@@ -212,7 +212,7 @@ const jsonLd = {
           name: "What if I already have a website but it's not getting leads?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "That's exactly what we fix. Most service businesses have a website that looks fine but doesn't convert visitors into enquiries. We audit your current setup, identify the leaks, and build the missing pieces — tracking, CTAs, follow-up, and funnels.",
+            text: "That's exactly what we fix. Most service businesses have a website that looks fine but doesn't convert visitors into enquiries. We audit your current setup, identify the leaks, and build the missing pieces - tracking, CTAs, follow-up, and funnels.",
           },
         },
       ],

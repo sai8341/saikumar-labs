@@ -41,7 +41,7 @@ export default function ArticleContent() {
             </h1>
             <p className="mt-4 text-lg text-charcoal-600">
               Your website looks fine. Your ads are running. But where are the
-              leads going? Here are the 5 most common reasons — and practical
+              leads going? Here are the 5 most common reasons - and practical
               fixes.
             </p>
           </motion.div>
@@ -62,13 +62,13 @@ export default function ArticleContent() {
                 If you run a coaching business, clinic, salon, or consulting
                 practice in India, you&apos;ve probably invested in a website and
                 maybe even some ads. But the leads aren&apos;t coming in the way
-                you expected. Or worse — they&apos;re coming in, but
+                you expected. Or worse - they&apos;re coming in, but
                 you&apos;re not converting them.
               </p>
               <p className="text-charcoal-600 leading-relaxed mb-8">
                 The problem usually isn&apos;t your service or your marketing
                 budget. It&apos;s the system between them. Here are the 5 most
-                common lead leaks we see — and how to fix each one.
+                common lead leaks we see - and how to fix each one.
               </p>
             </motion.div>
 
@@ -114,7 +114,7 @@ export default function ArticleContent() {
               <p className="text-charcoal-600 leading-relaxed mb-4">
                 A lead fills your contact form. You see it 3 days later. By
                 then, they&apos;ve already gone to a competitor. This is the
-                single biggest reason service businesses lose leads — slow or
+                single biggest reason service businesses lose leads - slow or
                 zero follow-up.
               </p>
               <div className="bg-card border border-border rounded-xl p-5 mb-4">
@@ -138,7 +138,7 @@ export default function ArticleContent() {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl font-semibold text-charcoal-900 mb-3">
-                3. No Tracking — You Don&apos;t Know What&apos;s Working
+                3. No Tracking - You Don&apos;t Know What&apos;s Working
               </h2>
               <p className="text-charcoal-600 leading-relaxed mb-4">
                 If you don&apos;t have Google Analytics, Search Console, or any
@@ -151,7 +151,7 @@ export default function ArticleContent() {
                   ✅ Fix:
                 </p>
                 <p className="text-sm text-charcoal-600">
-                  Set up GA4 and Google Search Console on day one. Track form
+                  Set up basic tracking and search visibility on day one. Track form
                   submissions, WhatsApp clicks, and phone calls as conversion
                   events. This gives you real data to make decisions.
                 </p>
@@ -170,7 +170,7 @@ export default function ArticleContent() {
               </h2>
               <p className="text-charcoal-600 leading-relaxed mb-4">
                 Over 75% of internet users in India browse on mobile. If your
-                website is slow, hard to navigate, or has tiny text on phones —
+                website is slow, hard to navigate, or has tiny text on phones -
                 visitors leave in seconds.
               </p>
               <div className="bg-card border border-border rounded-xl p-5 mb-4">
@@ -194,7 +194,7 @@ export default function ArticleContent() {
               viewport={{ once: true }}
             >
               <h2 className="text-2xl font-semibold text-charcoal-900 mb-3">
-                5. No Lead Capture Funnel — Just a Website
+                5. No Lead Capture Funnel - Just a Website
               </h2>
               <p className="text-charcoal-600 leading-relaxed mb-4">
                 Having a website is not the same as having a lead system. A
@@ -246,7 +246,7 @@ export default function ArticleContent() {
                     3.
                   </span>
                   <span>
-                    <strong>No Tracking</strong> → Set up GA4 + Search Console
+                    <strong>No Tracking</strong> → Set up basic tracking and search visibility
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
@@ -280,7 +280,7 @@ export default function ArticleContent() {
               Want Us to Find Your Lead Leaks?
             </h3>
             <p className="text-gray-custom-400 mb-6 text-sm">
-              We&apos;ll review your current website and lead flow for free — no
+              We&apos;ll review your current website and lead flow for free - no
               pitch, no pressure.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

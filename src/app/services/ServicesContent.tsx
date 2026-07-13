@@ -28,7 +28,7 @@ const serviceGroups: ServiceGroup[] = [
     title: "Online Presence",
     tagline: "Be found. Be trusted. Be chosen.",
     description:
-      "We build professional websites and landing pages that convert visitors into enquiries — not just look pretty. Your Google profile, social bios, and SEO are all set up to work together.",
+      "We build professional websites and landing pages that convert visitors into enquiries - not just look pretty. Your Google profile, social bios, and SEO are all set up to work together.",
     color: "bg-blue-50 text-blue-600",
     outcomes: [
       "Professional, mobile-friendly website that loads fast",
@@ -71,7 +71,7 @@ const serviceGroups: ServiceGroup[] = [
     title: "Follow-up & Automation",
     tagline: "Never miss a lead. Save hours every week.",
     description:
-      "Most businesses lose leads because they don't follow up. We build automated sequences that send the right message at the right time — so no lead goes cold.",
+      "Most businesses lose leads because they don't follow up. We build automated sequences that send the right message at the right time - so no lead goes cold.",
     color: "bg-purple-50 text-purple-600",
     outcomes: [
       "Automated follow-up sequences via WhatsApp & email",
@@ -102,7 +102,7 @@ export default function ServicesContent() {
                 <span className="text-gold-500">Capture More Leads</span>
               </h1>
               <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-charcoal-600 leading-relaxed">
-                We don&apos;t sell one-off tasks. We build complete systems — each service
+                We don&apos;t sell one-off tasks. We build complete systems - each service
                 is designed to fix a specific part of your lead flow.
               </p>
             </motion.div>

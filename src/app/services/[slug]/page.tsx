@@ -8,44 +8,58 @@ const servicePages = {
   "digital-foundation": {
     title: "Premium Website Design Services",
     subtitle: "The Digital Foundation",
-    description: "Get a custom, high-performance website that builds trust and authority. Our premium website development includes essential technical SEO and Google Business Profile setup.",
-    content: "Your website is the face of your business. We don't just hand over a cheap template. We build premium, custom websites optimized for performance, security, and user experience. Every website we build is properly submitted to Google (via Google Search Console) to ensure you rank for local searches.",
+    description: "Get a custom, high-performance website that builds trust and authority. We handle the tech so you don't have to.",
+    content: "Your website is the face of your business. If a potential client visits your site and gets confused or sees a cheap template, they will leave. We don't just hand over a pretty design. We build a solid foundation. We submit your site directly to Google so people can actually find you. We set up advanced tracking so you know how many visitors you're getting and what they are looking at. And the best part? We include 1-Year Free Hosting, Free SSL, and a Free Domain. No headaches for you.",
     features: [
       "Custom, High-Quality Website Development",
       "Mobile-Responsive & Fast Loading Architecture",
-      "Google Business Profile (GBP) Configuration",
-      "Meta (Facebook & Instagram) Page Setup",
-      "Technical SEO & Google Indexing Setup"
+      "Google Search Submission & Setup",
+      "Advanced Visitor Tracking Setup",
+      "1-Year Free Hosting, SSL & Domain"
     ],
     keyword: "Premium Website Design Services",
   },
   "lead-engine": {
     title: "Lead Generation Systems",
     subtitle: "The Lead Engine",
-    description: "Scale your service business with predictable enquiries. We set up high-converting landing pages, GA4 tracking, and WhatsApp automation services.",
-    content: "Don't guess where your traffic is coming from or lose leads because you replied too late. We build end-to-end lead generation systems. By integrating advanced GA4 tracking, Meta Ads, and automated WhatsApp follow-ups, we ensure every visitor is tracked and every lead is engaged instantly.",
+    description: "Scale your service business with predictable enquiries. We set up high-converting landing pages and Meta Ads.",
+    content: "Getting traffic to your website is useless if those visitors don't turn into enquiries. The Lead Engine is designed to capture attention and convert it. We build dedicated, high-converting landing pages tailored to your services. We integrate advanced tracking systems so you can see exactly where your leads come from. Then, we set up targeted Meta Ads to bring in a steady flow of potential clients. And just like the Foundation plan, you get 1-Year Free Hosting, SSL, and Domain included.",
     features: [
       "High-Converting Landing Pages",
-      "Advanced GA4 & GTM Tracking Integration",
+      "Advanced Lead Tracking Integration",
       "Meta Ads Setup for Predictable Lead Flow",
-      "Instant WhatsApp Automation Follow-ups",
-      "Lead Capture & CRM Integration"
+      "Lead Capture Forms",
+      "1-Year Free Hosting, SSL & Domain"
     ],
     keyword: "Lead Generation Systems",
   },
   "brand-authority": {
-    title: "AI Automation Services & Branding",
+    title: "Content & Branding Automation",
     subtitle: "Brand Authority",
-    description: "Establish industry leadership with advanced content strategy, YouTube optimization, and custom AI automation services for your internal workflows.",
-    content: "For founders and service providers looking to scale their personal brand. We optimize your YouTube channel for maximum reach, develop advanced content strategies, and implement custom AI workflows that automate your internal operations, saving you hundreds of hours.",
+    description: "Establish industry leadership with advanced YouTube optimization and custom AI workflows.",
+    content: "For true industry leaders, founders, and service providers who want to scale their personal brand. We help you dominate platforms like YouTube with proper SEO and content strategies. But more importantly, as you grow, your operations will get messy. We implement custom AI workflows that automate your internal business tasks, saving you and your team hundreds of hours. Focus on delivering value while the system does the heavy lifting. Includes 1-Year Free Hosting, SSL, and Domain.",
     features: [
       "YouTube Channel SEO & Optimization",
-      "Custom AI Workflows for Content & Operations",
-      "Internal Business Automation setup",
+      "Custom Internal AI Workflows",
       "Advanced Personal Branding Strategy",
-      "Omnichannel Presence Management"
+      "Omnichannel Presence Management",
+      "1-Year Free Hosting, SSL & Domain"
     ],
     keyword: "AI Automation Services",
+  },
+  "business-automation": {
+    title: "Business Automation Systems",
+    subtitle: "Business Automation",
+    description: "For businesses tired of manual follow-ups, chaotic operations, and lost leads.",
+    content: "You shouldn't be manually texting every lead or trying to remember who to follow up with. Our Business Automation systems take the repetitive tasks off your plate. We build smart WhatsApp automation sequences that engage your leads instantly. We integrate your lead capture forms directly into a CRM so no enquiry slips through the cracks. We set up automated appointment reminders to reduce no-shows. Let the system run your business so you can focus on serving your clients. Includes 1-Year Free Hosting, SSL, and Domain.",
+    features: [
+      "WhatsApp Automation Follow-ups",
+      "CRM & Lead Capture Integration",
+      "Automated Appointment Reminders",
+      "Custom Business Workflows",
+      "1-Year Free Hosting, SSL & Domain"
+    ],
+    keyword: "Business Automation Services",
   }
 };
 

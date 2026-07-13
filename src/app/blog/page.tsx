@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import BlogContent from "./BlogContent";
 
 export const metadata: Metadata = {
-  title: "Blog — Lead Generation Tips for Service Businesses",
+  title: "Blog - Lead Generation Tips for Service Businesses",
   description:
     "Practical tips on lead generation, business automation, WhatsApp follow-up, and digital marketing for coaches, clinics, salons, and service businesses in India.",
   openGraph: {

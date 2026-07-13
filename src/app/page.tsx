@@ -21,42 +21,58 @@ const packages = [
   {
     title: "The Digital Foundation",
     slug: "/services/digital-foundation",
-    description: "For businesses moving online. Build a trustworthy presence.",
+    description: "For businesses moving online. A solid, SEO-ready presence, not a cheap template.",
     icon: Globe,
     features: [
-      "Premium Website Development",
-      "Google Business Profile Setup",
-      "Meta (FB/Insta) Pages Setup",
-      "Basic Technical SEO"
+      "Custom, High-Performance Website",
+      "Google Search Console (GSC) Setup",
+      "Basic Technical SEO & Indexing",
+      "GA4 Tracking Setup",
+      "1-Year Free Hosting, SSL & Domain"
     ]
   },
   {
     title: "The Lead Engine",
     slug: "/services/lead-engine",
-    description: "For service businesses ready to scale predictable enquiries.",
+    description: "For service businesses ready to capture traffic and scale predictable enquiries.",
     icon: TrendingUp,
     highlight: true,
     features: [
       "Everything in Foundation",
       "High-Converting Landing Pages",
-      "GA4 & GTM Tracking Integration",
+      "Advanced GA4 & GTM Integration",
       "Meta Ads Setup (Steady Leads)",
-      "WhatsApp Automation Follow-ups"
+      "1-Year Free Hosting, SSL & Domain"
     ]
   },
   {
     title: "Brand Authority",
     slug: "/services/brand-authority",
-    description: "For leaders leveraging video and advanced AI workflows.",
+    description: "For industry leaders scaling through personal brand and advanced workflows.",
     icon: MonitorPlay,
     features: [
-      "YouTube Channel Optimization",
-      "Custom AI Workflows",
-      "Internal Business Automation",
-      "Advanced Content Strategy"
+      "YouTube Channel SEO & Strategy",
+      "Custom Internal AI Workflows",
+      "Advanced Personal Branding",
+      "Omnichannel Content Strategy",
+      "1-Year Free Hosting, SSL & Domain"
+    ]
+  },
+  {
+    title: "Business Automation",
+    slug: "/services/business-automation",
+    description: "For businesses tired of manual follow-ups and chaotic operations.",
+    icon: Bot,
+    features: [
+      "WhatsApp Automation Follow-ups",
+      "CRM & Lead Capture Integration",
+      "Automated Appointment Reminders",
+      "Custom Business Workflows",
+      "1-Year Free Hosting, SSL & Domain"
     ]
   }
 ];
+
 
 export default function HomePage() {
   return (
@@ -102,7 +118,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Your website shouldn't just look good—it needs to generate revenue. We design premium websites integrated with GA4 tracking and WhatsApp automations.
+            Your website shouldn't just look good, it needs to generate revenue. We design premium websites integrated with complete tracking and WhatsApp automations.
           </motion.p>
 
           <motion.div
@@ -200,8 +216,8 @@ export default function HomePage() {
               <ul className="space-y-4">
                 {[
                   "Custom, high-quality websites built for performance.",
-                  "Properly indexed on Google (GSC) for SEO visibility.",
-                  "Advanced GA4 tracking to monitor visitor behavior.",
+                  "Properly submitted to Google for SEO visibility.",
+                  "Advanced visitor tracking to monitor behavior.",
                   "Robust security and clean, clutter-free architecture."
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-text-primary">

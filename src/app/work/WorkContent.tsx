@@ -24,12 +24,12 @@ const caseStudies = [
     industry: "Coaching",
     color: "from-blue-500 to-blue-600",
     problem:
-      "Leads from Instagram and the website were scattered with no follow-up process — enquiries went cold within hours.",
+      "Leads from Instagram and the website were scattered with no follow-up process - enquiries went cold within hours.",
     solution:
       "Built a conversion-focused landing page, connected lead capture to WhatsApp, and set up automated follow-up sequences.",
     outcome:
       "Every enquiry captured in one place. Automated follow-up runs without manual effort. Clear data on which channels bring real leads.",
-    systems: ["Landing Page", "Lead Funnel", "GA4 Tracking", "Follow-up Automation"],
+    systems: ["Landing Page", "Lead Funnel", "Lead Tracking", "Follow-up Automation"],
   },
   {
     icon: Stethoscope,
@@ -37,7 +37,7 @@ const caseStudies = [
     industry: "Healthcare Clinic",
     color: "from-green-500 to-green-600",
     problem:
-      "High no-show rate — patients booked but forgot, and staff had to manually call each person.",
+      "High no-show rate - patients booked but forgot, and staff had to manually call each person.",
     solution:
       "Created an online booking flow with automated WhatsApp and SMS reminders before each appointment.",
     outcome:
@@ -50,7 +50,7 @@ const caseStudies = [
     industry: "Salon & Beauty",
     color: "from-pink-500 to-pink-600",
     problem:
-      "All enquiries came through Instagram DMs — chaotic, slow responses, and no way to track service requests.",
+      "All enquiries came through Instagram DMs - chaotic, slow responses, and no way to track service requests.",
     solution:
       "Set up a clean enquiry form connected to WhatsApp with automated greeting and service selection.",
     outcome:
@@ -80,7 +80,7 @@ export default function WorkContent() {
               </h1>
               <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-charcoal-600 leading-relaxed">
                 Real examples of lead systems we&apos;ve built for service
-                businesses — from problem to outcome.
+                businesses - from problem to outcome.
               </p>
             </motion.div>
           </div>
@@ -117,7 +117,7 @@ export default function WorkContent() {
                 </h2>
               </div>
 
-              {/* Content — 3 compact paragraphs */}
+              {/* Content - 3 compact paragraphs */}
               <div className="p-5 sm:p-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8">
                   {/* Problem */}
@@ -179,7 +179,7 @@ export default function WorkContent() {
         </div>
       </section>
 
-      {/* Approach Section — Tightened */}
+      {/* Approach Section - Tightened */}
       <section className="section-padding bg-section-alt">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading

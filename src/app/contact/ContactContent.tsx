@@ -34,7 +34,7 @@ export default function ContactContent() {
               </h1>
               <p className="mt-6 text-xl text-charcoal-600 leading-relaxed">
                 Book a free review, ask a question, or just say hello. We
-                respond to every message — usually within a few hours.
+                respond to every message - usually within a few hours.
               </p>
             </motion.div>
           </div>
@@ -113,7 +113,7 @@ export default function ContactContent() {
                       Quick Response
                     </span>
                     <span className="text-xs text-gray-custom-500">
-                      We respond within 24 hours — usually much sooner.
+                      We respond within 24 hours - usually much sooner.
                     </span>
                   </div>
                 </div>

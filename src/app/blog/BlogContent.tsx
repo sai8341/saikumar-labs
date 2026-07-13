@@ -5,13 +5,13 @@ import Link from "next/link";
 import { ArrowRight, Clock, Tag } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 
-// Blog posts data — expand this as you write more content
+// Blog posts data - expand this as you write more content
 const blogPosts = [
   {
     slug: "why-service-businesses-lose-leads",
     title: "Why Most Service Businesses Lose Leads (And How to Fix It)",
     excerpt:
-      "Your website looks fine. Your ads are running. But where are the leads going? Here are the 5 most common reasons service businesses lose leads — and what to do about each one.",
+      "Your website looks fine. Your ads are running. But where are the leads going? Here are the 5 most common reasons service businesses lose leads - and what to do about each one.",
     category: "Lead Generation",
     readTime: "5 min read",
     date: "2025-06-10",
@@ -31,7 +31,7 @@ const blogPosts = [
     title:
       "Google Business Profile Setup Guide for Service Businesses in India",
     excerpt:
-      "Getting found on Google Maps and local search starts with a properly set up Google Business Profile. Here's exactly how to do it step by step — no SEO jargon needed.",
+      "Getting found on Google Maps and local search starts with a properly set up Google Business Profile. Here's exactly how to do it step by step - no SEO jargon needed.",
     category: "Online Presence",
     readTime: "6 min read",
     date: "2025-05-28",
