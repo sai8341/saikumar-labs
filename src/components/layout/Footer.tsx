@@ -7,7 +7,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-charcoal-900 text-cream-300">
+    <footer className="bg-background text-text-secondary border-t border-bg-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -21,11 +21,11 @@ export default function Footer() {
                 height={36}
                 className="rounded-lg"
               />
-              <span className="font-heading font-bold text-lg text-cream-50">
+              <span className="font-heading font-bold text-lg text-foreground">
                 SaiKumar Labs
               </span>
             </Link>
-            <p className="text-sm text-gray-custom-400 leading-relaxed mb-6">
+            <p className="text-sm text-text-secondary leading-relaxed mb-6">
               Helping service businesses fix lead leaks and turn their online
               presence into a system that brings more enquiries.
             </p>
@@ -33,7 +33,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-semibold text-cream-50 mb-5 text-sm uppercase tracking-wider">
+            <h4 className="font-heading font-semibold text-foreground mb-5 text-sm uppercase tracking-wider">
               Quick Links
             </h4>
             <ul className="space-y-3">
@@ -41,7 +41,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-custom-400 hover:text-gold-400 transition-colors duration-200 flex items-center gap-1"
+                    className="text-sm text-text-secondary hover:text-foreground transition-colors duration-200 flex items-center gap-1"
                   >
                     {link.label}
                   </Link>
@@ -52,7 +52,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-heading font-semibold text-cream-50 mb-5 text-sm uppercase tracking-wider">
+            <h4 className="font-heading font-semibold text-foreground mb-5 text-sm uppercase tracking-wider">
               Services
             </h4>
             <ul className="space-y-3">
@@ -65,7 +65,7 @@ export default function Footer() {
                 <li key={service}>
                   <Link
                     href="/services"
-                    className="text-sm text-gray-custom-400 hover:text-gold-400 transition-colors duration-200"
+                    className="text-sm text-text-secondary hover:text-foreground transition-colors duration-200"
                   >
                     {service}
                   </Link>
@@ -76,14 +76,14 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-heading font-semibold text-cream-50 mb-5 text-sm uppercase tracking-wider">
+            <h4 className="font-heading font-semibold text-foreground mb-5 text-sm uppercase tracking-wider">
               Get In Touch
             </h4>
             <ul className="space-y-4">
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="flex items-center gap-2.5 text-sm text-gray-custom-400 hover:text-gold-400 transition-colors"
+                  className="flex items-center gap-2.5 text-sm text-text-secondary hover:text-foreground transition-colors"
                 >
                   <Mail className="w-4 h-4" />
                   {siteConfig.email}
@@ -92,7 +92,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`tel:${siteConfig.phone}`}
-                  className="flex items-center gap-2.5 text-sm text-gray-custom-400 hover:text-gold-400 transition-colors"
+                  className="flex items-center gap-2.5 text-sm text-text-secondary hover:text-foreground transition-colors"
                 >
                   <Phone className="w-4 h-4" />
                   {siteConfig.phone}
@@ -114,8 +114,8 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="py-6 border-t border-charcoal-700 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-custom-500">
+        <div className="py-6 border-t border-bg-border flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-text-muted">
             © {currentYear} SaiKumar Labs. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
@@ -125,7 +125,7 @@ export default function Footer() {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-gray-custom-500 hover:text-gold-400 capitalize transition-colors"
+                className="text-xs text-text-muted hover:text-foreground capitalize transition-colors"
               >
                 {platform}
               </a>

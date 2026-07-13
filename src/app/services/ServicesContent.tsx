@@ -8,34 +8,10 @@ import {
   Bot,
   ArrowRight,
   MessageCircle,
-  Layout,
-  FileText,
-  Search,
-  Smartphone,
-  Share2,
-  Link2,
-  Briefcase,
-  Settings,
-  LineChart,
-  Camera,
-  MonitorSmartphone,
-  Users,
-  Filter,
-  Workflow,
-  Cpu,
-  Bell,
-  MessageSquare,
 } from "lucide-react";
 import Button from "@/components/ui/Button";
-import SectionHeading from "@/components/ui/SectionHeading";
 import { siteConfig } from "@/lib/config";
 import { analytics } from "@/lib/analytics";
-
-type ServiceItem = {
-  icon: React.ElementType;
-  name: string;
-  description: string;
-};
 
 type ServiceGroup = {
   icon: React.ElementType;
@@ -43,7 +19,7 @@ type ServiceGroup = {
   tagline: string;
   description: string;
   color: string;
-  items: ServiceItem[];
+  outcomes: string[];
 };
 
 const serviceGroups: ServiceGroup[] = [
@@ -52,39 +28,14 @@ const serviceGroups: ServiceGroup[] = [
     title: "Online Presence",
     tagline: "Be found. Be trusted. Be chosen.",
     description:
-      "Your online presence is the first thing a potential customer sees. We make sure it looks professional, works smoothly, and guides visitors to take action.",
+      "We build professional websites and landing pages that convert visitors into enquiries — not just look pretty. Your Google profile, social bios, and SEO are all set up to work together.",
     color: "bg-blue-50 text-blue-600",
-    items: [
-      {
-        icon: Layout,
-        name: "Website Development",
-        description:
-          "Clean, fast, mobile-friendly websites designed to convert visitors into enquiries — not just look pretty.",
-      },
-      {
-        icon: FileText,
-        name: "Landing Page Development",
-        description:
-          "Focused pages built for a single goal — whether it's capturing leads from ads, social, or referrals.",
-      },
-      {
-        icon: MonitorSmartphone,
-        name: "Business Website Setup",
-        description:
-          "A complete professional website with all the essentials — contact, services, about, and clear calls to action.",
-      },
-      {
-        icon: Search,
-        name: "Basic On-Page SEO",
-        description:
-          "Proper page titles, meta descriptions, headings, and content structure so Google can find and rank your pages.",
-      },
-      {
-        icon: Users,
-        name: "Bio & Profile Optimisation",
-        description:
-          "Your Instagram bio, Google Business profile, and social bios — optimised to make visitors take the next step.",
-      },
+    outcomes: [
+      "Professional, mobile-friendly website that loads fast",
+      "Landing pages designed to capture leads from ads & social",
+      "On-page SEO so Google can find and rank your business",
+      "Social profiles optimised with clear calls-to-action",
+      "Google Business Profile setup for local visibility",
     ],
   },
   {
@@ -92,51 +43,13 @@ const serviceGroups: ServiceGroup[] = [
     title: "Tracking & Analytics",
     tagline: "Know what's working. Stop guessing.",
     description:
-      "Without tracking, you're spending money blindly. We set up the tools that show you exactly where leads come from and what's actually driving results.",
+      "Without tracking, you're spending money blindly. We set up analytics, search monitoring, and ad tracking so you always know which channels bring real leads.",
     color: "bg-green-50 text-green-600",
-    items: [
-      {
-        icon: LineChart,
-        name: "Google Analytics 4 Setup",
-        description:
-          "Track visitor behaviour, traffic sources, and conversion events on your website — properly configured from day one.",
-      },
-      {
-        icon: Search,
-        name: "Google Search Console Setup",
-        description:
-          "Monitor your search performance, discover what people search to find you, and catch technical issues early.",
-      },
-      {
-        icon: Camera,
-        name: "Instagram Business Account Setup",
-        description:
-          "Convert to a business profile with insights, contact buttons, and the ability to run ads.",
-      },
-      {
-        icon: Share2,
-        name: "Facebook Page Setup",
-        description:
-          "A professional Facebook presence with proper categories, contact info, and CTA buttons.",
-      },
-      {
-        icon: Link2,
-        name: "Instagram + Facebook Connecting",
-        description:
-          "Link your Instagram and Facebook accounts so you can manage content, ads, and insights from one place.",
-      },
-      {
-        icon: Briefcase,
-        name: "Meta Business Manager Setup",
-        description:
-          "Set up Meta Business Portfolio to manage all your Meta assets — pages, ad accounts, pixels — in one dashboard.",
-      },
-      {
-        icon: Settings,
-        name: "Meta Ad Account Setup",
-        description:
-          "Create and configure your ad account properly so you're ready to run targeted campaigns when the time is right.",
-      },
+    outcomes: [
+      "Google Analytics 4 configured to track conversions",
+      "Search Console monitoring your Google performance",
+      "Meta Business Manager & ad accounts ready to run",
+      "Clear dashboards showing what's working and what's not",
     ],
   },
   {
@@ -144,27 +57,13 @@ const serviceGroups: ServiceGroup[] = [
     title: "Lead Capture",
     tagline: "Turn visitors into real enquiries.",
     description:
-      "Getting traffic is only half the battle. We build the systems that capture that traffic as real leads — with clear funnels, forms, and conversion paths.",
+      "Getting traffic is only half the battle. We build the funnels, forms, and integration flows that capture visitors as real, trackable leads.",
     color: "bg-amber-50 text-amber-600",
-    items: [
-      {
-        icon: Filter,
-        name: "Lead Funnel Setup",
-        description:
-          "A clear path from first touchpoint to enquiry — designed to guide visitors step by step toward reaching out.",
-      },
-      {
-        icon: Smartphone,
-        name: "Lead Generation System Setup",
-        description:
-          "A complete lead system with forms, landing pages, and tracking — so every potential customer is captured.",
-      },
-      {
-        icon: MessageSquare,
-        name: "WhatsApp / Enquiry Workflow Direction",
-        description:
-          "Route enquiries to WhatsApp, email, or your preferred channel — with a professional flow that feels seamless.",
-      },
+    outcomes: [
+      "Lead funnels that guide visitors to enquire",
+      "Enquiry forms connected to WhatsApp & email",
+      "Landing pages optimised for ad campaigns",
+      "One organised pipeline for all enquiries",
     ],
   },
   {
@@ -172,27 +71,13 @@ const serviceGroups: ServiceGroup[] = [
     title: "Follow-up & Automation",
     tagline: "Never miss a lead. Save hours every week.",
     description:
-      "Most businesses lose leads not because they don't get any — but because they don't follow up. We build the systems that do it for you.",
+      "Most businesses lose leads because they don't follow up. We build automated sequences that send the right message at the right time — so no lead goes cold.",
     color: "bg-purple-50 text-purple-600",
-    items: [
-      {
-        icon: Workflow,
-        name: "Automation Workflow Setup",
-        description:
-          "Automated sequences that send the right message at the right time — follow-ups, reminders, and confirmations.",
-      },
-      {
-        icon: Cpu,
-        name: "AI Automation Solutions",
-        description:
-          "Smart automation using AI — from chatbot responses to intelligent lead scoring and routing.",
-      },
-      {
-        icon: Bell,
-        name: "Follow-up System Setup",
-        description:
-          "A structured follow-up system that ensures no lead goes cold — reminders, sequences, and escalation paths.",
-      },
+    outcomes: [
+      "Automated follow-up sequences via WhatsApp & email",
+      "Appointment reminders that reduce no-shows",
+      "AI-powered responses for faster first contact",
+      "Escalation paths so urgent leads get attention",
     ],
   },
 ];
@@ -209,17 +94,16 @@ export default function ServicesContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-gold-700 bg-cream-200 rounded-full border border-gold-400/30">
+              <span className="inline-block px-4 py-1.5 mb-4 sm:mb-6 text-xs sm:text-sm font-medium text-gold-700 bg-cream-200 rounded-full border border-gold-400/30">
                 Our Services
               </span>
-              <h1>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                 Everything You Need to{" "}
                 <span className="text-gold-500">Capture More Leads</span>
               </h1>
-              <p className="mt-6 text-xl text-charcoal-600 leading-relaxed">
-                We organise our services by what they do for your business — not
-                by technical labels. Each service is designed to fix a specific
-                part of your lead flow.
+              <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-charcoal-600 leading-relaxed">
+                We don&apos;t sell one-off tasks. We build complete systems — each service
+                is designed to fix a specific part of your lead flow.
               </p>
             </motion.div>
           </div>
@@ -232,54 +116,50 @@ export default function ServicesContent() {
           key={group.title}
           className={`section-padding ${groupIndex % 2 === 0 ? "bg-cream-50" : "bg-section-alt"}`}
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Group header */}
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              className="max-w-3xl mb-12"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div
-                  className={`w-10 h-10 rounded-xl ${group.color} flex items-center justify-center`}
-                >
-                  <group.icon className="w-5 h-5" />
-                </div>
-                <span className="text-sm font-semibold text-gold-600 uppercase tracking-wider">
-                  {group.title}
-                </span>
-              </div>
-              <h2 className="mb-3">{group.tagline}</h2>
-              <p className="text-lg text-gray-custom-500 leading-relaxed">
-                {group.description}
-              </p>
-            </motion.div>
-
-            {/* Service items */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {group.items.map((item, i) => (
-                <motion.div
-                  key={item.name}
-                  className="bg-card rounded-2xl p-7 border border-border hover:border-gold-400/30 hover:shadow-md transition-all duration-300"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.08 }}
-                >
-                  <div className="w-10 h-10 rounded-lg bg-cream-200 flex items-center justify-center mb-4">
-                    <item.icon className="w-5 h-5 text-gold-600" />
+              {/* Left: Info */}
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <div
+                    className={`w-10 h-10 rounded-xl ${group.color} flex items-center justify-center`}
+                  >
+                    <group.icon className="w-5 h-5" />
                   </div>
-                  <h3 className="text-base font-semibold text-charcoal-900 mb-2">
-                    {item.name}
-                  </h3>
-                  <p className="text-sm text-gray-custom-500 leading-relaxed">
-                    {item.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
+                  <span className="text-sm font-semibold text-gold-600 uppercase tracking-wider">
+                    {group.title}
+                  </span>
+                </div>
+                <h2 className="mb-3 text-xl sm:text-2xl md:text-3xl">{group.tagline}</h2>
+                <p className="text-sm sm:text-base text-gray-custom-500 leading-relaxed">
+                  {group.description}
+                </p>
+              </div>
+
+              {/* Right: Outcomes */}
+              <div className="bg-card rounded-2xl p-5 sm:p-6 border border-border">
+                <h3 className="text-sm font-semibold text-charcoal-700 uppercase tracking-wider mb-4">
+                  What You Get
+                </h3>
+                <ul className="space-y-3">
+                  {group.outcomes.map((outcome, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-3 text-sm sm:text-base text-charcoal-600"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold-400 mt-2 shrink-0" />
+                      {outcome}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
           </div>
         </section>
       ))}
@@ -294,36 +174,37 @@ export default function ServicesContent() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-cream-50 mb-4">
+            <h2 className="text-cream-50 mb-3 sm:mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl">
               Not Sure Where to Start?
             </h2>
-            <p className="text-lg text-gray-custom-400 mb-8">
+            <p className="text-sm sm:text-lg text-gray-custom-400 mb-6 sm:mb-8">
               Book a free lead flow review. We&apos;ll look at your current
               setup and tell you exactly which services will make the biggest
               difference.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-row gap-3 justify-center">
               <Button
                 href="/contact"
                 variant="primary"
-                size="lg"
+                size="sm"
+                className="sm:px-6 sm:py-3 sm:text-base"
                 trackLabel="services_cta"
                 id="services-cta"
               >
                 Book a Free Review
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </Button>
               <Button
                 href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`}
                 variant="outline"
-                size="lg"
+                size="sm"
+                className="border-cream-300/30 text-cream-100 hover:bg-cream-100/10 hover:text-cream-50 sm:px-6 sm:py-3 sm:text-base"
                 external
-                className="border-cream-300/30 text-cream-100 hover:bg-cream-100/10 hover:text-cream-50"
                 trackLabel="services_whatsapp"
                 id="services-whatsapp"
                 onClick={() => analytics.whatsappClick("services_cta")}
               >
-                <MessageCircle className="w-5 h-5" />
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
                 WhatsApp Us
               </Button>
             </div>

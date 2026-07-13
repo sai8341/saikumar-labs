@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { analytics } from "@/lib/analytics";
 
@@ -27,23 +29,23 @@ export default function Button({
   id,
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 cursor-pointer whitespace-nowrap";
+    "inline-flex items-center justify-center font-semibold rounded-full transition-all duration-300 cursor-pointer whitespace-nowrap";
 
   const variants = {
     primary:
-      "bg-gold-400 text-charcoal-900 hover:bg-gold-600 hover:text-white shadow-md hover:shadow-lg active:scale-[0.98]",
+      "bg-accent-primary text-accent-secondary hover:bg-opacity-90 shadow-md active:scale-[0.98]",
     secondary:
-      "bg-charcoal-900 text-cream-50 hover:bg-charcoal-700 shadow-md hover:shadow-lg active:scale-[0.98]",
+      "bg-bg-border text-text-primary hover:bg-opacity-80 active:scale-[0.98]",
     outline:
-      "border-2 border-gold-400 text-charcoal-900 hover:bg-gold-400 hover:text-charcoal-900 active:scale-[0.98]",
+      "border border-bg-border text-text-primary hover:bg-bg-card active:scale-[0.98]",
     ghost:
-      "text-charcoal-800 hover:text-gold-600 hover:bg-cream-200 active:scale-[0.98]",
+      "text-text-secondary hover:text-text-primary hover:bg-bg-border active:scale-[0.98]",
   };
 
   const sizes = {
-    sm: "px-4 py-2 text-sm gap-1.5",
-    md: "px-6 py-3 text-base gap-2",
-    lg: "px-8 py-4 text-lg gap-2.5",
+    sm: "px-5 py-2.5 text-sm gap-1.5",
+    md: "px-7 py-3.5 text-base gap-2",
+    lg: "px-9 py-4 text-lg gap-2.5",
   };
 
   const classes = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;

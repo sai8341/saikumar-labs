@@ -29,7 +29,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-cream-50/95 backdrop-blur-md shadow-sm border-b border-border"
+          ? "bg-background/90 backdrop-blur-md shadow-sm border-b border-bg-border"
           : "bg-transparent"
       }`}
     >
@@ -45,7 +45,7 @@ export default function Header() {
               className="rounded-lg"
               priority
             />
-            <span className="font-heading font-bold text-xl text-charcoal-900 hidden sm:block">
+            <span className="font-heading font-bold text-xl text-foreground hidden sm:block">
               SaiKumar Labs
             </span>
           </Link>
@@ -58,8 +58,8 @@ export default function Header() {
                 href={link.href}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
                   pathname === link.href
-                    ? "text-gold-600 bg-cream-200"
-                    : "text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-100"
+                    ? "text-foreground bg-bg-border"
+                    : "text-text-secondary hover:text-foreground hover:bg-bg-card"
                 }`}
               >
                 {link.label}
@@ -83,14 +83,14 @@ export default function Header() {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-cream-200 transition-colors cursor-pointer"
+            className="md:hidden p-2 rounded-lg hover:bg-bg-border transition-colors cursor-pointer"
             aria-label={isMobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMobileOpen}
           >
             {isMobileOpen ? (
-              <X className="w-6 h-6 text-charcoal-900" />
+              <X className="w-6 h-6 text-foreground" />
             ) : (
-              <Menu className="w-6 h-6 text-charcoal-900" />
+              <Menu className="w-6 h-6 text-foreground" />
             )}
           </button>
         </div>
@@ -104,7 +104,7 @@ export default function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="md:hidden bg-cream-50 border-t border-border overflow-hidden"
+            className="md:hidden bg-background border-t border-bg-border overflow-hidden"
           >
             <div className="px-4 py-6 space-y-1">
               {siteConfig.navLinks.map((link) => (
@@ -113,8 +113,8 @@ export default function Header() {
                   href={link.href}
                   className={`block px-4 py-3 rounded-xl text-base font-medium transition-colors ${
                     pathname === link.href
-                      ? "text-gold-600 bg-cream-200"
-                      : "text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-100"
+                      ? "text-foreground bg-bg-border"
+                      : "text-text-secondary hover:text-foreground hover:bg-bg-card"
                   }`}
                 >
                   {link.label}
