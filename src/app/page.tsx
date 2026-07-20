@@ -134,20 +134,8 @@ export default function HomePage() {
               className="w-full sm:w-auto text-black bg-white hover:bg-gray-200 border-transparent shadow-[0_0_20px_rgba(255,255,255,0.15)]"
               trackLabel="hero_cta"
             >
-              Book a Free Lead Review
+              Let's Talk About Your Business
               <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button
-              href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`}
-              variant="outline"
-              size="lg"
-              className="w-full sm:w-auto"
-              external
-              trackLabel="hero_whatsapp"
-              onClick={() => analytics.whatsappClick("hero")}
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              WhatsApp Us
             </Button>
           </motion.div>
           
