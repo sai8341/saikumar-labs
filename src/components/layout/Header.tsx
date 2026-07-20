@@ -67,13 +67,14 @@ export default function Header() {
           {/* Desktop CTA */}
           <div className="hidden md:block">
             <Button
-              href="/contact"
+              href="https://cal.com/saikumarlabs/discovery-call?theme=light"
+              external
               variant="primary"
               size="sm"
               trackLabel="header_cta"
               id="header-cta"
             >
-              Free Lead Flow Review
+              Book a 30-Min Call
             </Button>
           </div>
 
@@ -119,14 +120,15 @@ export default function Header() {
               ))}
               <div className="pt-4">
                 <Button
-                  href="/contact"
+                  href="https://cal.com/saikumarlabs/discovery-call?theme=light"
+                  external
                   variant="primary"
                   size="md"
                   className="w-full"
                   trackLabel="mobile_header_cta"
                   id="mobile-header-cta"
                 >
-                  Free Lead Flow Review
+                  Book a 30-Min Call
                 </Button>
               </div>
             </div>

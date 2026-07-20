@@ -38,20 +38,23 @@ export function AutoScrollRamp() {
   return (
     <div className="w-full overflow-hidden bg-background py-8 md:py-12 border-b border-border">
       <div className="relative flex max-w-[100vw] overflow-hidden hover-pause group">
-        <div className="flex w-max animate-marquee space-x-4 md:space-x-8 px-4 md:px-8">
+        <div className="flex w-max animate-marquee space-x-6 md:space-x-8 px-4 md:px-8">
           {duplicatedUSPs.map((usp, index) => (
             <div
               key={index}
-              className="flex items-center space-x-4 px-6 py-4 rounded-full bg-card border border-border shadow-[0_4px_14px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(0,103,244,0.12)] hover:-translate-y-[2px] transition-all duration-300 cursor-default shrink-0 min-w-[280px]"
+              className="group/item flex items-center space-x-4 px-8 py-4 rounded-full bg-background border border-bg-border shadow-sm hover:shadow-[0_8px_30px_rgba(0,103,244,0.15)] hover:border-accent-primary/40 hover:-translate-y-1 transition-all duration-300 cursor-default shrink-0 min-w-[320px] relative overflow-hidden"
             >
-              <div className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-accent-primary/10">
+              {/* Subtle gradient hover background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-accent-primary/0 via-accent-primary/5 to-accent-primary/0 opacity-0 group-hover/item:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative z-10 flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-accent-primary/10 text-accent-primary group-hover/item:bg-accent-primary group-hover/item:text-white transition-colors duration-300">
                 {usp.icon}
               </div>
-              <div className="flex flex-col">
-                <span className="text-foreground font-bold text-sm md:text-base leading-tight tracking-tight">
+              <div className="relative z-10 flex flex-col">
+                <span className="text-text-primary font-bold text-[15px] leading-tight tracking-tight">
                   {usp.title}
                 </span>
-                <span className="text-muted text-xs md:text-sm font-medium tracking-tight mt-0.5">
+                <span className="text-text-secondary text-[13px] font-medium tracking-tight mt-1">
                   {usp.description}
                 </span>
               </div>

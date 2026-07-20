@@ -184,7 +184,7 @@ export default function ServicesContent() {
             </p>
             <div className="flex flex-row gap-3 justify-center">
               <Button
-                href="https://cal.com/saikumarlabs/30min"
+                href="https://cal.com/saikumarlabs/discovery-call?theme=light"
                 external
                 variant="primary"
                 size="sm"
