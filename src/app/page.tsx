@@ -78,7 +78,7 @@ export default function HomePage() {
   return (
     <>
       {/* ==================== HERO ==================== */}
-      <section className="relative overflow-hidden bg-bg-dark pt-16 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
+      <section className="relative overflow-hidden bg-background pt-16 pb-12 md:pt-20 md:pb-16 lg:pt-24 lg:pb-20">
         <div className="absolute inset-0 opacity-[0.05]">
           <div
             className="absolute inset-0"
@@ -162,7 +162,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mt-12">
             {/* The Pain */}
             <motion.div
-              className="bg-bg-dark rounded-2xl p-8 border border-bg-border relative overflow-hidden"
+              className="bg-background rounded-2xl p-8 border border-bg-border relative overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -190,7 +190,7 @@ export default function HomePage() {
 
             {/* The Solution */}
             <motion.div
-              className="bg-bg-dark rounded-2xl p-8 border border-bg-border relative overflow-hidden shadow-[0_0_30px_rgba(255,255,255,0.02)]"
+              className="bg-background rounded-2xl p-8 border border-bg-border relative overflow-hidden shadow-[0_0_30px_rgba(255,255,255,0.02)]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -220,7 +220,7 @@ export default function HomePage() {
       </section>
 
       {/* ==================== PACKAGES (SYSTEMS) ==================== */}
-      <section className="section-padding bg-bg-dark">
+      <section className="section-padding bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             badge="Our Solutions"
@@ -284,7 +284,7 @@ export default function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <span className="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-wider text-text-primary uppercase bg-bg-dark rounded-full border border-bg-border">
+              <span className="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-wider text-text-primary uppercase bg-background rounded-full border border-bg-border">
                 The Architect
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-6">
@@ -299,13 +299,13 @@ export default function HomePage() {
               
               <div className="flex gap-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-bg-dark border border-bg-border flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-background border border-bg-border flex items-center justify-center">
                     <Briefcase className="w-5 h-5 text-text-primary" />
                   </div>
                   <span className="text-sm font-medium text-text-primary">Full-Stack Dev</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-bg-dark border border-bg-border flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-background border border-bg-border flex items-center justify-center">
                     <Bot className="w-5 h-5 text-text-primary" />
                   </div>
                   <span className="text-sm font-medium text-text-primary">AI Automation</span>
@@ -314,7 +314,7 @@ export default function HomePage() {
             </motion.div>
             
             <motion.div
-              className="relative rounded-2xl overflow-hidden aspect-square md:aspect-[4/5] bg-bg-dark border border-bg-border flex items-center justify-center"
+              className="relative rounded-2xl overflow-hidden aspect-square md:aspect-[4/5] bg-background border border-bg-border flex items-center justify-center"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -333,7 +333,7 @@ export default function HomePage() {
       </section>
 
       {/* ==================== CONTACT CTA ==================== */}
-      <section className="py-24 sm:py-32 bg-bg-dark relative overflow-hidden">
+      <section className="py-24 sm:py-32 bg-background relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-white/5 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
