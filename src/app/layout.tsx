@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import ScrollDepthTracker from "@/components/analytics/ScrollDepthTracker";
+import SmoothScroll from "@/components/layout/SmoothScroll";
 import { siteConfig } from "@/lib/config";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -234,12 +235,14 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col antialiased">
-        <GoogleAnalytics />
-        <ScrollDepthTracker />
-        <Header />
-        <main className="flex-1 pt-16 md:pt-20">{children}</main>
-        <Footer />
-        <WhatsAppButton />
+        <SmoothScroll>
+          <GoogleAnalytics />
+          <ScrollDepthTracker />
+          <Header />
+          <main className="flex-1 pt-16 md:pt-20">{children}</main>
+          <Footer />
+          <WhatsAppButton />
+        </SmoothScroll>
       </body>
     </html>
   );
