@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, CheckCircle } from "lucide-react";
+import { Send, CheckCircle, ChevronDown, ShieldCheck } from "lucide-react";
 import Button from "./Button";
 import { analytics } from "@/lib/analytics";
 
@@ -10,21 +10,33 @@ type FormData = {
   name: string;
   business: string;
   contact: string;
+  service: string;
   help: string;
 };
+
+const serviceOptions = [
+  "Custom Website",
+  "Landing Page",
+  "Technical SEO",
+  "AI Automation",
+  "Website + Lead System",
+  "Appointment Booking",
+  "Not Sure Yet"
+];
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     business: "",
     contact: "",
+    service: "",
     help: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -56,8 +68,7 @@ export default function ContactForm() {
           Thank you!
         </h3>
         <p className="text-gray-custom-500 max-w-md mx-auto">
-          We&apos;ve received your message. SaiKumar Labs will get back to you
-          within 24 hours — usually much sooner.
+          We&apos;ve received your enquiry. We will review your requirements and get back to you within one business day.
         </p>
       </motion.div>
     );
@@ -69,19 +80,24 @@ export default function ContactForm() {
   return (
     <motion.form
       onSubmit={handleSubmit}
-      className="bg-card rounded-2xl p-8 md:p-10 border border-border shadow-sm"
+      className="bg-card rounded-2xl p-8 md:p-10 border border-border shadow-sm relative"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold text-charcoal-900 mb-2">Tell Us About Your Business</h2>
+        <p className="text-sm text-gray-custom-500">Fill out the form below and we&apos;ll get back to you within one business day.</p>
+      </div>
+
       <div className="space-y-5">
         <div>
           <label
             htmlFor="contact-name"
             className="block text-sm font-medium text-charcoal-800 mb-1.5"
           >
-            Your Name
+            Your Name <span className="text-red-500">*</span>
           </label>
           <input
             id="contact-name"
@@ -100,13 +116,12 @@ export default function ContactForm() {
             htmlFor="contact-business"
             className="block text-sm font-medium text-charcoal-800 mb-1.5"
           >
-            Business Name
+            Business Name <span className="text-gray-custom-400 font-normal">(Optional)</span>
           </label>
           <input
             id="contact-business"
             type="text"
             name="business"
-            required
             placeholder="e.g. Glow Skin Clinic"
             value={formData.business}
             onChange={handleChange}
@@ -119,7 +134,7 @@ export default function ContactForm() {
             htmlFor="contact-contact"
             className="block text-sm font-medium text-charcoal-800 mb-1.5"
           >
-            Phone or Email
+            Phone or Email <span className="text-red-500">*</span>
           </label>
           <input
             id="contact-contact"
@@ -135,10 +150,36 @@ export default function ContactForm() {
 
         <div>
           <label
+            htmlFor="contact-service"
+            className="block text-sm font-medium text-charcoal-800 mb-1.5"
+          >
+            Service Interested In <span className="text-gray-custom-400 font-normal">(Optional)</span>
+          </label>
+          <div className="relative">
+            <select
+              id="contact-service"
+              name="service"
+              value={formData.service}
+              onChange={handleChange}
+              className={`${inputClasses} appearance-none cursor-pointer ${!formData.service ? 'text-gray-custom-300' : 'text-charcoal-900'}`}
+            >
+              <option value="" disabled hidden>Select a service...</option>
+              {serviceOptions.map((opt) => (
+                <option key={opt} value={opt} className="text-charcoal-900">{opt}</option>
+              ))}
+            </select>
+            <div className="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-gray-custom-400">
+              <ChevronDown className="w-4 h-4" />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label
             htmlFor="contact-help"
             className="block text-sm font-medium text-charcoal-800 mb-1.5"
           >
-            What do you need help with?
+            Message <span className="text-red-500">*</span>
           </label>
           <textarea
             id="contact-help"
@@ -152,25 +193,34 @@ export default function ContactForm() {
           />
         </div>
 
-        <Button
-          type="submit"
-          variant="primary"
-          size="lg"
-          className="w-full"
-          id="contact-form-submit"
-        >
-          {isSubmitting ? (
-            <span className="flex items-center gap-2">
-              <span className="w-4 h-4 border-2 border-charcoal-900/30 border-t-charcoal-900 rounded-full animate-spin" />
-              Sending...
-            </span>
-          ) : (
-            <span className="flex items-center gap-2">
-              <Send className="w-4 h-4" />
-              Send Message
-            </span>
-          )}
-        </Button>
+        <div className="pt-2">
+          <Button
+            type="submit"
+            variant="primary"
+            size="lg"
+            className="w-full"
+            id="contact-form-submit"
+          >
+            {isSubmitting ? (
+              <span className="flex items-center gap-2">
+                <span className="w-4 h-4 border-2 border-charcoal-900/30 border-t-charcoal-900 rounded-full animate-spin" />
+                Sending...
+              </span>
+            ) : (
+              <span className="flex items-center gap-2">
+                <Send className="w-4 h-4" />
+                Send My Enquiry
+              </span>
+            )}
+          </Button>
+          
+          <div className="mt-5 flex items-start justify-center gap-2 text-center text-xs text-gray-custom-400">
+            <ShieldCheck className="w-4 h-4 shrink-0 text-gold-400/70" />
+            <p>
+              Your information will only be used to respond to your enquiry. We never share your details.
+            </p>
+          </div>
+        </div>
       </div>
     </motion.form>
   );

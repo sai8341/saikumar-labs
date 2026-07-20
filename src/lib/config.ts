@@ -17,6 +17,7 @@ export const siteConfig = {
   whatsappMessage:
     "Hi SaiKumar Labs, I'd like to discuss how you can help my business get more enquiries.",
   phone: "+91 93901 23367",
+  email: "hello@saikumarlabs.com",
 
   // Social
   social: {

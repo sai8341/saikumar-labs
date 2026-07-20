@@ -17,6 +17,27 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { siteConfig } from "@/lib/config";
 import { analytics } from "@/lib/analytics";
 
+const commonChallenges = [
+  "Low Website Enquiries",
+  "Missed Leads",
+  "No Lead Tracking",
+  "Manual Follow-ups",
+  "Poor Conversion Rates",
+  "Slow Response Times",
+  "No Online Booking",
+  "Disconnected Business Tools"
+];
+
+const industriesHelped = [
+  "Healthcare",
+  "Professional Coaching",
+  "Consultants",
+  "Agencies",
+  "Salons & Clinics",
+  "Local Businesses",
+  "Small Service Businesses"
+];
+
 const caseStudies = [
   {
     icon: Users,
@@ -29,7 +50,7 @@ const caseStudies = [
       "Built a conversion-focused landing page, connected lead capture to WhatsApp, and set up automated follow-up sequences.",
     outcome:
       "Every enquiry captured in one place. Automated follow-up runs without manual effort. Clear data on which channels bring real leads.",
-    systems: ["Landing Page", "Lead Funnel", "Lead Tracking", "Follow-up Automation"],
+    technologies: ["Next.js", "WhatsApp", "n8n", "GA4", "Cal.com"],
   },
   {
     icon: Stethoscope,
@@ -42,7 +63,7 @@ const caseStudies = [
       "Created an online booking flow with automated WhatsApp and SMS reminders before each appointment.",
     outcome:
       "Significant reduction in missed appointments. Staff freed from manual calling. Smoother patient experience.",
-    systems: ["Online Booking", "WhatsApp Reminders", "SMS Alerts", "Conversion Tracking"],
+    technologies: ["Next.js", "Cal.com", "WhatsApp", "n8n", "GA4"],
   },
   {
     icon: Scissors,
@@ -55,7 +76,7 @@ const caseStudies = [
       "Set up a clean enquiry form connected to WhatsApp with automated greeting and service selection.",
     outcome:
       "Organised enquiry pipeline. Professional first impression. Clients explore services and reach out in seconds.",
-    systems: ["Enquiry Form", "WhatsApp Integration", "Auto-greeting", "Lead Tracking"],
+    technologies: ["Next.js", "WhatsApp", "Google Tag Manager", "n8n", "Schema"],
   },
 ];
 
@@ -63,7 +84,7 @@ export default function WorkContent() {
   return (
     <>
       {/* Hero */}
-      <section className="section-padding bg-gradient-to-b from-cream-100 to-cream-50">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-cream-100 to-cream-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -74,21 +95,47 @@ export default function WorkContent() {
               <span className="inline-block px-4 py-1.5 mb-4 sm:mb-6 text-xs sm:text-sm font-medium text-gold-700 bg-cream-200 rounded-full border border-gold-400/30">
                 Our Work
               </span>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-                Systems That{" "}
-                <span className="text-gold-500">Actually Work</span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl">
+                Systems We Build for{" "}
+                <span className="text-gold-500">Service Businesses</span>
               </h1>
-              <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-charcoal-600 leading-relaxed">
-                Real examples of lead systems we&apos;ve built for service
-                businesses - from problem to outcome.
+              <p className="mt-6 sm:mt-8 text-sm sm:text-lg text-charcoal-600 leading-relaxed max-w-2xl mx-auto">
+                The examples below demonstrate how we solve common business problems using custom websites, lead systems, automation, and tracking. Every business is different, so every solution is planned and customized based on your goals, requirements, and workflow.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Case Studies */}
-      <section className="section-padding bg-cream-50">
+      {/* Challenges and Industries */}
+      <section className="py-12 md:py-16 bg-white border-t border-border">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-lg md:text-xl font-bold text-charcoal-900 mb-6">Common Business Challenges We Solve</h2>
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-4xl mx-auto">
+              {commonChallenges.map((challenge, i) => (
+                <span key={i} className="px-4 py-2 bg-cream-50 text-charcoal-700 text-sm font-medium rounded-full border border-border shadow-sm">
+                  {challenge}
+                </span>
+              ))}
+            </div>
+          </div>
+          
+          <div className="text-center pt-10 md:pt-16 border-t border-border/50">
+            <h2 className="text-lg md:text-xl font-bold text-charcoal-900 mb-6">Industries We Commonly Help</h2>
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-4xl mx-auto">
+              {industriesHelped.map((industry, i) => (
+                <span key={i} className="px-4 py-2 bg-white text-charcoal-800 text-sm font-medium rounded-full border border-border shadow-sm">
+                  {industry}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies / Solution Cards */}
+      <section className="py-16 md:py-24 bg-cream-50 border-t border-border/50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-14">
           {caseStudies.map((study, studyIndex) => (
             <motion.article
@@ -102,19 +149,27 @@ export default function WorkContent() {
             >
               {/* Header */}
               <div
-                className={`bg-gradient-to-r ${study.color} p-5 sm:p-8`}
+                className={`bg-gradient-to-r ${study.color} p-5 sm:p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4`}
               >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-white/20 flex items-center justify-center">
-                    <study.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
+                      <study.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                    </div>
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+                      <span className="text-xs sm:text-sm font-medium text-white/90">
+                        {study.industry}
+                      </span>
+                      <span className="hidden sm:inline text-white/40">•</span>
+                      <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-charcoal-900 bg-white/90 px-2 py-0.5 rounded shadow-sm">
+                        Solution Example
+                      </span>
+                    </div>
                   </div>
-                  <span className="text-xs sm:text-sm font-medium text-white/80">
-                    {study.industry}
-                  </span>
+                  <h2 className="text-lg sm:text-2xl font-bold text-white mt-1">
+                    {study.title}
+                  </h2>
                 </div>
-                <h2 className="text-lg sm:text-2xl font-bold text-white">
-                  {study.title}
-                </h2>
               </div>
 
               {/* Content - 3 compact paragraphs */}
@@ -160,32 +215,31 @@ export default function WorkContent() {
                   </div>
                 </div>
 
-                {/* Systems tags and CTA */}
-                <div className="mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-border flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                    {study.systems.map((sys) => (
+                {/* Technologies and CTA */}
+                <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-border flex flex-col sm:flex-row justify-between items-start sm:items-center gap-5">
+                  <div className="flex flex-wrap gap-2">
+                    {study.technologies.map((tech) => (
                       <span
-                        key={sys}
-                        className="px-2.5 py-1 bg-cream-200 text-charcoal-700 text-xs font-medium rounded-full"
+                        key={tech}
+                        className="px-3 py-1.5 bg-cream-100 text-charcoal-800 text-xs font-medium rounded-full border border-cream-200"
                       >
-                        {sys}
+                        {tech}
                       </span>
                     ))}
                   </div>
                   
-                  {/* Live Demo Button Placeholder */}
                   <Button
                     href={study.industry === "Healthcare Clinic" ? "https://clinic-portfolio-demo.vercel.app" : study.industry === "Coaching" ? "https://coach-portfolio-demo.vercel.app" : "#"}
                     variant="outline"
                     size="sm"
                     external
-                    className="text-xs shrink-0"
+                    className="text-xs shrink-0 w-full sm:w-auto"
                     onClick={(e) => {
                       e.stopPropagation();
-                      analytics.portfolioClick(`${study.title}_demo`);
+                      analytics.portfolioClick(`${study.title}_explore`);
                     }}
                   >
-                    View Live Demo
+                    Explore Solution
                     <ArrowRight className="w-3 h-3 ml-1" />
                   </Button>
                 </div>
@@ -194,9 +248,38 @@ export default function WorkContent() {
           ))}
         </div>
       </section>
+      
+      {/* Need Something More Specific Section */}
+      <section className="py-16 md:py-24 bg-white border-t border-border">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-2xl sm:text-3xl font-bold text-charcoal-900 mb-4">
+              Need Something More Specific?
+            </h2>
+            <p className="text-sm sm:text-lg text-gray-custom-500 mb-8 max-w-2xl mx-auto leading-relaxed">
+              These examples represent some of the most common systems we build. Every business is different, so every solution is customized based on your goals, requirements, and budget. We'll first understand your business before recommending the right solution.
+            </p>
+            <Button
+              href="https://cal.com/saikumarlabs/discovery-call?theme=light"
+              external
+              variant="primary"
+              size="lg"
+              trackLabel="work_specific_discovery"
+            >
+              Book a Discovery Call
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Approach Section - Tightened */}
-      <section className="section-padding bg-section-alt">
+      <section className="py-16 md:py-24 bg-section-alt border-t border-border/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             badge="Our Approach"
@@ -234,7 +317,7 @@ export default function WorkContent() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-charcoal-900 relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-charcoal-900 relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gold-400/10 rounded-full blur-3xl" />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -243,35 +326,34 @@ export default function WorkContent() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-cream-50 mb-3 sm:mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+            <h2 className="text-cream-50 mb-3 sm:mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">
               Want a System Like This?
             </h2>
-            <p className="text-sm sm:text-lg text-gray-custom-400 mb-6 sm:mb-8">
-              Let&apos;s talk about your lead flow and how to fix it.
+            <p className="text-sm sm:text-lg text-gray-custom-400 mb-6 sm:mb-8 max-w-xl mx-auto leading-relaxed">
+              Let's discuss your business, understand your goals, and recommend the right solution for your requirements.
             </p>
-            <div className="flex flex-row gap-3 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
               <Button
-                href="/contact"
+                href="https://cal.com/saikumarlabs/discovery-call?theme=light"
+                external
                 variant="primary"
-                size="sm"
-                className="sm:px-6 sm:py-3 sm:text-base"
+                size="lg"
+                className="w-full sm:w-auto"
                 trackLabel="work_cta"
-                id="work-cta"
               >
-                Book a Free Review
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                Book a Discovery Call
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button
                 href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`}
                 variant="outline"
-                size="sm"
-                className="border-cream-300/30 text-cream-100 hover:bg-cream-100/10 hover:text-cream-50 sm:px-6 sm:py-3 sm:text-base"
+                size="lg"
+                className="w-full sm:w-auto border-cream-300/30 text-cream-100 hover:bg-cream-100/10 hover:text-cream-50"
                 external
                 trackLabel="work_whatsapp"
-                id="work-whatsapp"
                 onClick={() => analytics.whatsappClick("work_cta")}
               >
-                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                <MessageCircle className="w-5 h-5 mr-2" />
                 WhatsApp Us
               </Button>
             </div>

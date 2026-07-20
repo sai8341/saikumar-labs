@@ -476,6 +476,25 @@ export default function HomePage() {
               </motion.div>
             ))}
           </div>
+          <div className="mt-16 max-w-3xl">
+            <h3 className="text-xl font-bold text-text-primary mb-3">
+              Need Something More Specific?
+            </h3>
+            <div className="border-l-2 border-accent-primary/20 pl-4 mb-6">
+              <p className="text-base text-text-secondary leading-relaxed">
+                These are our most common service packages. Every business is different, so every project can be customized based on your goals, requirements, and budget.
+              </p>
+            </div>
+            <Button 
+              href="https://cal.com/saikumarlabs/discovery-call?theme=light" 
+              external
+              variant="outline" 
+              className="text-sm font-semibold"
+              trackLabel="home_customization_cta"
+            >
+              Book a Discovery Call
+            </Button>
+          </div>
         </div>
       </section>
 

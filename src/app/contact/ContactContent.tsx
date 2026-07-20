@@ -7,17 +7,35 @@ import {
   Phone,
   Clock,
   ArrowUpRight,
-  Shield,
+  ArrowRight,
+  Video,
+  CheckCircle2,
+  Check
 } from "lucide-react";
 import ContactForm from "@/components/ui/ContactForm";
+import Button from "@/components/ui/Button";
 import { siteConfig } from "@/lib/config";
 import { analytics } from "@/lib/analytics";
+
+const nextSteps = [
+  "Send your enquiry.",
+  "We'll review your requirements.",
+  "We'll contact you within one business day.",
+  "We'll recommend the best next steps for your business."
+];
+
+const trustItems = [
+  "No Sales Pressure",
+  "Honest Recommendations",
+  "Tailored Solutions",
+  "Business-First Approach"
+];
 
 export default function ContactContent() {
   return (
     <>
       {/* Hero */}
-      <section className="section-padding bg-gradient-to-b from-cream-100 to-cream-50">
+      <section className="py-16 md:py-20 bg-gradient-to-b from-cream-100 to-cream-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -33,16 +51,59 @@ export default function ContactContent() {
                 <span className="text-gold-500">Lead Flow</span>
               </h1>
               <p className="mt-6 text-xl text-charcoal-600 leading-relaxed">
-                Book a free review, ask a question, or just say hello. We
-                respond to every message - usually within a few hours.
+                Tell us about your business and your goals. We&apos;ll understand your requirements, answer your questions, and if we&apos;re a good fit, we&apos;ll recommend the best next steps for your business.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
+      {/* Primary Discovery Call Section */}
+      <section className="pb-16 bg-cream-50 border-b border-border/50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="bg-white rounded-2xl p-8 border border-border shadow-sm relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gold-400/5 rounded-full blur-[80px]" />
+            <div className="relative z-10">
+              <h2 className="text-2xl font-bold text-charcoal-900 mb-3">Want to Discuss Your Business Directly?</h2>
+              <p className="text-gray-custom-500 mb-8 max-w-lg mx-auto">
+                Book a free 30-minute Discovery Call if you&apos;d rather discuss your business before filling out the form.
+              </p>
+              
+              <Button
+                href="https://cal.com/saikumarlabs/discovery-call?theme=light"
+                external
+                variant="primary"
+                size="lg"
+                trackLabel="contact_discovery_call"
+              >
+                Book a Discovery Call
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              
+              {/* Trust Indicators */}
+              <div className="flex justify-center gap-6 mt-8 flex-wrap">
+                <div className="flex items-center gap-2 text-charcoal-600 text-sm font-medium">
+                  <Clock className="w-4 h-4 text-gold-500" /> 30 Minute Call
+                </div>
+                <div className="flex items-center gap-2 text-charcoal-600 text-sm font-medium">
+                  <Video className="w-4 h-4 text-gold-500" /> Google Meet
+                </div>
+                <div className="flex items-center gap-2 text-charcoal-600 text-sm font-medium">
+                  <CheckCircle2 className="w-4 h-4 text-gold-500" /> No Obligation
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Contact Content */}
-      <section className="section-padding bg-cream-50">
+      <section className="py-16 md:py-20 bg-cream-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Left Side - Contact Info */}
@@ -67,7 +128,7 @@ export default function ContactContent() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => analytics.whatsappClick("contact_page")}
-                  className="inline-flex items-center gap-3 px-6 py-4 bg-green-500 text-white rounded-xl font-semibold hover:bg-green-600 transition-colors shadow-md hover:shadow-lg"
+                  className="inline-flex items-center gap-3 px-6 py-4 bg-green-500 text-white rounded-xl font-semibold hover:bg-green-600 transition-colors shadow-md hover:shadow-lg w-full justify-center sm:w-auto sm:justify-start"
                   id="contact-whatsapp"
                 >
                   <MessageCircle className="w-5 h-5" />
@@ -77,12 +138,10 @@ export default function ContactContent() {
               </div>
 
               {/* Other contact methods */}
-              <div className="space-y-5">
+              <div className="space-y-4">
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-custom-400">
                   Other Ways to Reach Us
                 </h3>
-
-
 
                 <a
                   href={`tel:${siteConfig.phone}`}
@@ -90,7 +149,7 @@ export default function ContactContent() {
                   className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-gold-400/30 transition-colors group"
                   id="contact-phone"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-cream-200 flex items-center justify-center group-hover:bg-gold-400/20 transition-colors">
+                  <div className="w-10 h-10 rounded-lg bg-cream-200 flex items-center justify-center group-hover:bg-gold-400/20 transition-colors shrink-0">
                     <Phone className="w-5 h-5 text-gold-600" />
                   </div>
                   <div>
@@ -102,31 +161,42 @@ export default function ContactContent() {
                     </span>
                   </div>
                 </a>
+
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-gold-400/30 transition-colors group"
+                  id="contact-email"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-cream-200 flex items-center justify-center group-hover:bg-gold-400/20 transition-colors shrink-0">
+                    <Mail className="w-5 h-5 text-gold-600" />
+                  </div>
+                  <div>
+                    <span className="text-xs text-gray-custom-400 block">
+                      Email
+                    </span>
+                    <span className="text-sm font-medium text-charcoal-900">
+                      {siteConfig.email}
+                    </span>
+                  </div>
+                </a>
               </div>
 
-              {/* Trust signals */}
-              <div className="space-y-4 pt-4">
-                <div className="flex items-start gap-3">
-                  <Clock className="w-5 h-5 text-gold-500 mt-0.5" />
-                  <div>
-                    <span className="text-sm font-medium text-charcoal-900 block">
-                      Quick Response
-                    </span>
-                    <span className="text-xs text-gray-custom-500">
-                      We respond within 24 hours - usually much sooner.
-                    </span>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Shield className="w-5 h-5 text-gold-500 mt-0.5" />
-                  <div>
-                    <span className="text-sm font-medium text-charcoal-900 block">
-                      No Pressure, No Pitch
-                    </span>
-                    <span className="text-xs text-gray-custom-500">
-                      Just honest advice about your lead flow.
-                    </span>
-                  </div>
+              {/* What Happens Next? */}
+              <div className="pt-6 border-t border-border">
+                <h3 className="text-lg font-semibold text-charcoal-900 mb-6">
+                  What Happens Next?
+                </h3>
+                <div className="space-y-6">
+                  {nextSteps.map((step, idx) => (
+                    <div key={idx} className="flex gap-4">
+                      <div className="w-8 h-8 rounded-full bg-gold-400/10 text-gold-600 flex items-center justify-center font-bold text-sm shrink-0 border border-gold-400/20">
+                        {idx + 1}
+                      </div>
+                      <p className="text-sm text-gray-custom-500 leading-relaxed pt-1">
+                        {step}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
@@ -135,6 +205,21 @@ export default function ContactContent() {
             <div className="lg:col-span-3">
               <ContactForm />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Section */}
+      <section className="py-16 bg-white border-t border-border">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl font-bold text-charcoal-900 mb-8">What You Can Expect</h2>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+            {trustItems.map((item, idx) => (
+              <div key={idx} className="flex items-center gap-2 bg-cream-50 border border-border px-5 py-3 rounded-full shadow-sm">
+                <Check className="w-4 h-4 text-gold-500 shrink-0" />
+                <span className="text-sm font-medium text-charcoal-800">{item}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
