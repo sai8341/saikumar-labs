@@ -160,8 +160,8 @@ export default function WorkContent() {
                   </div>
                 </div>
 
-                {/* Systems tags */}
-                <div className="mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-border">
+                {/* Systems tags and CTA */}
+                <div className="mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-border flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                   <div className="flex flex-wrap gap-1.5 sm:gap-2">
                     {study.systems.map((sys) => (
                       <span
@@ -172,6 +172,22 @@ export default function WorkContent() {
                       </span>
                     ))}
                   </div>
+                  
+                  {/* Live Demo Button Placeholder */}
+                  <Button
+                    href={study.industry === "Healthcare Clinic" ? "https://clinic-portfolio-demo.vercel.app" : study.industry === "Coaching" ? "https://coach-portfolio-demo.vercel.app" : "#"}
+                    variant="outline"
+                    size="sm"
+                    external
+                    className="text-xs shrink-0"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      analytics.portfolioClick(`${study.title}_demo`);
+                    }}
+                  >
+                    View Live Demo
+                    <ArrowRight className="w-3 h-3 ml-1" />
+                  </Button>
                 </div>
               </div>
             </motion.article>
