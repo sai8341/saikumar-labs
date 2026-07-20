@@ -1,23 +1,25 @@
 @import "tailwindcss";
 
 /* ============================================
-   SaiKumar Labs - Datalumina Inspired Theme
-   Brand: Deep Dark (#0B0F19), Pure White, Subdued Grey
+   SaiKumar Labs - CodeDale Inspired Theme
+   Brand: High-Contrast Monochrome (White, Light Gray, Deep Black)
    ============================================ */
 
 :root {
-  /* Datalumina Base Colors */
-  --bg-dark: #0B0F19; /* Deep dark background */
-  --bg-card: #141A29; /* Slightly lighter for cards */
-  --bg-border: #1E293B; /* Subtle borders */
+  /* Base Colors (keeping old names to avoid refactoring all components) */
+  --bg-dark: #ffffff; /* Now pure white */
+  --bg-card: #f5f5f5; /* Now light gray */
+  --bg-border: #e5e7eb; /* Subtle gray borders */
   
-  --text-primary: #FFFFFF; /* Headings */
-  --text-secondary: #94A3B8; /* Body text (slate-400) */
-  --text-muted: #64748B; /* slate-500 */
+  /* Text Colors */
+  --text-primary: #151619; /* Deep charcoal/black */
+  --text-secondary: #50576b; /* Slate gray */
+  --text-muted: #8c92a4; 
   
-  --accent-primary: #FFFFFF; /* High contrast CTA */
-  --accent-secondary: #0F172A; /* Inverted for CTA text */
-  --brand-gold: #E8A800; /* Original brand color, use sparingly */
+  /* Accent Colors */
+  --accent-primary: #151619; /* Black for primary CTA buttons */
+  --accent-secondary: #ffffff; /* Text on primary buttons */
+  --brand-gold: #151619; /* Removed gold, using black for contrast */
 
   /* Semantic */
   --background: var(--bg-dark);
@@ -37,13 +39,14 @@
   --color-bg-dark: var(--bg-dark);
   --color-bg-card: var(--bg-card);
   --color-bg-border: var(--bg-border);
+  --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-accent-primary: var(--accent-primary);
   --color-accent-secondary: var(--accent-secondary);
   --color-brand-gold: var(--brand-gold);
 
   --font-sans: var(--font-plus-jakarta);
-  --font-heading: var(--font-plus-jakarta); /* Using Plus Jakarta Sans for both for a modern geometric vibe */
+  --font-heading: var(--font-plus-jakarta); 
 }
 
 /* ============================================

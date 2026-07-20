@@ -27,14 +27,14 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[95%] max-w-5xl rounded-full border ${
         isScrolled
-          ? "bg-background/90 backdrop-blur-md shadow-sm border-b border-bg-border"
-          : "bg-transparent"
+          ? "bg-background/90 backdrop-blur-md shadow-lg border-bg-border"
+          : "bg-background/50 backdrop-blur-sm shadow-sm border-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+      <nav className="px-4 sm:px-6">
+        <div className="flex items-center justify-between h-14 md:h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 shrink-0">
             <Image
@@ -45,9 +45,6 @@ export default function Header() {
               className="rounded-lg"
               priority
             />
-            <span className="font-heading font-bold text-xl text-foreground hidden sm:block">
-              SaiKumar Labs
-            </span>
           </Link>
 
           {/* Desktop Nav */}

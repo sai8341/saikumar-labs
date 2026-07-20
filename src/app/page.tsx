@@ -104,12 +104,12 @@ export default function HomePage() {
           </motion.div>
 
           <motion.h1
-            className="mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-text-primary leading-tight"
+            className="mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tighter text-text-primary leading-none"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            We build <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-500">premium websites</span> & automated lead systems.
+            We build <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-800">premium websites</span> & automated lead systems.
           </motion.h1>
 
           <motion.p
