@@ -15,7 +15,28 @@ import {
   Star,
   Zap,
   Check,
-  X
+  X,
+  Search,
+  Lightbulb,
+  Palette,
+  Code,
+  BarChart3,
+  Rocket,
+  Headphones,
+  Users,
+  PlayCircle,
+  MessageSquare,
+  Settings,
+  Megaphone,
+  FileCode,
+  Gauge,
+  ShieldCheck,
+  Database,
+  FileText,
+  Monitor,
+  HardDrive,
+  ClipboardCheck,
+  Share2,
 } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -25,26 +46,26 @@ import { analytics } from "@/lib/analytics";
 
 const packages = [
   {
-    title: "The Digital Foundation",
+    title: "Website Foundation",
     slug: "/services/digital-foundation",
-    description: "For businesses moving online. A solid, SEO-ready presence, not a cheap template.",
+    description: "For businesses going online properly. A custom-coded, SEO-ready website — not a template.",
     icon: Globe,
     features: [
       "Custom, High-Performance Website",
-      "Google Search Console (GSC) Setup",
-      "Basic Technical SEO & Indexing",
+      "Google Search Console Setup",
+      "Technical SEO & Indexing",
       "GA4 Tracking Setup",
       "1-Year Free Hosting, SSL & Domain"
     ]
   },
   {
-    title: "The Lead Engine",
+    title: "Growth Engine",
     slug: "/services/lead-engine",
-    description: "For service businesses ready to capture traffic and scale predictable enquiries.",
+    description: "For businesses ready to capture traffic and turn visitors into real enquiries.",
     icon: TrendingUp,
     highlight: true,
     features: [
-      "Everything in Foundation",
+      "Everything in Website Foundation",
       "High-Converting Landing Pages",
       "Advanced GA4 & GTM Integration",
       "Meta Ads Setup (Steady Leads)",
@@ -54,7 +75,7 @@ const packages = [
   {
     title: "Brand Authority",
     slug: "/services/brand-authority",
-    description: "For industry leaders scaling through personal brand and advanced workflows.",
+    description: "For founders scaling through content, personal brand, and multi-channel presence.",
     icon: MonitorPlay,
     features: [
       "YouTube Channel SEO & Strategy",
@@ -65,9 +86,9 @@ const packages = [
     ]
   },
   {
-    title: "Business Automation",
+    title: "Business Systems",
     slug: "/services/business-automation",
-    description: "For businesses tired of manual follow-ups and chaotic operations.",
+    description: "For businesses tired of manual follow-ups, missed leads, and disconnected tools.",
     icon: Bot,
     features: [
       "WhatsApp Automation Follow-ups",
@@ -81,28 +102,74 @@ const packages = [
 
 const portfolioItems = [
   {
-    title: "Clinic Portfolio",
-    description: "Complete digital transformation for a multi-specialty clinic.",
+    title: "Healthcare Website",
+    description: "Complete digital presence for a multi-specialty clinic with appointment booking and patient flow.",
     image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=2070&auto=format&fit=crop",
-    feedback: "Patient bookings increased by 300%.",
+    tag: "Concept Project",
     link: "/work"
   },
   {
-    title: "Coach Portfolio",
-    description: "Personal branding and lead generation engine for an executive coach.",
+    title: "Coaching Platform",
+    description: "Personal branding and lead generation system for an executive coach.",
     image: "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2070&auto=format&fit=crop",
-    feedback: "Finally, a system that works on autopilot.",
+    tag: "Demo Build",
     link: "/work"
   },
   {
-    title: "Agency Portfolio",
-    description: "A high-performance scalable setup for a marketing agency.",
+    title: "Agency Website",
+    description: "High-performance, scalable website for a marketing agency with lead capture.",
     image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",
-    feedback: "Our conversion rate doubled in a month.",
+    tag: "Sample Build",
     link: "/work"
   }
 ];
 
+const deliverables = [
+  { icon: Search, label: "Requirement Discovery" },
+  { icon: Lightbulb, label: "Business Strategy" },
+  { icon: Palette, label: "Custom UI Design" },
+  { icon: Code, label: "Responsive Development" },
+  { icon: Gauge, label: "Performance Optimization" },
+  { icon: FileText, label: "Technical SEO" },
+  { icon: FileCode, label: "On-Page SEO" },
+  { icon: Database, label: "JSON-LD Schema" },
+  { icon: Globe, label: "Google Search Console" },
+  { icon: Share2, label: "Sitemap Submission" },
+  { icon: BarChart3, label: "Google Analytics 4" },
+  { icon: Monitor, label: "Google Tag Manager" },
+  { icon: ShieldCheck, label: "SSL & Security" },
+  { icon: HardDrive, label: "Hosting & Deployment" },
+  { icon: ClipboardCheck, label: "Quality Assurance" },
+  { icon: Headphones, label: "Launch Support" },
+];
+
+const processSteps = [
+  { number: "01", title: "Discovery", description: "We learn your business, audience, and goals" },
+  { number: "02", title: "Strategy", description: "We define the structure, pages, and conversion flow" },
+  { number: "03", title: "Design", description: "You see the UI before a single line of code is written" },
+  { number: "04", title: "Development", description: "Custom-coded in Next.js, optimized for speed" },
+  { number: "05", title: "SEO & Tracking", description: "GA4, GTM, GSC, schema, sitemap — all configured" },
+  { number: "06", title: "Launch", description: "Deployed on fast, reliable infrastructure with SSL" },
+  { number: "07", title: "Support", description: "Ongoing assistance and performance monitoring" },
+];
+
+const comparisonItems = [
+  { typical: "Template-based design", ours: "Custom-coded from scratch" },
+  { typical: "Basic layout only", ours: "Business strategy built in" },
+  { typical: "No analytics tracking", ours: "GA4 + GTM configured" },
+  { typical: "No search visibility", ours: "Technical SEO + schema" },
+  { typical: "No structured data", ours: "JSON-LD markup" },
+  { typical: "Launch and forget", ours: "Launch + ongoing support" },
+];
+
+const additionalCapabilities = [
+  { icon: Users, label: "Instagram & Facebook Setup" },
+  { icon: Megaphone, label: "Business Manager & Ads Manager" },
+  { icon: PlayCircle, label: "YouTube Channel Setup & SEO" },
+  { icon: MessageCircle, label: "WhatsApp Automation" },
+  { icon: Calendar, label: "Booking & Appointment Systems" },
+  { icon: MessageSquare, label: "AI Chatbots & Auto-Responses" },
+];
 
 export default function HomePage() {
   return (
@@ -193,7 +260,7 @@ export default function HomePage() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
               </span>
-              Your Digital Growth Partner
+              Website & Lead Systems
             </span>
           </motion.div>
 
@@ -214,7 +281,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Your website shouldn't just look good, it needs to generate revenue. We design premium websites integrated with complete tracking and WhatsApp automations.
+            Your website shouldn&apos;t just look good — it needs to bring in business. We build custom-coded websites with SEO, analytics, and lead capture systems built in from day one.
           </motion.p>
 
           <motion.div
@@ -246,7 +313,7 @@ export default function HomePage() {
           <SectionHeading
             badge="The Problem"
             title="Most agencies build websites. We build systems."
-            subtitle="A pretty website won't grow your business. You need a system that captures traffic and converts it into revenue."
+            subtitle="A website alone won't grow your business. You need a system that captures traffic, tracks performance, and converts visitors into real enquiries."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mt-12">
@@ -268,16 +335,16 @@ export default function HomePage() {
                   <XCircle className="w-6 h-6 text-red-500" />
                 </div>
                 <h3 className="text-2xl font-bold text-text-primary mb-2">
-                  The ₹2,499 Template Trap
+                  Common Website Limitations
                 </h3>
-                <p className="text-text-secondary mb-8">What most cheap agencies deliver</p>
+                <p className="text-text-secondary mb-8">What most website packages typically include</p>
                 
                 <ul className="space-y-5">
                   {[
-                    "Cheap agencies just edit a template and hand it over.",
-                    "Your website is never submitted to Google (no SEO).",
-                    "No tracking for visitor numbers or time spent on page.",
-                    "Poor security that leaves your business vulnerable."
+                    "Built on a template with limited customization options.",
+                    "No Google Search Console or sitemap submission.",
+                    "No analytics tracking — no data on visitor behaviour.",
+                    "No structured data or schema markup for search engines."
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-4 text-text-primary">
                       <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center">
@@ -310,14 +377,14 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold text-text-primary mb-2">
                   The SaiKumar Labs Standard
                 </h3>
-                <p className="text-text-secondary mb-8">What we build for you</p>
+                <p className="text-text-secondary mb-8">What we build into every project</p>
                 
                 <ul className="space-y-5">
                   {[
-                    "Custom, high-converting websites built for performance.",
-                    "Properly submitted to Google for local SEO visibility.",
-                    "Advanced visitor tracking to monitor user behavior.",
-                    "Robust security and clean, clutter-free architecture."
+                    "Custom-coded websites built around your business goals.",
+                    "Google Search Console, sitemap, and proper indexing.",
+                    "GA4 + GTM tracking to measure what actually works.",
+                    "JSON-LD schema markup for structured search visibility."
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-4 text-text-primary font-medium">
                       <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-accent-primary/10 flex items-center justify-center">
@@ -338,8 +405,8 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             badge="Our Solutions"
-            title="End-to-End Systems for Growth"
-            subtitle="We don't sell disconnected services. We provide complete packages tailored to where your business is right now."
+            title="What We Build"
+            subtitle="Complete systems tailored to where your business is right now — from first website to full automation."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
@@ -412,14 +479,132 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ==================== WHAT'S INCLUDED (DELIVERABLES) ==================== */}
+      <section className="section-padding bg-bg-card border-y border-bg-border">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            badge="What's Included"
+            title="Everything That Goes Into Every Build"
+            subtitle="Every project includes a complete setup — from strategy and design to SEO, tracking, and launch support."
+          />
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mt-12">
+            {deliverables.map((item, i) => (
+              <motion.div
+                key={item.label}
+                className="group flex items-center gap-3 p-4 md:p-5 rounded-2xl bg-background border border-bg-border hover:border-accent-primary/30 hover:shadow-sm transition-all duration-300"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.03 }}
+              >
+                <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-accent-primary/10 flex items-center justify-center group-hover:bg-accent-primary/20 transition-colors duration-300">
+                  <item.icon className="w-4 h-4 text-accent-primary" />
+                </div>
+                <span className="text-[13px] md:text-[14px] font-semibold text-text-primary leading-tight">{item.label}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== HOW WE WORK (PROCESS) ==================== */}
+      <section className="section-padding bg-background">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            badge="How We Work"
+            title="A Clear Process From Start to Launch"
+            subtitle="No guesswork, no surprises. Here's exactly how we take your project from idea to live website."
+          />
+
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
+            {processSteps.slice(0, 4).map((step, i) => (
+              <motion.div
+                key={step.number}
+                className="relative group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+              >
+                <div className="p-6 md:p-8 rounded-3xl bg-bg-card border border-bg-border h-full hover:border-accent-primary/30 hover:shadow-sm transition-all duration-300">
+                  <span className="text-3xl md:text-4xl font-[800] text-accent-primary/15 block mb-4">{step.number}</span>
+                  <h3 className="text-lg font-bold text-text-primary mb-2">{step.title}</h3>
+                  <p className="text-[14px] text-text-secondary leading-relaxed">{step.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-4 max-w-4xl mx-auto">
+            {processSteps.slice(4).map((step, i) => (
+              <motion.div
+                key={step.number}
+                className="relative group"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: (i + 4) * 0.1 }}
+              >
+                <div className="p-6 md:p-8 rounded-3xl bg-bg-card border border-bg-border h-full hover:border-accent-primary/30 hover:shadow-sm transition-all duration-300">
+                  <span className="text-3xl md:text-4xl font-[800] text-accent-primary/15 block mb-4">{step.number}</span>
+                  <h3 className="text-lg font-bold text-text-primary mb-2">{step.title}</h3>
+                  <p className="text-[14px] text-text-secondary leading-relaxed">{step.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== WHY SAIKUMAR LABS ==================== */}
+      <section className="section-padding bg-bg-card border-y border-bg-border">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            badge="Why Us"
+            title="What Sets Us Apart"
+            subtitle="A side-by-side look at what you get when you work with SaiKumar Labs."
+          />
+
+          <motion.div
+            className="mt-12 bg-background rounded-3xl border border-bg-border overflow-hidden"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            {/* Table Header */}
+            <div className="grid grid-cols-2 border-b border-bg-border">
+              <div className="p-5 md:p-6 text-center">
+                <span className="text-sm font-semibold text-text-muted uppercase tracking-wider">Typical Website</span>
+              </div>
+              <div className="p-5 md:p-6 text-center bg-accent-primary/5 border-l border-bg-border">
+                <span className="text-sm font-semibold text-accent-primary uppercase tracking-wider">SaiKumar Labs</span>
+              </div>
+            </div>
+            
+            {/* Table Rows */}
+            {comparisonItems.map((row, i) => (
+              <div key={i} className={`grid grid-cols-2 ${i < comparisonItems.length - 1 ? 'border-b border-bg-border' : ''}`}>
+                <div className="p-4 md:p-5 flex items-center justify-center text-center">
+                  <span className="text-[14px] text-text-muted">{row.typical}</span>
+                </div>
+                <div className="p-4 md:p-5 flex items-center justify-center text-center bg-accent-primary/5 border-l border-bg-border">
+                  <span className="text-[14px] font-medium text-text-primary">{row.ours}</span>
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* ==================== OUR WORK (PORTFOLIO) ==================== */}
-      <section className="section-padding bg-bg-card border-t border-bg-border overflow-hidden">
+      <section className="section-padding bg-background border-t border-bg-border overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-12">
             <SectionHeading
               badge="Our Work"
-              title="Recent Success Stories"
-              subtitle="Scroll through to see the premium systems we've built."
+              title="Recent Projects"
+              subtitle="A selection of websites and systems we've built."
             />
             <div className="hidden md:flex">
               <Button href="/work" variant="ghost">View All Work <ArrowRight className="w-4 h-4 ml-2" /></Button>
@@ -431,7 +616,7 @@ export default function HomePage() {
             {portfolioItems.map((item, i) => (
               <motion.div
                 key={item.title}
-                className="snap-start shrink-0 w-[85vw] sm:w-[420px] lg:w-[480px] bg-background rounded-[2rem] overflow-hidden border border-bg-border group relative transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(0,103,244,0.12)] hover:border-accent-primary/30"
+                className="snap-start shrink-0 w-[85vw] sm:w-[420px] lg:w-[480px] bg-bg-card rounded-[2rem] overflow-hidden border border-bg-border group relative transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(0,103,244,0.12)] hover:border-accent-primary/30"
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -447,12 +632,11 @@ export default function HomePage() {
                   
                   <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
                   
-                  {/* Feedback Overlay (Always visible for impact) */}
+                  {/* Tag Overlay */}
                   <div className="absolute bottom-0 left-0 w-full p-6 z-20 flex items-end">
                     <div className="bg-white/10 backdrop-blur-md px-4 py-3 rounded-2xl border border-white/20 transform transition-transform duration-500 group-hover:translate-x-2">
                       <p className="text-sm font-semibold text-white tracking-wide">
-                        <span className="text-green-400 mr-2">↗</span>
-                        {item.feedback}
+                        {item.tag}
                       </p>
                     </div>
                   </div>
@@ -477,7 +661,7 @@ export default function HomePage() {
                     size="lg" 
                     className="w-full justify-between group-hover:bg-accent-primary group-hover:text-white group-hover:border-accent-primary transition-all duration-300"
                   >
-                    <span className="font-semibold">View Case Study</span>
+                    <span className="font-semibold">View Project</span>
                     <ArrowRight className="w-5 h-5 transition-transform duration-500 group-hover:translate-x-2" />
                   </Button>
                 </div>
@@ -487,8 +671,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ==================== FOUNDER AUTHORITY ==================== */}
+      {/* ==================== ADDITIONAL CAPABILITIES ==================== */}
       <section className="section-padding bg-bg-card border-y border-bg-border">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            badge="Also Available"
+            title="Additional Services"
+            subtitle="Beyond websites, we can help set up and configure the platforms that support your business."
+          />
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-5 mt-12">
+            {additionalCapabilities.map((cap, i) => (
+              <motion.div
+                key={cap.label}
+                className="flex items-center gap-3 p-4 rounded-2xl bg-background border border-bg-border"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: i * 0.05 }}
+              >
+                <cap.icon className="w-5 h-5 text-text-muted flex-shrink-0" />
+                <span className="text-[13px] md:text-[14px] font-medium text-text-secondary">{cap.label}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== FOUNDER AUTHORITY ==================== */}
+      <section className="section-padding bg-background border-b border-bg-border">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -498,16 +709,16 @@ export default function HomePage() {
               transition={{ duration: 0.5 }}
             >
               <span className="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-wider text-text-primary uppercase bg-background rounded-full border border-bg-border">
-                The Architect
+                Our Approach
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-6">
-                Hi, I'm Sai Kumar.
+                Why SaiKumar Labs Exists
               </h2>
               <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-                I started in full-stack development, moved into digital marketing, and then mastered AI automation. Now, I combine these skills to build lead systems that actually generate revenue.
+                Most businesses don&apos;t need another website. They need a website that actually brings in enquiries, shows up on Google, and gives them clear data on what&apos;s working.
               </p>
               <p className="text-lg text-text-secondary mb-8 leading-relaxed">
-                As the creator of <span className="text-text-primary font-medium">Think IT Telugu</span>, I've dedicated myself to simplifying complex tech. I bring that same clarity and execution to your business. No jargon, just systems that work.
+                SaiKumar Labs was built around that idea. Every project starts with understanding the business — the audience, the goals, the gaps. Only then does design and code begin. The result is a system built to perform, not just to look good.
               </p>
               
               <div className="flex gap-6">
@@ -515,30 +726,41 @@ export default function HomePage() {
                   <div className="w-10 h-10 rounded-full bg-background border border-bg-border flex items-center justify-center">
                     <Briefcase className="w-5 h-5 text-text-primary" />
                   </div>
-                  <span className="text-sm font-medium text-text-primary">Full-Stack Dev</span>
+                  <span className="text-sm font-medium text-text-primary">Business First</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-background border border-bg-border flex items-center justify-center">
-                    <Bot className="w-5 h-5 text-text-primary" />
+                    <Code className="w-5 h-5 text-text-primary" />
                   </div>
-                  <span className="text-sm font-medium text-text-primary">AI Automation</span>
+                  <span className="text-sm font-medium text-text-primary">Custom Built</span>
                 </div>
               </div>
             </motion.div>
             
             <motion.div
-              className="relative rounded-2xl overflow-hidden aspect-square md:aspect-[4/5] bg-background border border-bg-border flex items-center justify-center"
+              className="relative rounded-2xl overflow-hidden aspect-square md:aspect-[4/5] bg-bg-card border border-bg-border flex items-center justify-center"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              {/* Placeholder for Founder Image */}
-              <div className="text-center p-8">
-                <div className="w-24 h-24 rounded-full bg-bg-border mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-3xl font-bold text-text-muted">SK</span>
-                </div>
-                <p className="text-text-muted text-sm uppercase tracking-widest">SaiKumar Labs</p>
+              <div className="w-full p-8 md:p-10 space-y-5">
+                <p className="text-xs font-semibold text-text-muted uppercase tracking-widest mb-6">Every Project Includes</p>
+                {[
+                  { icon: Code, label: "Custom Coded" },
+                  { icon: Search, label: "SEO Ready" },
+                  { icon: BarChart3, label: "GA4 + GTM" },
+                  { icon: Database, label: "Schema Enabled" },
+                  { icon: Gauge, label: "Fast Performance" },
+                  { icon: Briefcase, label: "Business Focused" },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-4">
+                    <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-accent-primary/10 flex items-center justify-center">
+                      <item.icon className="w-4 h-4 text-accent-primary" />
+                    </div>
+                    <span className="text-[15px] font-semibold text-text-primary">{item.label}</span>
+                  </div>
+                ))}
               </div>
             </motion.div>
           </div>
@@ -546,8 +768,8 @@ export default function HomePage() {
       </section>
 
       {/* ==================== CONTACT CTA ==================== */}
-      <section className="py-24 sm:py-32 bg-background relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-white/5 rounded-full blur-[120px] pointer-events-none" />
+      <section className="py-24 sm:py-32 bg-text-primary relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-accent-primary/20 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <motion.div
@@ -556,11 +778,11 @@ export default function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-text-primary mb-6 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-              Ready to fix your lead flow?
+            <h2 className="!text-white mb-6 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+              Ready to build something that actually works?
             </h2>
-            <p className="text-lg md:text-xl text-text-secondary mb-10 max-w-xl mx-auto">
-              Get a free, no-pressure review of your current lead system. We'll show you where leads are being lost and what to fix first.
+            <p className="text-lg md:text-xl !text-gray-400 mb-10 max-w-xl mx-auto">
+              Book a free, no-pressure call. We&apos;ll review your current setup, identify gaps, and show you exactly what a proper system looks like.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -569,7 +791,7 @@ export default function HomePage() {
                 external
                 variant="primary"
                 size="lg"
-                className="w-full sm:w-auto text-black bg-white hover:bg-gray-200"
+                className="w-full sm:w-auto !bg-white !text-text-primary hover:!bg-gray-200 shadow-[0_0_40px_rgba(255,255,255,0.15)]"
                 trackLabel="bottom_cta"
               >
                 Book a Free Review

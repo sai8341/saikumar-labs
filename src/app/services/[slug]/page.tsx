@@ -5,9 +5,9 @@ import { Metadata } from "next";
 
 const servicePages = {
   "digital-foundation": {
-    title: "Premium Website Design Services",
-    subtitle: "The Digital Foundation",
-    description: "Get a custom, high-performance website that builds trust and authority. We handle the tech so you don't have to.",
+    title: "Website Foundation",
+    subtitle: "Website Foundation",
+    description: "Get a custom-coded, high-performance website that builds trust and authority. We handle the tech so you don't have to.",
     content: "Your website is the face of your business. If a potential client visits your site and gets confused or sees a cheap template, they will leave. We don't just hand over a pretty design. We build a solid foundation. We submit your site directly to Google so people can actually find you. We set up advanced tracking so you know how many visitors you're getting and what they are looking at.",
     features: [
       "Custom, High-Quality Website Development",
@@ -20,10 +20,10 @@ const servicePages = {
     keyword: "Premium Website Design Services",
   },
   "lead-engine": {
-    title: "Lead Generation Systems",
-    subtitle: "The Lead Engine",
+    title: "Growth Engine",
+    subtitle: "Growth Engine",
     description: "Scale your service business with predictable enquiries. We set up high-converting landing pages and Meta Ads.",
-    content: "Getting traffic to your website is useless if those visitors don't turn into enquiries. The Lead Engine is designed to capture attention and convert it. We build dedicated, high-converting landing pages tailored to your services. We integrate advanced tracking systems so you can see exactly where your leads come from. Then, we set up targeted Meta Ads to bring in a steady flow of potential clients.",
+    content: "Getting traffic to your website is useless if those visitors don't turn into enquiries. The Growth Engine is designed to capture attention and convert it. We build dedicated, high-converting landing pages tailored to your services. We integrate advanced tracking systems so you can see exactly where your leads come from. Then, we set up targeted Meta Ads to bring in a steady flow of potential clients.",
     features: [
       "High-Converting Landing Pages",
       "Advanced Lead Tracking Integration",
@@ -35,7 +35,7 @@ const servicePages = {
     keyword: "Lead Generation Systems",
   },
   "brand-authority": {
-    title: "Content & Branding Automation",
+    title: "Brand Authority",
     subtitle: "Brand Authority",
     description: "Establish industry leadership with advanced YouTube optimization and custom AI workflows.",
     content: "For true industry leaders, founders, and service providers who want to scale their personal brand. We help you dominate platforms like YouTube with proper SEO and content strategies. But more importantly, as you grow, your operations will get messy. We implement custom AI workflows that automate your internal business tasks, saving you and your team hundreds of hours. Focus on delivering value while the system does the heavy lifting.",
@@ -50,10 +50,10 @@ const servicePages = {
     keyword: "AI Automation Services",
   },
   "business-automation": {
-    title: "Business Automation Systems",
-    subtitle: "Business Automation",
+    title: "Business Systems",
+    subtitle: "Business Systems",
     description: "For businesses tired of manual follow-ups, chaotic operations, and lost leads.",
-    content: "You shouldn't be manually texting every lead or trying to remember who to follow up with. Our Business Automation systems take the repetitive tasks off your plate. We build smart WhatsApp automation sequences that engage your leads instantly. We integrate your lead capture forms directly into a CRM so no enquiry slips through the cracks. We set up automated appointment reminders to reduce no-shows. Let the system run your business so you can focus on serving your clients.",
+    content: "You shouldn't be manually texting every lead or trying to remember who to follow up with. Our Business Systems take the repetitive tasks off your plate. We build smart WhatsApp automation sequences that engage your leads instantly. We integrate your lead capture forms directly into a CRM so no enquiry slips through the cracks. We set up automated appointment reminders to reduce no-shows. Let the system run your business so you can focus on serving your clients.",
     features: [
       "WhatsApp Automation Follow-ups",
       "CRM & Lead Capture Integration",

@@ -1,33 +1,33 @@
 "use client";
 
 import React from "react";
-import { TrendingUp, Zap, Target, Users, ShieldCheck } from "lucide-react";
+import { Code, Search, BarChart3, MousePointerClick, ShieldCheck } from "lucide-react";
 
 const USPs = [
   {
-    icon: <TrendingUp className="w-5 h-5 text-accent-primary" />,
-    title: "3x More Leads",
-    description: "Proven funnels for service businesses",
+    icon: <Code className="w-5 h-5 text-accent-primary" />,
+    title: "Custom Coded",
+    description: "No templates, no page builders",
   },
   {
-    icon: <Zap className="w-5 h-5 text-accent-primary" />,
-    title: "Instant Follow-ups",
-    description: "Automated WhatsApp & Email",
+    icon: <Search className="w-5 h-5 text-accent-primary" />,
+    title: "SEO Built In",
+    description: "Schema, sitemap, GSC from day one",
   },
   {
-    icon: <Target className="w-5 h-5 text-accent-primary" />,
-    title: "100% Tracking",
-    description: "Zero guesswork in analytics",
+    icon: <BarChart3 className="w-5 h-5 text-accent-primary" />,
+    title: "Full Tracking",
+    description: "GA4, GTM, and conversion events",
   },
   {
-    icon: <Users className="w-5 h-5 text-accent-primary" />,
-    title: "High Conversion",
-    description: "Tested on 100+ landing pages",
+    icon: <MousePointerClick className="w-5 h-5 text-accent-primary" />,
+    title: "Lead Capture Ready",
+    description: "Forms, WhatsApp, booking integration",
   },
   {
     icon: <ShieldCheck className="w-5 h-5 text-accent-primary" />,
-    title: "Reliable Systems",
-    description: "No tech headaches for you",
+    title: "Fast & Secure",
+    description: "Optimized for speed and uptime",
   },
 ];
 
