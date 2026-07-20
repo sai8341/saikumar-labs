@@ -10,10 +10,14 @@ import {
   TrendingUp,
   MonitorPlay,
   Briefcase,
-  Bot
+  Bot,
+  Calendar,
+  Star,
+  Zap
 } from "lucide-react";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { AutoScrollRamp } from "@/components/ui/AutoScrollRamp";
 import { siteConfig } from "@/lib/config";
 import { analytics } from "@/lib/analytics";
 
@@ -73,6 +77,30 @@ const packages = [
   }
 ];
 
+const portfolioItems = [
+  {
+    title: "Clinic Portfolio",
+    description: "Complete digital transformation for a multi-specialty clinic.",
+    image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=2070&auto=format&fit=crop",
+    feedback: "Patient bookings increased by 300%.",
+    link: "/work"
+  },
+  {
+    title: "Coach Portfolio",
+    description: "Personal branding and lead generation engine for an executive coach.",
+    image: "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2070&auto=format&fit=crop",
+    feedback: "Finally, a system that works on autopilot.",
+    link: "/work"
+  },
+  {
+    title: "Agency Portfolio",
+    description: "A high-performance scalable setup for a marketing agency.",
+    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",
+    feedback: "Our conversion rate doubled in a month.",
+    link: "/work"
+  }
+];
+
 
 export default function HomePage() {
   return (
@@ -92,28 +120,94 @@ export default function HomePage() {
         {/* Subtle Glows */}
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-brand-gold/5 rounded-full blur-[100px]" />
         
+        {/* Floating Icons & Doodles (Desktop wide only) */}
+        <div className="absolute inset-0 max-w-[1400px] mx-auto hidden xl:block pointer-events-none z-0">
+          {/* Left Side: Bot */}
+          <motion.div 
+            className="absolute top-[30%] left-[8%] flex items-center justify-center w-14 h-14 bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-gray-100 rotate-[-12deg]"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1, rotate: -12 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <Bot className="w-7 h-7 text-purple-600" />
+          </motion.div>
+          {/* Doodle Line from Bot */}
+          <motion.svg 
+            className="absolute top-[38%] left-[12%] w-24 h-24 text-gray-300 opacity-60"
+            viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={{ pathLength: 1, opacity: 0.6 }}
+            transition={{ duration: 1, delay: 0.6 }}
+          >
+            <path d="M10 10 C 40 50, 60 70, 90 90" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeDasharray="6 6"/>
+          </motion.svg>
+
+          {/* Right Side: Figma */}
+          <motion.div 
+            className="absolute top-[25%] right-[10%] flex items-center justify-center w-16 h-16 bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-gray-100 rotate-[8deg]"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1, rotate: 8 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            <svg className="w-8 h-8" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 28.5A9.5 9.5 0 1 1 38 28.5A9.5 9.5 0 0 1 19 28.5Z" fill="#1ABCFE"/>
+              <path d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19V57H9.5A9.5 9.5 0 0 1 0 47.5Z" fill="#0ACF83"/>
+              <path d="M19 0L9.5 0A9.5 9.5 0 0 0 0 9.5L0 9.5A9.5 9.5 0 0 0 9.5 19L19 19L19 0Z" fill="#F24E1E"/>
+              <path d="M0 28.5A9.5 9.5 0 0 0 9.5 38L19 38L19 19L9.5 19A9.5 9.5 0 0 0 0 28.5Z" fill="#A259FF"/>
+              <path d="M38 9.5A9.5 9.5 0 0 0 28.5 0L19 0L19 19L28.5 19A9.5 9.5 0 0 0 38 9.5Z" fill="#FF7262"/>
+            </svg>
+          </motion.div>
+          {/* Doodle Line from Figma */}
+          <motion.svg 
+            className="absolute top-[35%] right-[14%] w-20 h-20 text-gray-300 opacity-60"
+            viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+            initial={{ pathLength: 0, opacity: 0 }}
+            animate={{ pathLength: 1, opacity: 0.6 }}
+            transition={{ duration: 1, delay: 0.7 }}
+          >
+            <path d="M90 10 C 60 40, 40 60, 10 80" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeDasharray="6 6"/>
+          </motion.svg>
+
+          {/* Left Bottom: Cursor */}
+          <motion.div 
+            className="absolute bottom-[20%] left-[15%] flex items-center justify-center w-12 h-12 bg-white rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-gray-100 rotate-[15deg]"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1, rotate: 15 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
+            <MonitorPlay className="w-6 h-6 text-black" />
+          </motion.div>
+        </div>
+
         <div className="relative w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            className="flex justify-center mb-8"
           >
-            <span className="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-wider text-text-primary uppercase bg-bg-card rounded-full border border-bg-border shadow-sm">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs font-semibold tracking-wider text-blue-600 uppercase bg-blue-50/50 rounded-full border border-blue-200 shadow-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+              </span>
               Your Digital Growth Partner
             </span>
           </motion.div>
 
-          <motion.h1
-            className="mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tighter text-text-primary leading-none"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            We build <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-800">premium websites</span> & automated lead systems.
-          </motion.h1>
+          <div className="relative">
+            <motion.h1
+              className="mb-5 text-[40px] leading-[1.05] sm:text-5xl md:text-[56px] lg:text-[64px] font-[800] tracking-[-0.04em] text-text-primary"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              We build <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">premium websites</span><br className="hidden sm:block" /> & automated lead systems.
+            </motion.h1>
+          </div>
 
           <motion.p
-            className="text-base sm:text-lg text-text-secondary mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-[16px] md:text-[18px] text-text-secondary mb-8 max-w-[640px] mx-auto leading-[1.6] font-medium"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -122,20 +216,20 @@ export default function HomePage() {
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row items-center gap-4 justify-center"
+            className="flex justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <Button
-              href="/contact"
+              href="https://cal.com/saikumarlabs/30min"
+              external
               variant="primary"
-              size="lg"
-              className="w-full sm:w-auto text-black bg-white hover:bg-gray-200 border-transparent shadow-[0_0_20px_rgba(255,255,255,0.15)]"
+              className="!px-6 !py-3 !text-[15px] font-semibold w-auto shadow-[0_0_20px_rgba(0,103,244,0.3)] hover:shadow-[0_0_30px_rgba(0,103,244,0.4)] hover:-translate-y-0.5 transition-all"
               trackLabel="hero_cta"
             >
-              Let's Talk About Your Business
-              <ArrowRight className="w-5 h-5 ml-2" />
+              Book a 30-Min Call
+              <ArrowRight className="w-4 h-4 ml-1.5" />
             </Button>
           </motion.div>
           
@@ -149,6 +243,9 @@ export default function HomePage() {
           </motion.p>
         </div>
       </section>
+
+      {/* ==================== AUTO SCROLL USPs (Ramp) ==================== */}
+      <AutoScrollRamp />
 
       {/* ==================== PAIN VS SOLUTION ==================== */}
       <section className="section-padding bg-bg-card border-y border-bg-border">
@@ -266,6 +363,60 @@ export default function HomePage() {
                     className={`w-full ${pkg.highlight ? 'bg-white text-black hover:bg-gray-200' : ''}`}
                   >
                     View Details
+                  </Button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== OUR WORK (PORTFOLIO) ==================== */}
+      <section className="section-padding bg-bg-card border-t border-bg-border overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-end mb-12">
+            <SectionHeading
+              badge="Our Work"
+              title="Recent Success Stories"
+              subtitle="Scroll through to see the premium systems we've built."
+            />
+            <div className="hidden md:flex">
+              <Button href="/work" variant="ghost">View All Work <ArrowRight className="w-4 h-4 ml-2" /></Button>
+            </div>
+          </div>
+          
+          {/* Horizontal Scroll Container */}
+          <div className="flex gap-6 overflow-x-auto hide-scrollbar scroll-smooth snap-x snap-mandatory pb-8 pt-4 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+            {portfolioItems.map((item, i) => (
+              <motion.div
+                key={item.title}
+                className="snap-start shrink-0 w-[85vw] sm:w-[400px] bg-background rounded-3xl overflow-hidden border border-bg-border group relative transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,103,244,0.15)]"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+              >
+                {/* Image Area */}
+                <div className="h-48 sm:h-56 overflow-hidden relative">
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors z-10" />
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  
+                  {/* Chat Bubble overlay */}
+                  <div className="absolute bottom-4 left-4 z-20 bg-background/95 backdrop-blur-sm px-4 py-2 rounded-2xl rounded-bl-sm border border-bg-border shadow-lg transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                    <p className="text-xs font-medium text-text-primary">💬 "{item.feedback}"</p>
+                  </div>
+                </div>
+
+                {/* Content Area */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-text-primary mb-2 group-hover:text-accent-primary transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-text-secondary text-sm mb-6 line-clamp-2">
+                    {item.description}
+                  </p>
+                  <Button href={item.link} variant="outline" size="sm" className="w-full group-hover:bg-accent-primary group-hover:text-accent-secondary group-hover:border-accent-primary">
+                    View Project <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:rotate-[-45deg]" />
                   </Button>
                 </div>
               </motion.div>

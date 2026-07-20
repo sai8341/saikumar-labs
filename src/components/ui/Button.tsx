@@ -6,7 +6,7 @@ import { analytics } from "@/lib/analytics";
 type ButtonProps = {
   children: React.ReactNode;
   href?: string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
   className?: string;
@@ -33,9 +33,9 @@ export default function Button({
 
   const variants = {
     primary:
-      "bg-accent-primary text-accent-secondary hover:bg-opacity-90 shadow-md active:scale-[0.98]",
+      "bg-accent-primary text-accent-secondary hover:opacity-90 shadow-md active:scale-[0.98]",
     secondary:
-      "bg-bg-border text-text-primary hover:bg-opacity-80 active:scale-[0.98]",
+      "bg-bg-border text-text-primary hover:opacity-80 active:scale-[0.98]",
     outline:
       "border border-bg-border text-text-primary hover:bg-bg-card active:scale-[0.98]",
     ghost:
@@ -50,11 +50,11 @@ export default function Button({
 
   const classes = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
 
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
     if (trackLabel) {
       analytics.ctaClick(trackLabel);
     }
-    onClick?.();
+    onClick?.(e);
   };
 
   if (href) {

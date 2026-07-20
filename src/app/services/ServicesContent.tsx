@@ -86,7 +86,7 @@ export default function ServicesContent() {
   return (
     <>
       {/* Hero */}
-      <section className="section-padding bg-gradient-to-b from-cream-100 to-cream-50">
+      <section className="pt-24 pb-16 md:pt-32 md:pb-24 bg-background border-b border-bg-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -94,14 +94,14 @@ export default function ServicesContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <span className="inline-block px-4 py-1.5 mb-4 sm:mb-6 text-xs sm:text-sm font-medium text-gold-700 bg-cream-200 rounded-full border border-gold-400/30">
+              <span className="inline-block px-4 py-1.5 mb-4 sm:mb-6 text-xs sm:text-sm font-medium text-accent-primary bg-accent-primary/10 rounded-full border border-accent-primary/20">
                 Our Services
               </span>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-text-primary">
                 Everything You Need to{" "}
-                <span className="text-gold-500">Capture More Leads</span>
+                <span className="text-accent-primary">Capture More Leads</span>
               </h1>
-              <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-charcoal-600 leading-relaxed">
+              <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-text-secondary leading-relaxed">
                 We don&apos;t sell one-off tasks. We build complete systems - each service
                 is designed to fix a specific part of your lead flow.
               </p>
@@ -114,7 +114,7 @@ export default function ServicesContent() {
       {serviceGroups.map((group, groupIndex) => (
         <section
           key={group.title}
-          className={`section-padding ${groupIndex % 2 === 0 ? "bg-cream-50" : "bg-section-alt"}`}
+          className={`py-12 md:py-20 lg:py-24 ${groupIndex % 2 === 0 ? "bg-bg-card" : "bg-background"}`}
         >
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -125,35 +125,35 @@ export default function ServicesContent() {
               transition={{ duration: 0.5 }}
             >
               {/* Left: Info */}
-              <div>
+              <div className={groupIndex % 2 !== 0 ? "lg:order-last" : ""}>
                 <div className="flex items-center gap-3 mb-3">
                   <div
                     className={`w-10 h-10 rounded-xl ${group.color} flex items-center justify-center`}
                   >
                     <group.icon className="w-5 h-5" />
                   </div>
-                  <span className="text-sm font-semibold text-gold-600 uppercase tracking-wider">
+                  <span className="text-sm font-semibold text-accent-primary uppercase tracking-wider">
                     {group.title}
                   </span>
                 </div>
-                <h2 className="mb-3 text-xl sm:text-2xl md:text-3xl">{group.tagline}</h2>
-                <p className="text-sm sm:text-base text-gray-custom-500 leading-relaxed">
+                <h2 className="mb-4 text-2xl sm:text-3xl md:text-4xl font-bold text-text-primary">{group.tagline}</h2>
+                <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
                   {group.description}
                 </p>
               </div>
 
               {/* Right: Outcomes */}
-              <div className="bg-card rounded-2xl p-5 sm:p-6 border border-border">
-                <h3 className="text-sm font-semibold text-charcoal-700 uppercase tracking-wider mb-4">
+              <div className="bg-background rounded-3xl p-6 sm:p-8 border border-bg-border shadow-sm">
+                <h3 className="text-sm font-bold text-text-primary uppercase tracking-wider mb-6">
                   What You Get
                 </h3>
-                <ul className="space-y-3">
+                <ul className="space-y-4">
                   {group.outcomes.map((outcome, i) => (
                     <li
                       key={i}
-                      className="flex items-start gap-3 text-sm sm:text-base text-charcoal-600"
+                      className="flex items-start gap-3 text-sm sm:text-base text-text-secondary"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-gold-400 mt-2 shrink-0" />
+                      <span className="w-2 h-2 rounded-full bg-accent-primary mt-2 shrink-0" />
                       {outcome}
                     </li>
                   ))}
@@ -165,8 +165,8 @@ export default function ServicesContent() {
       ))}
 
       {/* CTA */}
-      <section className="section-padding bg-charcoal-900 relative overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gold-400/10 rounded-full blur-3xl" />
+      <section className="py-20 md:py-32 bg-text-primary relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-accent-primary/20 rounded-full blur-[100px]" />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -174,31 +174,32 @@ export default function ServicesContent() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-cream-50 mb-3 sm:mb-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+            <h2 className="!text-white mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
               Not Sure Where to Start?
             </h2>
-            <p className="text-sm sm:text-lg text-gray-custom-400 mb-6 sm:mb-8">
+            <p className="!text-gray-300 text-sm sm:text-lg mb-8 sm:mb-10 max-w-2xl mx-auto">
               Book a free lead flow review. We&apos;ll look at your current
               setup and tell you exactly which services will make the biggest
               difference.
             </p>
             <div className="flex flex-row gap-3 justify-center">
               <Button
-                href="/contact"
+                href="https://cal.com/saikumarlabs/30min"
+                external
                 variant="primary"
                 size="sm"
                 className="sm:px-6 sm:py-3 sm:text-base"
                 trackLabel="services_cta"
                 id="services-cta"
               >
-                Book a Free Review
+                Book a 30-Min Call
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </Button>
               <Button
                 href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`}
                 variant="outline"
                 size="sm"
-                className="border-cream-300/30 text-cream-100 hover:bg-cream-100/10 hover:text-cream-50 sm:px-6 sm:py-3 sm:text-base"
+                className="border-white/30 !text-white hover:bg-white/10 sm:px-6 sm:py-3 sm:text-base"
                 external
                 trackLabel="services_whatsapp"
                 id="services-whatsapp"

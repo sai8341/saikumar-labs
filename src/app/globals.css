@@ -17,9 +17,9 @@
   --text-muted: #8c92a4; 
   
   /* Accent Colors */
-  --accent-primary: #151619; /* Black for primary CTA buttons */
+  --accent-primary: #0067F4; /* Vibrant Corporate Blue */
   --accent-secondary: #ffffff; /* Text on primary buttons */
-  --brand-gold: #151619; /* Removed gold, using black for contrast */
+  --brand-gold: #0067F4; /* Replaced gold with blue */
 
   /* Semantic */
   --background: var(--bg-dark);
@@ -153,4 +153,35 @@ p {
     padding-top: 8rem;
     padding-bottom: 8rem;
   }
+}
+
+/* ============================================
+   Utility: Hide Scrollbar
+   ============================================ */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ============================================
+   Marquee Animation
+   ============================================ */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.hover-pause:hover .animate-marquee {
+  animation-play-state: paused;
 }
