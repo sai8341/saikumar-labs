@@ -9,7 +9,8 @@ import { analytics } from "@/lib/analytics";
 type FormData = {
   name: string;
   business: string;
-  contact: string;
+  whatsapp: string;
+  email: string;
   service: string;
   help: string;
 };
@@ -28,7 +29,8 @@ export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     business: "",
-    contact: "",
+    whatsapp: "",
+    email: "",
     service: "",
     help: "",
   });
@@ -53,7 +55,9 @@ export default function ContactForm() {
         body: JSON.stringify({
           name: formData.name,
           businessName: formData.business,
-          contact: formData.contact,
+          phone: formData.whatsapp,
+          email: formData.email,
+          contact: formData.whatsapp,
           service: formData.service || 'Custom Website & Lead System',
           help: formData.help,
           source: 'website_contact_form'
@@ -84,7 +88,7 @@ export default function ContactForm() {
           Thank you!
         </h3>
         <p className="text-gray-custom-500 max-w-md mx-auto">
-          We&apos;ve received your enquiry. We will review your requirements and get back to you within one business day.
+          We&apos;ve received your enquiry. We will review your requirements and reply directly to your WhatsApp shortly.
         </p>
       </motion.div>
     );
@@ -104,7 +108,7 @@ export default function ContactForm() {
     >
       <div className="mb-8">
         <h2 className="text-2xl font-bold text-charcoal-900 mb-2">Tell Us About Your Business</h2>
-        <p className="text-sm text-gray-custom-500">Fill out the form below and we&apos;ll get back to you within one business day.</p>
+        <p className="text-sm text-gray-custom-500">Fill out the form below and we&apos;ll get back to you directly on WhatsApp.</p>
       </div>
 
       <div className="space-y-5">
@@ -147,22 +151,41 @@ export default function ContactForm() {
 
         <div>
           <label
-            htmlFor="contact-contact"
+            htmlFor="contact-whatsapp"
             className="block text-sm font-medium text-charcoal-800 mb-1.5"
           >
-            Phone or Email <span className="text-red-500">*</span>
+            WhatsApp Number <span className="text-red-500">*</span>
           </label>
           <input
-            id="contact-contact"
-            type="text"
-            name="contact"
+            id="contact-whatsapp"
+            type="tel"
+            name="whatsapp"
             required
-            placeholder="e.g. +91 98765 43210 or hello@example.com"
-            value={formData.contact}
+            placeholder="e.g. +91 98765 43210"
+            value={formData.whatsapp}
             onChange={handleChange}
             className={inputClasses}
           />
         </div>
+
+        <div>
+          <label
+            htmlFor="contact-email"
+            className="block text-sm font-medium text-charcoal-800 mb-1.5"
+          >
+            Email Address <span className="text-gray-custom-400 font-normal">(Optional)</span>
+          </label>
+          <input
+            id="contact-email"
+            type="email"
+            name="email"
+            placeholder="e.g. priya@example.com"
+            value={formData.email}
+            onChange={handleChange}
+            className={inputClasses}
+          />
+        </div>
+
 
         <div>
           <label
