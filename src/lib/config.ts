@@ -9,19 +9,20 @@ export const siteConfig = {
   tagline: "Lead Systems for Service Businesses",
   description:
     "Helping service businesses fix lead leaks and turn their online presence into a lead system that brings more enquiries, better follow-up, and fewer missed leads.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://saikumarlabs.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://saikumar-labs.vercel.app",
   ogImage: "/og-image.jpg",
 
   // Contact
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919390123367",
+  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919346926949",
   whatsappMessage:
     "Hi SaiKumar Labs, I'd like to discuss how you can help my business get more enquiries.",
-  phone: "+91 93901 23367",
+  phone: "+91 93469 26949",
   email: "hello@saikumarlabs.com",
+
 
   // Social
   social: {
-    instagram: "https://instagram.com/saikumarlabs",
+    instagram: "https://instagram.com/saikumar.labs",
     linkedin: "https://linkedin.com/company/saikumarlabs",
     twitter: "https://twitter.com/saikumarlabs",
   },

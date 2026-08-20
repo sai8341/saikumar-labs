@@ -45,13 +45,29 @@ export default function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate submission (replace with actual API endpoint later)
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    analytics.formSubmit("contact_form");
-    setIsSubmitted(true);
-    setIsSubmitting(false);
+    try {
+      const opsApiUrl = process.env.NEXT_PUBLIC_OPS_API_URL || 'https://ops.sydxai.com';
+      await fetch(`${opsApiUrl}/api/leads`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          businessName: formData.business,
+          contact: formData.contact,
+          service: formData.service || 'Custom Website & Lead System',
+          help: formData.help,
+          source: 'website_contact_form'
+        })
+      });
+    } catch (err) {
+      console.warn('Ops API dispatch failed (offline fallback):', err);
+    } finally {
+      analytics.formSubmit("contact_form");
+      setIsSubmitted(true);
+      setIsSubmitting(false);
+    }
   };
+
 
   if (isSubmitted) {
     return (
