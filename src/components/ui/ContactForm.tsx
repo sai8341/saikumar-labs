@@ -87,123 +87,146 @@ export default function ContactForm({
   if (isSubmitted) {
     return (
       <motion.div
-        className="bg-card rounded-2xl p-10 border border-border text-center"
+        className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-lg text-center space-y-4"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.4 }}
       >
-        <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
-          <CheckCircle className="w-8 h-8 text-green-600" />
+        <div className="w-16 h-16 rounded-2xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center mx-auto shadow-xs">
+          <CheckCircle className="w-8 h-8" />
         </div>
-        <h3 className="text-2xl font-semibold text-charcoal-900 mb-3">
-          Thank you!
-        </h3>
-        <p className="text-gray-custom-500 max-w-md mx-auto">
-          We&apos;ve received your enquiry. We will review your requirements and reply directly to your WhatsApp shortly.
-        </p>
+        <div className="space-y-2">
+          <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
+            Enquiry Received! 🚀
+          </h3>
+          <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
+            Thank you, <strong className="text-slate-900">{formData.name}</strong>. We have received your project requirements for <strong className="text-indigo-600">{formData.service || 'SaiKumar Labs'}</strong> and will reply directly to your WhatsApp (<span className="font-mono text-slate-800">{formData.whatsapp}</span>) within 2 to 4 business hours.
+          </p>
+        </div>
+        <div className="pt-4">
+          <a
+            href={`https://wa.me/919390123367?text=${encodeURIComponent(`Hi Sai Kumar, I just submitted an enquiry for ${formData.business || formData.name} (${formData.service}). Looking forward to discussing next steps.`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-sm"
+          >
+            <span>Open Fast-Track WhatsApp Chat →</span>
+          </a>
+        </div>
       </motion.div>
     );
   }
 
   const inputClasses =
-    "w-full px-4 py-3.5 rounded-xl border border-border bg-cream-50 text-charcoal-900 placeholder:text-gray-custom-300 focus:outline-none focus:ring-2 focus:ring-gold-400/50 focus:border-gold-400 transition-all duration-200";
+    "w-full px-4 py-3.5 rounded-xl border border-slate-200 bg-slate-50/70 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0067F4]/20 focus:border-[#0067F4] font-medium text-sm transition-all duration-200";
 
   return (
     <motion.form
       onSubmit={handleSubmit}
-      className="bg-card rounded-2xl p-8 md:p-10 border border-border shadow-sm relative"
+      className="bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-slate-200/90 shadow-lg relative text-slate-900"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold text-charcoal-900 mb-2">{title}</h2>
-        <p className="text-sm text-gray-custom-500">{subtitle}</p>
+      <div className="mb-6 border-b border-slate-100 pb-5">
+        <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#0067F4] mb-1.5">
+          <span className="w-2 h-2 rounded-full bg-[#0067F4]" />
+          <span>Option 2: Direct Written Enquiry</span>
+        </div>
+        <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+          {title}
+        </h2>
+        <p className="text-xs sm:text-sm text-slate-500 mt-1 leading-relaxed">
+          {subtitle}
+        </p>
       </div>
 
-      <div className="space-y-5">
-        <div>
-          <label
-            htmlFor="contact-name"
-            className="block text-sm font-medium text-charcoal-800 mb-1.5"
-          >
-            Your Name <span className="text-red-500">*</span>
-          </label>
-          <input
-            id="contact-name"
-            type="text"
-            name="name"
-            required
-            placeholder="e.g. Priya Sharma"
-            value={formData.name}
-            onChange={handleChange}
-            className={inputClasses}
-          />
+      <div className="space-y-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label
+              htmlFor="contact-name"
+              className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5"
+            >
+              Your Name <span className="text-rose-500">*</span>
+            </label>
+            <input
+              id="contact-name"
+              type="text"
+              name="name"
+              required
+              placeholder="e.g. Dr. Rajesh Varma"
+              value={formData.name}
+              onChange={handleChange}
+              className={inputClasses}
+            />
+          </div>
+
+          <div>
+            <label
+              htmlFor="contact-whatsapp"
+              className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5"
+            >
+              WhatsApp Phone Number <span className="text-rose-500">*</span>
+            </label>
+            <input
+              id="contact-whatsapp"
+              type="tel"
+              name="whatsapp"
+              required
+              placeholder="+91 98765 43210"
+              value={formData.whatsapp}
+              onChange={handleChange}
+              className={inputClasses}
+            />
+          </div>
         </div>
 
-        <div>
-          <label
-            htmlFor="contact-business"
-            className="block text-sm font-medium text-charcoal-800 mb-1.5"
-          >
-            Business Name <span className="text-gray-custom-400 font-normal">(Optional)</span>
-          </label>
-          <input
-            id="contact-business"
-            type="text"
-            name="business"
-            placeholder="e.g. Glow Skin Clinic"
-            value={formData.business}
-            onChange={handleChange}
-            className={inputClasses}
-          />
-        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label
+              htmlFor="contact-business"
+              className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5"
+            >
+              Business / Practice Name
+            </label>
+            <input
+              id="contact-business"
+              type="text"
+              name="business"
+              placeholder="e.g. Apex Dental Studio"
+              value={formData.business}
+              onChange={handleChange}
+              className={inputClasses}
+            />
+          </div>
 
-        <div>
-          <label
-            htmlFor="contact-whatsapp"
-            className="block text-sm font-medium text-charcoal-800 mb-1.5"
-          >
-            WhatsApp Number <span className="text-red-500">*</span>
-          </label>
-          <input
-            id="contact-whatsapp"
-            type="tel"
-            name="whatsapp"
-            required
-            placeholder="e.g. +91 98765 43210"
-            value={formData.whatsapp}
-            onChange={handleChange}
-            className={inputClasses}
-          />
+          <div>
+            <label
+              htmlFor="contact-email"
+              className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5"
+            >
+              Email Address
+            </label>
+            <input
+              id="contact-email"
+              type="email"
+              name="email"
+              placeholder="doctor@apexdental.in"
+              value={formData.email}
+              onChange={handleChange}
+              className={inputClasses}
+            />
+          </div>
         </div>
-
-        <div>
-          <label
-            htmlFor="contact-email"
-            className="block text-sm font-medium text-charcoal-800 mb-1.5"
-          >
-            Email Address <span className="text-gray-custom-400 font-normal">(Optional)</span>
-          </label>
-          <input
-            id="contact-email"
-            type="email"
-            name="email"
-            placeholder="e.g. priya@example.com"
-            value={formData.email}
-            onChange={handleChange}
-            className={inputClasses}
-          />
-        </div>
-
 
         <div>
           <label
             htmlFor="contact-service"
-            className="block text-sm font-medium text-charcoal-800 mb-1.5"
+            className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5"
           >
-            Service Interested In <span className="text-gray-custom-400 font-normal">(Optional)</span>
+            Service Selected
           </label>
           <div className="relative">
             <select
@@ -211,14 +234,14 @@ export default function ContactForm({
               name="service"
               value={formData.service}
               onChange={handleChange}
-              className={`${inputClasses} appearance-none cursor-pointer ${!formData.service ? 'text-gray-custom-300' : 'text-charcoal-900'}`}
+              className={`${inputClasses} appearance-none cursor-pointer pr-10`}
             >
-              <option value="" disabled hidden>Select a service...</option>
+              <option value="" disabled hidden>Select a service package...</option>
               {serviceOptions.map((opt) => (
-                <option key={opt} value={opt} className="text-charcoal-900">{opt}</option>
+                <option key={opt} value={opt} className="text-slate-900">{opt}</option>
               ))}
             </select>
-            <div className="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-gray-custom-400">
+            <div className="absolute inset-y-0 right-0 flex items-center pr-3.5 pointer-events-none text-slate-400">
               <ChevronDown className="w-4 h-4" />
             </div>
           </div>
@@ -227,48 +250,45 @@ export default function ContactForm({
         <div>
           <label
             htmlFor="contact-help"
-            className="block text-sm font-medium text-charcoal-800 mb-1.5"
+            className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5"
           >
-            Message <span className="text-red-500">*</span>
+            What are your core goals or bottlenecks? <span className="text-rose-500">*</span>
           </label>
           <textarea
             id="contact-help"
             name="help"
-            rows={4}
+            rows={3}
             required
-            placeholder="Tell us about your business and what you'd like to improve..."
+            placeholder="e.g. We need a modern, fast clinic website with direct WhatsApp appointment booking and Google Maps ranking..."
             value={formData.help}
             onChange={handleChange}
             className={`${inputClasses} resize-none`}
           />
         </div>
 
-        <div className="pt-2">
-          <Button
+        <div className="pt-2 space-y-3">
+          <button
             type="submit"
-            variant="primary"
-            size="lg"
-            className="w-full"
+            disabled={isSubmitting}
+            className="w-full py-4 px-6 rounded-xl bg-[#0067F4] hover:bg-blue-600 text-white font-bold text-sm sm:text-base shadow-lg shadow-blue-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
             id="contact-form-submit"
           >
             {isSubmitting ? (
               <span className="flex items-center gap-2">
-                <span className="w-4 h-4 border-2 border-charcoal-900/30 border-t-charcoal-900 rounded-full animate-spin" />
-                Sending...
+                <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                Sending Enquiry...
               </span>
             ) : (
               <span className="flex items-center gap-2">
                 <Send className="w-4 h-4" />
-                Send My Enquiry
+                Send Project Enquiry (Instant Reply)
               </span>
             )}
-          </Button>
+          </button>
           
-          <div className="mt-5 flex items-start justify-center gap-2 text-center text-xs text-gray-custom-400">
-            <ShieldCheck className="w-4 h-4 shrink-0 text-gold-400/70" />
-            <p>
-              Your information will only be used to respond to your enquiry. We never share your details.
-            </p>
+          <div className="flex items-center justify-center gap-2 text-center text-xs text-slate-400">
+            <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+            <span>Zero spam guarantee. Directly routed to Sai Kumar on WhatsApp & Ops.</span>
           </div>
         </div>
       </div>

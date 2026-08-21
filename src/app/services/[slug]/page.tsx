@@ -637,57 +637,65 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* 12. DUAL CONVERSION SUITE: 30-MIN STRATEGY CALL + INSTANT INBOUND ENQUIRY FORM */}
-      <section className="py-20 md:py-28 bg-text-primary relative overflow-hidden text-white" id="enquiry">
-        <div className="absolute top-0 right-0 w-full h-full bg-accent-primary/5 pointer-events-none" />
-        <div className="absolute -top-[200px] -right-[200px] w-[600px] h-[600px] bg-accent-primary/20 rounded-full blur-[120px] pointer-events-none" />
+      <section className="py-20 md:py-28 bg-slate-50/80 border-t border-slate-200/80 relative overflow-hidden" id="enquiry">
+        
+        {/* Subtle Ambient Background Gradients */}
+        <div className="absolute -top-[200px] right-0 w-[500px] h-[500px] bg-blue-100/50 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-50/60 rounded-full blur-[100px] pointer-events-none" />
         
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white text-xs font-mono font-bold tracking-wider uppercase mb-6 backdrop-blur-sm border border-white/10">
-              <Sparkles className="w-4 h-4 text-amber-300" />
-              <span>Get Started with {service.title}</span>
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-[#0067F4] border border-blue-200/60 text-xs font-mono font-bold tracking-wider uppercase mb-4 shadow-2xs">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Next Step: Start Your Project</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-4">
               Let&apos;s Build Your {service.title} System
             </h2>
-            <p className="text-lg text-slate-300 leading-relaxed">
-              Choose how you&apos;d like to connect: Book a 1-on-1 discovery call with Sai Kumar or send a quick 60-second project enquiry below.
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+              Choose the easiest way to connect — book a live 30-min strategy call or send a quick 60-second written project enquiry below.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
             {/* Left Card: 30-Min Instant Video Discovery Call */}
-            <div className="lg:col-span-5 bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md space-y-6 text-left">
-              <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white">
+            <div className="lg:col-span-5 bg-white border border-slate-200/90 rounded-3xl p-7 sm:p-9 shadow-lg space-y-6 text-left hover:border-blue-200 transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#0067F4] border border-blue-100 flex items-center justify-center font-bold">
                 <Calendar className="w-6 h-6" />
               </div>
               
               <div>
-                <span className="text-xs font-mono font-bold text-cyan-300 uppercase tracking-wider block mb-1">
+                <span className="text-xs font-mono font-bold text-[#0067F4] uppercase tracking-wider block mb-1">
                   Option 1: Live Strategy Session
                 </span>
-                <h3 className="text-2xl font-bold text-white">
+                <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
                   Book 30-Min Discovery Call
                 </h3>
               </div>
 
-              <p className="text-sm text-slate-300 leading-relaxed">
-                Direct 1-on-1 Google Meet session with Lead Engineer Sai Kumar. We will audit your current setup, answer your questions, and formulate your custom implementation roadmap.
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Direct 1-on-1 session with Lead Engineer Sai Kumar. We will audit your current setup, answer technical questions, and formulate your custom implementation roadmap.
               </p>
 
-              <div className="space-y-3 text-xs text-slate-300 border-y border-white/10 py-4 font-medium">
-                <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Zero hard selling, 100% technical clarity</span>
+              <div className="space-y-3 text-xs text-slate-700 border-y border-slate-100 py-4 font-semibold">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
+                  <span>Zero sales pressure, 100% technical clarity</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                <div className="flex items-center gap-2.5">
+                  <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
                   <span>Custom scope & architectural recommendation</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                <div className="flex items-center gap-2.5">
+                  <div className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                    <Check className="w-3.5 h-3.5" />
+                  </div>
                   <span>Same-day official SOW proposal delivery</span>
                 </div>
               </div>
@@ -697,20 +705,20 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 external
                 variant="primary" 
                 size="lg" 
-                className="w-full text-slate-900 bg-white hover:bg-slate-100 border-none py-4 font-bold text-base shadow-lg transition-all"
+                className="w-full text-white bg-[#0067F4] hover:bg-blue-600 border-none py-4 font-bold text-sm shadow-md shadow-blue-600/20 transition-all"
               >
                 <span>Book 30-Min Discovery Call</span>
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
 
-              <div className="text-center pt-2">
+              <div className="text-center pt-1">
                 <a
                   href={`https://wa.me/919390123367?text=${encodeURIComponent(`Hi Sai Kumar, I am exploring the ${service.title} package on SaiKumar Labs and would like to ask a few questions.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs text-slate-300 hover:text-white transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs text-slate-600 hover:text-slate-900 transition-colors font-medium"
                 >
-                  <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
+                  <MessageSquare className="w-3.5 h-3.5 text-emerald-600" />
                   <span>Or message Sai Kumar on WhatsApp →</span>
                 </a>
               </div>
