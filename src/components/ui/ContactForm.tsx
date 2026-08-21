@@ -87,30 +87,27 @@ export default function ContactForm({
   if (isSubmitted) {
     return (
       <motion.div
-        className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-lg text-center space-y-4"
+        className="bg-white rounded-3xl p-10 sm:p-14 border border-slate-200 shadow-sm text-center flex flex-col items-center justify-center space-y-6 min-h-[380px]"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.4 }}
+        transition={{ duration: 0.3 }}
       >
-        <div className="w-16 h-16 rounded-2xl bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center mx-auto shadow-xs">
+        <div className="w-16 h-16 rounded-2xl bg-emerald-50 text-emerald-600 border border-emerald-200/80 flex items-center justify-center shadow-xs">
           <CheckCircle className="w-8 h-8" />
         </div>
-        <div className="space-y-2">
-          <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
-            Enquiry Received! 🚀
-          </h3>
-          <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
-            Thank you, <strong className="text-slate-900">{formData.name}</strong>. We have received your project requirements for <strong className="text-indigo-600">{formData.service || 'SaiKumar Labs'}</strong> and will reply directly to your WhatsApp (<span className="font-mono text-slate-800">{formData.whatsapp}</span>) within 2 to 4 business hours.
-          </p>
-        </div>
-        <div className="pt-4">
+
+        <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+          Received
+        </h3>
+
+        <div className="pt-2">
           <a
             href={`https://wa.me/919390123367?text=${encodeURIComponent(`Hi Sai Kumar, I just submitted an enquiry for ${formData.business || formData.name} (${formData.service}). Looking forward to discussing next steps.`)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-sm"
+            className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-bold transition-all shadow-sm hover:shadow-md cursor-pointer"
           >
-            <span>Open Fast-Track WhatsApp Chat →</span>
+            <span>Open WhatsApp Chat →</span>
           </a>
         </div>
       </motion.div>
