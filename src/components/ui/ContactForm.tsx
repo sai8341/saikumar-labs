@@ -15,23 +15,34 @@ type FormData = {
   help: string;
 };
 
+type ContactFormProps = {
+  defaultService?: string;
+  title?: string;
+  subtitle?: string;
+  isCompact?: boolean;
+};
+
 const serviceOptions = [
-  "Custom Website",
-  "Landing Page",
-  "Technical SEO",
-  "AI Automation",
-  "Website + Lead System",
-  "Appointment Booking",
+  "Website Foundation",
+  "Growth Engine",
+  "Brand Authority",
+  "Business Systems",
+  "Custom Web & AI System",
   "Not Sure Yet"
 ];
 
-export default function ContactForm() {
+export default function ContactForm({
+  defaultService = "",
+  title = "Tell Us About Your Business",
+  subtitle = "Fill out the form below and we'll get back to you directly on WhatsApp.",
+  isCompact = false
+}: ContactFormProps) {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     business: "",
     whatsapp: "",
     email: "",
-    service: "",
+    service: defaultService || "",
     help: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -107,8 +118,8 @@ export default function ContactForm() {
       transition={{ duration: 0.5 }}
     >
       <div className="mb-8">
-        <h2 className="text-2xl font-bold text-charcoal-900 mb-2">Tell Us About Your Business</h2>
-        <p className="text-sm text-gray-custom-500">Fill out the form below and we&apos;ll get back to you directly on WhatsApp.</p>
+        <h2 className="text-2xl font-bold text-charcoal-900 mb-2">{title}</h2>
+        <p className="text-sm text-gray-custom-500">{subtitle}</p>
       </div>
 
       <div className="space-y-5">

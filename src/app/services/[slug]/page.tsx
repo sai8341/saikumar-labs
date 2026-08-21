@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
-import { ArrowRight, CheckCircle, Sparkles, Zap, ShieldCheck, Target, TrendingUp, Layers, HelpCircle, Check, ArrowUpRight } from "lucide-react";
+import { ArrowRight, CheckCircle, Sparkles, Zap, ShieldCheck, Target, TrendingUp, Layers, HelpCircle, Check, ArrowUpRight, Calendar, MessageSquare } from "lucide-react";
 import { Metadata } from "next";
+import ContactForm from "@/components/ui/ContactForm";
 
 const servicePages = {
   "digital-foundation": {
@@ -635,32 +636,97 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
-      {/* 12. BOTTOM CTA */}
-      <section className="py-16 md:py-24 bg-text-primary relative overflow-hidden">
+      {/* 12. DUAL CONVERSION SUITE: 30-MIN STRATEGY CALL + INSTANT INBOUND ENQUIRY FORM */}
+      <section className="py-20 md:py-28 bg-text-primary relative overflow-hidden text-white" id="enquiry">
         <div className="absolute top-0 right-0 w-full h-full bg-accent-primary/5 pointer-events-none" />
-        <div className="absolute -top-[200px] -right-[200px] w-[600px] h-[600px] bg-accent-primary/20 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute -top-[200px] -right-[200px] w-[600px] h-[600px] bg-accent-primary/20 rounded-full blur-[120px] pointer-events-none" />
         
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 text-white mb-8">
-            <Sparkles className="w-8 h-8" />
-          </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 tracking-tight" style={{ color: '#ffffff' }}>
-            Let's Discuss Your Project
-          </h2>
-          <p className="text-xl mb-12 max-w-2xl mx-auto leading-relaxed" style={{ color: '#d1d5db' }}>
-            We'll understand your business, answer your questions, recommend the right solution, and if we're a good fit, I'll recommend the best next steps for your business.
-          </p>
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           
-          <Button 
-            href="https://cal.com/saikumarlabs/discovery-call?theme=light" 
-            external
-            variant="primary" 
-            size="lg" 
-            className="w-full sm:w-auto text-text-primary bg-white hover:bg-gray-200 border-none px-10 py-4 shadow-[0_0_40px_rgba(255,255,255,0.2)] transition-all font-bold text-lg"
-          >
-            Book Discovery Call
-            <ArrowRight className="w-6 h-6 ml-2" />
-          </Button>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white text-xs font-mono font-bold tracking-wider uppercase mb-6 backdrop-blur-sm border border-white/10">
+              <Sparkles className="w-4 h-4 text-amber-300" />
+              <span>Get Started with {service.title}</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-6">
+              Let&apos;s Build Your {service.title} System
+            </h2>
+            <p className="text-lg text-slate-300 leading-relaxed">
+              Choose how you&apos;d like to connect: Book a 1-on-1 discovery call with Sai Kumar or send a quick 60-second project enquiry below.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            {/* Left Card: 30-Min Instant Video Discovery Call */}
+            <div className="lg:col-span-5 bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-md space-y-6 text-left">
+              <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white">
+                <Calendar className="w-6 h-6" />
+              </div>
+              
+              <div>
+                <span className="text-xs font-mono font-bold text-cyan-300 uppercase tracking-wider block mb-1">
+                  Option 1: Live Strategy Session
+                </span>
+                <h3 className="text-2xl font-bold text-white">
+                  Book 30-Min Discovery Call
+                </h3>
+              </div>
+
+              <p className="text-sm text-slate-300 leading-relaxed">
+                Direct 1-on-1 Google Meet session with Lead Engineer Sai Kumar. We will audit your current setup, answer your questions, and formulate your custom implementation roadmap.
+              </p>
+
+              <div className="space-y-3 text-xs text-slate-300 border-y border-white/10 py-4 font-medium">
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Zero hard selling, 100% technical clarity</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Custom scope & architectural recommendation</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Same-day official SOW proposal delivery</span>
+                </div>
+              </div>
+
+              <Button 
+                href="https://cal.com/saikumarlabs/discovery-call?theme=light" 
+                external
+                variant="primary" 
+                size="lg" 
+                className="w-full text-slate-900 bg-white hover:bg-slate-100 border-none py-4 font-bold text-base shadow-lg transition-all"
+              >
+                <span>Book 30-Min Discovery Call</span>
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+
+              <div className="text-center pt-2">
+                <a
+                  href={`https://wa.me/919390123367?text=${encodeURIComponent(`Hi Sai Kumar, I am exploring the ${service.title} package on SaiKumar Labs and would like to ask a few questions.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs text-slate-300 hover:text-white transition-colors"
+                >
+                  <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>Or message Sai Kumar on WhatsApp →</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Right Card: Quick 60-Second Inbound Lead Enquiry Form */}
+            <div className="lg:col-span-7">
+              <ContactForm 
+                defaultService={service.title}
+                title={`Send an Enquiry for ${service.title}`}
+                subtitle="Prefer written details? Fill this out and we'll reply directly on WhatsApp with your tailored proposal & pricing breakdown."
+              />
+            </div>
+
+          </div>
+
         </div>
       </section>
     </>
