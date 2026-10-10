@@ -99,406 +99,764 @@ const servicePages = {
     
     // 3. Perfect For
     perfectFor: [
-      "Service businesses with high-ticket offers",
-      "Coaches ready to scale enrollments",
-      "Clinics expanding high-value treatments",
-      "Agencies looking for steady client flow"
+      "Businesses getting traffic but no leads",
+      "Service Providers ready to scale",
+      "Consultants & Coaches",
+      "B2B Agencies"
     ],
 
     // 4. Expected Outcomes
     outcomes: [
-      "Consistent, predictable inbound leads",
-      "Lower cost-per-acquisition",
-      "Accurate conversion tracking",
-      "Clear ROI on your marketing spend",
-      "Automated audience retargeting"
+      "More qualified enquiries",
+      "Better conversion rates",
+      "Predictable lead flow",
+      "Easier lead tracking",
+      "Lower cost per acquisition",
+      "Better follow-up systems"
     ],
 
     // 5. What's Included
     features: [
-      "Everything in Website Foundation",
-      "High-Converting Landing Pages",
-      "Meta Business Suite Setup",
-      "Meta Pixel & Conversion API",
-      "Custom Campaign Architecture",
-      "Ad Creative Frameworks",
+      "Offer & Audience Strategy",
+      "High-Converting Landing Page Design",
+      "Direct Response Copywriting",
+      "Lead Capture Form Optimization",
+      "Thank You Page Strategy",
+      "Meta Ads Campaign Setup",
+      "Ad Creative Direction",
       "Audience Targeting & Retargeting",
-      "Full Funnel Tracking Setup",
-      "GA4 Custom Conversion Events",
-      "1-Year Free Hosting, SSL & Domain"
+      "Facebook Pixel Integration",
+      "Conversion API Setup",
+      "UTM Tracking Implementation",
+      "Google Analytics Lead Goals",
+      "Lead Notification Routing",
+      "Campaign Launch",
+      "Initial Optimization Phase"
     ],
 
     // 6. Our Process
     process: [
-      { step: "Offer Audit", desc: "Refining your core value proposition and defining the perfect customer avatar." },
-      { step: "Funnel Build", desc: "Designing high-speed, persuasive landing pages engineered specifically for conversion." },
-      { step: "Pixel & API", desc: "Configuring server-side tracking so every ad dollar is accurately accounted for." },
-      { step: "Campaign Launch", desc: "Setting up and testing targeted ad sets across Meta (Instagram & Facebook)." },
-      { step: "Optimization", desc: "Continuous A/B testing of headlines, creatives, and funnels to lower acquisition costs." }
+      { step: "Discovery", desc: "Analyzing your current offer, target market, and lead generation goals." },
+      { step: "Strategy", desc: "Designing the ad funnel and mapping out the user journey." },
+      { step: "Landing Page", desc: "Designing and developing the high-conversion standalone page." },
+      { step: "Tracking Setup", desc: "Configuring the Pixel, Conversions API, and GA4 goals." },
+      { step: "Launch", desc: "Setting the Meta Ads campaigns live to your target audience." },
+      { step: "Optimization", desc: "Monitoring initial data to tweak ad performance and page conversions." }
     ],
 
-    techStack: ["Next.js", "Meta Ads", "Meta Pixel", "GTM", "GA4", "Tailwind CSS"],
+    // 8. Technology Stack
+    techStack: ["Next.js", "Meta Ads Manager", "Conversions API", "GTM", "GA4", "UTM Tracking"],
 
+    // 9. FAQs
     faqs: [
-      { q: "Do you include ad spend in the package?", a: "No, ad spend is paid directly to Meta from your own billing account. Our fee covers strategy, funnel engineering, and technical implementation." },
-      { q: "How quickly do we see results?", a: "Landing pages and campaigns are usually live within 2 weeks. Most businesses start receiving qualified enquiries within days of launching ads." },
-      { q: "Do I need an existing audience?", a: "No. The combination of precision cold targeting and retargeting allows us to build your customer pipeline from scratch." }
+      { q: "Do I need an existing audience?", a: "No, we can target cold audiences effectively using Meta's advanced algorithms." },
+      { q: "Is ad spend included in your fee?", a: "No, the ad spend is paid directly to Meta (Facebook/Instagram). Our fee covers setup and management." },
+      { q: "Why use a landing page instead of my website?", a: "Landing pages remove distractions. They have one specific goal (capturing a lead), which significantly increases conversion rates." },
+      { q: "How long until I see leads?", a: "Once campaigns launch, you can often see leads within the first 24 to 48 hours." },
+      { q: "Can I use this for multiple services?", a: "We recommend focusing the Growth Engine on your highest-margin or most popular service first." },
+      { q: "Do you write the ad copy?", a: "Yes, we provide direct response copywriting for the landing page and ad creatives." }
     ],
 
+    // 10. Optional Add-ons
     addons: [
-      "Monthly Ad Campaign Management",
-      "Creative Video Editing Retainer",
-      "Multi-Variant Funnel Testing"
+      "Automated Email Nurture",
+      "CRM Integration",
+      "Lead Magnet Creation"
     ],
 
-    keyword: "High-Converting Lead Generation Funnels"
+    keyword: "Lead Generation Systems"
   },
   "brand-authority": {
     // 1. Hero
     title: "Brand Authority",
     subtitle: "Brand Authority",
-    description: "Position yourself as the undisputed authority in your industry through strategic YouTube SEO, content, and personal branding.",
+    description: "Establish industry leadership with advanced YouTube optimization and a dominant digital presence.",
     
     // 2. The Problem We Solve
-    problemDescription: "If your competitors have a stronger personal brand, they will win clients even with an inferior service. Clients want to buy from experts they know, like, and trust. The Brand Authority package turns your expertise into high-leverage digital assets. From YouTube video SEO to custom internal AI workflows, we position you as the definitive leader in your market.",
+    problemDescription: "In a crowded market, being good isn't enough; you have to be known. When potential high-ticket clients search your name, they need to see an industry authority, not a ghost. We help founders and experts dominate their niche by optimizing their personal brand, primarily leveraging YouTube search visibility, content strategy, and a cohesive omnichannel digital footprint.",
     
     // 3. Perfect For
     perfectFor: [
-      "Founders and CEOs building a personal brand",
-      "Consultants wanting high-ticket inbound leads",
-      "Specialized doctors and clinic owners",
-      "Industry educators and authors"
+      "Founders & CEOs",
+      "Industry Experts",
+      "Creators & Authors",
+      "Personal Brands"
     ],
 
     // 4. Expected Outcomes
     outcomes: [
-      "Top-of-mind industry positioning",
-      "Organic inbound search authority",
-      "Evergreen lead generation from YouTube",
-      "Higher pricing power and client trust",
-      "Custom AI assistants to streamline content"
+      "Higher perceived value",
+      "Easier high-ticket sales",
+      "Dominate brand search terms",
+      "Evergreen content traffic",
+      "Stronger client trust",
+      "Clear brand positioning"
     ],
 
     // 5. What's Included
     features: [
-      "YouTube Channel Strategy & Setup",
-      "Video SEO & Metadata Optimization",
-      "Custom Thumbnail Templates",
-      "Omnichannel Content Repurposing Plan",
-      "Custom Internal AI Prompts & Workflows",
-      "Personal Brand Landing Hub",
-      "Interactive Media Kit Integration",
-      "Newsletter & Lead Magnet Funnel",
-      "1-Year Free Hosting, SSL & Domain"
+      "Personal Brand Audit",
+      "Brand Positioning Strategy",
+      "YouTube Channel Audit",
+      "YouTube SEO Optimization",
+      "Video Title & Thumbnail Strategy",
+      "Content Pillar Development",
+      "Competitor Authority Analysis",
+      "Social Profile Standardization",
+      "Google Knowledge Panel Strategy",
+      "Media Kit Creation",
+      "Brand Asset Organization"
     ],
 
     // 6. Our Process
     process: [
-      { step: "Authority Audit", desc: "Analyzing your market niche, identifying content gaps, and crafting your core message." },
-      { step: "Platform Setup", desc: "Configuring your YouTube, social, and web presence with high-authority visual design." },
-      { step: "Workflow Automation", desc: "Building AI-assisted research and scripting pipelines tailored to your tone of voice." },
-      { step: "Distribution Strategy", desc: "Establishing an efficient system to convert video viewers into consultation enquiries." }
+      { step: "Audit", desc: "Reviewing your current digital footprint and identifying authority gaps." },
+      { step: "Positioning", desc: "Defining your unique angle, messaging, and core audience." },
+      { step: "Strategy", desc: "Developing a sustainable content and distribution plan." },
+      { step: "Optimization", desc: "Overhauling your YouTube channel and social profiles for search." },
+      { step: "Execution", desc: "Implementing the brand assets and SEO adjustments." },
+      { step: "Review", desc: "Analyzing search visibility improvements and content performance." }
     ],
 
-    techStack: ["YouTube Studio", "Next.js", "AI Pipelines", "Canva/Figma", "Tailwind CSS"],
+    // 8. Technology Stack
+    techStack: ["YouTube Studio", "VidIQ", "TubeBuddy", "Figma", "Google Search", "SEO Tools"],
 
+    // 9. FAQs
     faqs: [
-      { q: "Do I have to appear on camera?", a: "For maximum trust, personal branding works best on video, but we can also build faceless educational authority frameworks depending on your business model." },
-      { q: "How long until YouTube starts driving leads?", a: "YouTube is a compounding asset. Unlike ads that stop when budget ends, an optimized YouTube video can generate qualified clients for 2+ years." }
+      { q: "Do you edit the videos?", a: "This service focuses on strategy, SEO, and positioning, not video editing." },
+      { q: "Why focus on YouTube?", a: "YouTube is the world's second-largest search engine. Evergreen videos build deep trust and authority over time." },
+      { q: "How long does it take to build authority?", a: "While we can optimize profiles immediately, building true authority and search presence takes 3 to 6 months of consistent effort." },
+      { q: "Can you manage my social media?", a: "We provide the overarching strategy and optimization. Daily social media management is a separate operational task." },
+      { q: "Is this only for individuals?", a: "It's primarily for founders and personal brands, but the same principles apply to corporate brand channels." },
+      { q: "Will this get me more clients?", a: "Yes. Brand authority removes friction from the sales process. People buy faster when they already trust your expertise." }
     ],
 
+    // 10. Optional Add-ons
     addons: [
-      "Weekly Video SEO & Upload Management",
-      "Podcast Syndication Setup",
-      "Ghostwriting for LinkedIn"
+      "Podcast Setup Strategy",
+      "Newsletter Launch",
+      "Personal Website Build"
     ],
 
-    keyword: "Executive Personal Branding and Video SEO"
+    keyword: "Personal Branding Services"
   },
   "business-automation": {
     // 1. Hero
     title: "Business Systems",
     subtitle: "Business Systems",
-    description: "Eliminate manual chaos. We build custom WhatsApp automations, CRM pipelines, and AI workflows that work 24/7.",
+    description: "For businesses tired of manual follow-ups, chaotic operations, and lost leads.",
     
     // 2. The Problem We Solve
-    problemDescription: "Every hour you spend manually copying lead data, sending follow-up messages, or chasing no-shows is an hour stolen from closing deals. When leads wait even 15 minutes for a reply, conversion rates drop by 80%. Business Systems automate the tedious busywork. We deploy instant WhatsApp response bots, synchronized CRMs, and automated booking reminders so your operations run flawlessly around the clock.",
+    problemDescription: "You shouldn't be manually texting every lead or trying to remember who to follow up with. When operations rely entirely on human memory, mistakes happen, leads are lost, and growth bottlenecks. Our Business Systems take repetitive tasks off your plate. We build smart automations that route leads, update CRMs, and send instant WhatsApp messages so your team can focus on closing deals, not copying and pasting data.",
     
     // 3. Perfect For
     perfectFor: [
-      "Busy clinics losing patients to no-shows",
-      "High-volume service providers",
-      "Coaches tired of manual DM management",
-      "Companies with messy lead management"
+      "Growing Businesses",
+      "Teams lacking coordination",
+      "Businesses using manual processes",
+      "High-volume service providers"
     ],
 
     // 4. Expected Outcomes
     outcomes: [
-      "Sub-60 second lead response times",
-      "Dramatic reduction in appointment no-shows",
-      "100% automated lead capture into your CRM",
-      "Zero missed follow-ups or lost contacts",
-      "Dozens of hours saved every single week"
+      "Zero manual data entry",
+      "Instant lead response times",
+      "Better lead management",
+      "Fewer missed appointments",
+      "More time for high-value work",
+      "Scalable operations"
     ],
 
     // 5. What's Included
     features: [
-      "WhatsApp Business API Integration",
-      "Instant Automated Welcome & Qualifying Flows",
-      "Cal.com / Booking System Integration",
-      "SMS & WhatsApp Appointment Reminders",
-      "Lead Capture Webhooks & Integrations",
-      "Centralized Notion or Airtable CRM",
-      "Staff Alert Dispatch (Telegram / Email)",
-      "Automated Review Collection Sequences",
-      "1-Year Free Hosting, SSL & Domain"
+      "Operations Audit",
+      "Process Mapping",
+      "CRM Selection & Setup",
+      "Lead Capture Integration",
+      "Automated Lead Routing",
+      "WhatsApp Business API Setup",
+      "Instant WhatsApp Auto-replies",
+      "Automated Appointment Reminders",
+      "Internal Team Notifications",
+      "Email Follow-up Sequences",
+      "n8n / Zapier Architecture",
+      "Error Handling & Logging",
+      "System Testing",
+      "Team Handover & Training"
     ],
 
     // 6. Our Process
     process: [
-      { step: "System Audit", desc: "Mapping your current customer journey from first touch to closed client." },
-      { step: "Architecture", desc: "Designing frictionless automation logic and webhook routing." },
-      { step: "Integration", desc: "Connecting your website, WhatsApp, CRM, and calendar into a single unified engine." },
-      { step: "Rigorous Testing", desc: "Simulating live edge-cases and load to ensure 100% reliability." },
-      { step: "Team Handover", desc: "Training your staff on how to monitor and operate the automated workflows." }
+      { step: "Discovery", desc: "Identifying bottlenecks, repetitive tasks, and operational friction." },
+      { step: "Mapping", desc: "Designing the ideal automated workflow and data journey." },
+      { step: "Build", desc: "Configuring the CRM and building the automation sequences." },
+      { step: "Testing", desc: "Running rigorous sandbox tests to ensure data flows correctly." },
+      { step: "Deployment", desc: "Pushing the automations live to your production environment." },
+      { step: "Support", desc: "Providing team training and monitoring the system for stability." }
     ],
 
-    techStack: ["n8n", "WhatsApp Cloud API", "Cal.com", "Supabase", "Next.js", "Webhooks"],
+    // 8. Technology Stack
+    techStack: ["n8n", "Zapier", "Make", "WhatsApp API", "HubSpot / GoHighLevel", "Webhooks"],
 
+    // 9. FAQs
     faqs: [
-      { q: "Will automated WhatsApp messages get my number banned?", a: "No. We build strictly using official WhatsApp Business API standards and pre-approved utility templates to protect your number." },
-      { q: "Can my team still chat manually on WhatsApp?", a: "Yes. The automated flow qualifies and collects info first, then hands off seamlessly to your staff for live human chat when needed." },
-      { q: "What CRM does this connect to?", a: "We can connect to HubSpot, Zoho, Notion, Airtable, Google Sheets, or custom Supabase databases." }
+      { q: "What CRM do you recommend?", a: "It depends on your business. We often work with HubSpot, GoHighLevel, or specialized industry CRMs." },
+      { q: "Can you automate WhatsApp from my personal number?", a: "No, we use the official WhatsApp Business API to ensure stability and compliance." },
+      { q: "Will this replace my staff?", a: "No. Automations remove the robotic tasks from your staff's workload, empowering them to do more meaningful, revenue-generating work." },
+      { q: "What if the automation breaks?", a: "We build robust error handling and notifications into our systems. If an API fails, you will be notified immediately." },
+      { q: "Do I have to pay monthly for the software?", a: "Yes, you will need subscriptions for the CRM and automation platforms (like Zapier or n8n), which are billed directly by those companies." },
+      { q: "Is this secure?", a: "Yes, we use official APIs, webhooks, and secure authentication methods to protect your business data." }
     ],
 
+    // 10. Optional Add-ons
     addons: [
-      "Custom AI Lead Qualifier Bot",
-      "Multi-Agent Support Routing",
-      "Payment Gateway Integration"
+      "AI Chatbot Integration",
+      "Custom Dashboard Creation",
+      "Advanced Team Training"
     ],
 
-    keyword: "WhatsApp Business Automation and CRM Integration"
+    keyword: "Business Automation Services"
+  },
+  "clinic-lead-systems": {
+    // 1. Hero
+    title: "Clinic Lead & Appointment Systems",
+    subtitle: "Healthcare Lead Systems",
+    description: "Automated patient enquiry capture, WhatsApp appointment reminders, and frictionless booking funnels for clinics and healthcare practices in India.",
+    
+    // 2. The Problem We Solve
+    problemDescription: "Healthcare clinics and diagnostic centers lose over 50% of patient enquiries due to delayed reception responses, missed calls, and manual registers. SaiKumar Labs deploys automated clinic patient funnels that respond on WhatsApp within 10 seconds, confirm appointments, send automated location and prep instructions, and slash no-shows without overloading clinic staff.",
+    
+    // 3. Perfect For
+    perfectFor: [
+      "Dental Clinics & Orthodontists",
+      "Dermatology & Cosmetology Clinics",
+      "Diagnostic & Pathology Labs",
+      "Multi-Speciality Healthcare Centers"
+    ],
+
+    // 4. Expected Outcomes
+    outcomes: [
+      "Instant WhatsApp patient response",
+      "Up to 40% reduction in patient no-shows",
+      "Automated appointment scheduling",
+      "Higher Google Maps local patient trust",
+      "Zero lost phone enquiries",
+      "Centralized patient intake dashboard"
+    ],
+
+    // 5. What's Included
+    features: [
+      "Clinic Lead Intake Audit",
+      "Mobile Patient Booking Funnel",
+      "WhatsApp Business API Setup",
+      "Instant WhatsApp Auto-Response",
+      "Automated Appointment Reminders",
+      "Google Business Profile Clinic Optimization",
+      "Meta Ads Patient Acquisition Funnel",
+      "Reception Staff Training & SOPs",
+      "Patient Review Generation System",
+      "Analytics & Conversion Tracking"
+    ],
+
+    // 6. Our Process
+    process: [
+      { step: "Audit", desc: "Mapping clinic inquiry channels (calls, WhatsApp, walk-ins, Google Maps)." },
+      { step: "Funnel Build", desc: "Creating frictionless mobile appointment booking and intake pages." },
+      { step: "Automation", desc: "Setting up WhatsApp Cloud API for automated confirmations and reminders." },
+      { step: "Local SEO", desc: "Optimizing Google Business Profile for hyper-local patient searches." },
+      { step: "Launch & Train", desc: "Deploying the system and training clinic reception staff." }
+    ],
+
+    // 8. Technology Stack
+    techStack: ["Next.js", "WhatsApp Cloud API", "n8n", "Google Maps Platform", "GA4", "Meta Conversions API"],
+
+    // 9. FAQs
+    faqs: [
+      { q: "Can patients book appointments directly on WhatsApp?", a: "Yes. Patients can select preferred doctors, dates, and consultation slots directly through automated WhatsApp flows." },
+      { q: "Does this replace our clinic reception?", a: "No. It automates repetitive scheduling and reminders, allowing reception staff to focus on in-clinic patient care." },
+      { q: "Is patient data secure?", a: "Yes. All communication runs via official Meta Cloud APIs and encrypted web infrastructure adhering to strict privacy standards." },
+      { q: "How long does setup take?", a: "A complete clinic appointment system is typically deployed within 10 to 14 days." }
+    ],
+
+    // 10. Optional Add-ons
+    addons: [
+      "Multi-Doctor Scheduling Integration",
+      "Local Doctor SEO Retainer",
+      "Pre-Consultation Medical History Intake"
+    ],
+
+    keyword: "Clinic Appointment Automation India"
+  },
+  "web-applications": {
+    // 1. Hero
+    title: "Custom Web Applications",
+    subtitle: "Bespoke Digital Systems",
+    description: "Production Next.js web applications, client portals, and custom workflow software built for service businesses outgrowing off-the-shelf SaaS.",
+    
+    // 2. The Problem We Solve
+    problemDescription: "Off-the-shelf SaaS tools force your unique service workflows into rigid templates, while charging exorbitant per-seat monthly subscription fees. We engineer bespoke, fast, custom Next.js web applications tailored to your exact business operations—giving you full IP ownership, zero per-seat licensing fees, and infinite scalability.",
+    
+    // 3. Perfect For
+    perfectFor: [
+      "Service Businesses with unique workflows",
+      "B2B Agencies & Consultancies",
+      "Healthcare & Diagnostic Networks",
+      "High-Volume Training & Coaching Academies"
+    ],
+
+    // 4. Expected Outcomes
+    outcomes: [
+      "100% custom workflow alignment",
+      "Zero recurring per-user SaaS license fees",
+      "Full source code ownership",
+      "Blazing sub-second Next.js performance",
+      "Enterprise-grade AES-256 data security",
+      "Custom analytics & reporting dashboards"
+    ],
+
+    // 5. What's Included
+    features: [
+      "Full Architecture & Data Modeling",
+      "Custom Next.js App Router Development",
+      "TypeScript & Tailwind UI System",
+      "PostgreSQL / Supabase Database Architecture",
+      "Role-Based Access Control (RBAC)",
+      "Secure Magic Link & OAuth Authentication",
+      "AES-256 Encrypted Client Portals",
+      "Razorpay Escrow & Payment Gateway Integration",
+      "REST & Webhook API Endpoints",
+      "Automated CI/CD Deployment on Vercel"
+    ],
+
+    // 6. Our Process
+    process: [
+      { step: "Architecture", desc: "Data modeling, user journey mapping, and technical specifications." },
+      { step: "UI/UX Design", desc: "Designing high-conversion, responsive web app interfaces." },
+      { step: "Engineering", desc: "Building the application in Next.js, TypeScript, and Supabase." },
+      { step: "Security Audit", desc: "Rigorous testing of auth, encryption, and API endpoints." },
+      { step: "Handover", desc: "Deploying to production and transferring complete codebase repository." }
+    ],
+
+    // 8. Technology Stack
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL", "Vercel", "Razorpay"],
+
+    // 9. FAQs
+    faqs: [
+      { q: "Do I own the source code?", a: "Yes. You receive 100% full intellectual property and Git repository ownership upon project completion." },
+      { q: "How long does custom web application development take?", a: "Typical custom applications and client portals are completed in 3 to 6 weeks depending on scope." },
+      { q: "Can you integrate our existing databases or tools?", a: "Yes. We build custom API connectors for your existing CRMs, ERPs, and third-party tools." },
+      { q: "What about ongoing maintenance?", a: "We provide comprehensive handover documentation, team training, and optional ongoing technical retainers." }
+    ],
+
+    // 10. Optional Add-ons
+    addons: [
+      "Mobile PWA (Progressive Web App)",
+      "Dedicated Database Optimization",
+      "Monthly Maintenance Retainer"
+    ],
+
+    keyword: "Custom Web Application Development"
   }
 };
 
-export async function generateStaticParams() {
-  return Object.keys(servicePages).map((slug) => ({ slug }));
+export function generateStaticParams() {
+  return Object.keys(servicePages).map((slug) => ({
+    slug,
+  }));
 }
 
+const serviceKeywords: Record<string, string[]> = {
+  "digital-foundation": [
+    "website development for service business India",
+    "custom web design company Hyderabad",
+    "Next.js website development India",
+    "website design for clinics in Hyderabad",
+    "landing page development for coaches India",
+    "high converting website design",
+    "web development agency Hyderabad",
+    "business website design packages Hyderabad",
+  ],
+  "lead-engine": [
+    "lead generation system for service business",
+    "Meta ads lead generation agency India",
+    "high converting landing page design India",
+    "lead capture system for clinics in Hyderabad",
+    "lead funnel design for service business",
+    "performance marketing for clinics",
+    "lead generation company Hyderabad",
+  ],
+  "brand-authority": [
+    "personal branding for founders",
+    "YouTube SEO optimization India",
+    "digital presence for consultants",
+    "executive brand authority",
+    "personal brand strategist Hyderabad",
+    "YouTube channel optimization India",
+  ],
+  "business-automation": [
+    "WhatsApp lead follow-up system for service businesses",
+    "WhatsApp automation for business India",
+    "WhatsApp Business API setup India",
+    "AI automation agency for small business India",
+    "n8n workflow automation services India",
+    "clinic appointment follow-up automation",
+    "automated WhatsApp lead response",
+  ],
+  "clinic-lead-systems": [
+    "clinic appointment follow-up automation",
+    "patient appointment booking web app India",
+    "website design for clinics in Hyderabad",
+    "lead capture system for clinics in Hyderabad",
+    "healthcare digital marketing Hyderabad",
+    "doctor appointment booking system India",
+  ],
+  "web-applications": [
+    "custom web applications Hyderabad",
+    "Next.js website development India",
+    "custom web design company Hyderabad",
+    "web development agency Hyderabad",
+    "bespoke SaaS development India",
+    "client portal development Next.js",
+  ],
+};
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
-  const service = servicePages[slug as keyof typeof servicePages];
-  if (!service) return {};
+  const resolvedParams = await params;
+  const service = servicePages[resolvedParams.slug as keyof typeof servicePages];
+  if (!service) {
+    return { title: "Service Not Found" };
+  }
+
+  const slug = resolvedParams.slug;
+  const specificKeywords = serviceKeywords[slug] || [];
+  const canonicalUrl = `${siteConfig.url}/services/${slug}`;
 
   return {
-    title: `${service.title} - SaiKumar Labs`,
+    title: `${service.title} | SaiKumar Labs`,
     description: service.description,
+    keywords: [
+      ...specificKeywords,
+      service.keyword,
+      service.subtitle,
+      "SaiKumar Labs",
+      "Hyderabad",
+      "India",
+    ],
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: `${service.title} - SaiKumar Labs`,
+      description: service.description,
+      url: canonicalUrl,
+      type: "website",
+      siteName: siteConfig.name,
+      locale: "en_IN",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${service.title} - SaiKumar Labs`,
+      description: service.description,
+    },
   };
 }
 
-export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const service = servicePages[slug as keyof typeof servicePages];
+export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const currentSlug = resolvedParams.slug;
+  const service = servicePages[currentSlug as keyof typeof servicePages];
 
   if (!service) {
     notFound();
   }
 
+  const otherServices = Object.entries(servicePages)
+    .filter(([slug]) => slug !== currentSlug)
+    .map(([slug, data]) => ({ slug, ...data }));
+
+  // Generate Multi-Graph JSON-LD (Service + FAQPage) for Rich Snippets & GEO Citations
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": `${siteConfig.url}/services/${currentSlug}/#service`,
+        "name": service.title,
+        "serviceType": service.keyword || service.title,
+        "provider": {
+          "@type": ["LocalBusiness", "ProfessionalService"],
+          "@id": `${siteConfig.url}/#organization`,
+          "name": "SaiKumar Labs",
+          "url": siteConfig.url,
+        },
+        "description": service.description,
+        "areaServed": [
+          { "@type": "Country", "name": "India" },
+          { "@type": "AdministrativeArea", "name": "Telangana" },
+          { "@type": "City", "name": "Hyderabad" },
+          { "@type": "City", "name": "Bangalore" },
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": service.title,
+          "itemListElement": service.features.map((feature, index) => ({
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": feature,
+            },
+            "position": index + 1,
+          })),
+        },
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${siteConfig.url}/services/${currentSlug}/#faq`,
+        "mainEntity": service.faqs.map((faq) => ({
+          "@type": "Question",
+          "name": faq.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.a,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${siteConfig.url}/services/${currentSlug}/#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": siteConfig.url,
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": `${siteConfig.url}/services`,
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": service.title,
+            "item": `${siteConfig.url}/services/${currentSlug}`,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
-      {/* Hero Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-b from-cream-100 to-cream-50 border-b border-border/40">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cream-200 border border-gold-400/30 text-gold-700 text-xs sm:text-sm font-semibold mb-6">
-            <Sparkles className="w-4 h-4 text-gold-500" />
-            <span>{service.subtitle}</span>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-charcoal-900 mb-6">
-            {service.title}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      
+      {/* 1. HERO SECTION */}
+      <section className="relative pt-24 pb-16 md:pt-32 md:pb-20 bg-background overflow-hidden border-b border-bg-border">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-accent-primary/10 rounded-full blur-[120px] pointer-events-none" />
+        
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+          <span className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold text-accent-primary bg-accent-primary/10 rounded-full border border-accent-primary/20 tracking-wide uppercase">
+            {service.subtitle}
+          </span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-text-primary mb-8 leading-tight">
+            {service.title.split(' ').map((word, i, arr) => 
+              i === arr.length - 1 ? <span key={i} className="text-accent-primary">{word}</span> : <span key={i}>{word} </span>
+            )}
           </h1>
-
-          <p className="text-lg sm:text-xl text-charcoal-600 max-w-3xl mx-auto leading-relaxed mb-10">
+          <p className="mt-6 text-lg md:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
             {service.description}
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              href="https://cal.com/saikumarlabs/discovery-call?theme=light"
+          
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button 
+              href="https://cal.com/saikumarlabs/discovery-call?theme=light" 
               external
-              variant="primary"
-              size="lg"
+              variant="primary" 
+              size="lg" 
+              className="w-full sm:w-auto shadow-[0_0_30px_rgba(0,103,244,0.3)] hover:shadow-[0_0_40px_rgba(0,103,244,0.5)] transition-all font-semibold px-8"
             >
-              Book a Strategy Call
+              Book Discovery Call
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <Button
-              href="#service-enquiry"
-              variant="outline"
-              size="lg"
-            >
-              Get Free Custom Scope
-            </Button>
+          </div>
+          
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-text-muted text-sm font-medium">
+            <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-accent-primary" /> 30 Minute Call</div>
+            <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-accent-primary" /> Google Meet</div>
+            <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-accent-primary" /> Free Consultation</div>
+            <div className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-accent-primary" /> No Obligation</div>
           </div>
         </div>
       </section>
-
-      {/* The Core Problem & Transformation */}
-      <section className="py-16 md:py-24 bg-white border-b border-border/40">
+      
+      {/* 2. THE PROBLEM WE SOLVE */}
+      <section className="py-16 md:py-20 bg-bg-card border-b border-bg-border">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-cream-50 rounded-3xl p-8 sm:p-12 border border-border shadow-sm">
-            <h2 className="text-2xl sm:text-3xl font-bold text-charcoal-900 mb-6">
-              The Problem We Solve
-            </h2>
-            <p className="text-base sm:text-lg text-charcoal-700 leading-relaxed">
+          <div className="bg-background rounded-[2rem] p-8 md:p-12 border border-bg-border relative overflow-hidden shadow-xl shadow-black/5">
+            <div className="absolute top-0 left-0 w-2 h-full bg-accent-primary" />
+            
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 rounded-xl bg-accent-primary/10 flex items-center justify-center">
+                <Zap className="w-6 h-6 text-accent-primary" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-text-primary">The Problem We Solve</h2>
+            </div>
+            
+            <p className="text-[17px] md:text-lg text-text-secondary leading-relaxed md:leading-loose">
               {service.problemDescription}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Outcomes & Perfect For */}
-      <section className="py-16 md:py-24 bg-cream-50 border-b border-border/40">
+      {/* 3. PERFECT FOR & 4. EXPECTED OUTCOMES */}
+      <section className="py-16 md:py-20 bg-background border-b border-bg-border">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            
             {/* Perfect For */}
-            <div className="bg-white rounded-3xl p-8 sm:p-10 border border-border shadow-sm">
-              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold mb-6">
-                <Target className="w-6 h-6" />
+            <div>
+              <div className="flex items-center gap-3 mb-8">
+                <Target className="w-6 h-6 text-text-primary" />
+                <h2 className="text-2xl md:text-3xl font-bold text-text-primary">Perfect For</h2>
               </div>
-              <h3 className="text-2xl font-bold text-charcoal-900 mb-6">
-                Who This Is Built For
-              </h3>
-              <ul className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {service.perfectFor.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                    <span className="text-charcoal-700 font-medium">{item}</span>
-                  </li>
+                  <div key={idx} className="flex items-start gap-3 p-4 rounded-2xl bg-bg-card border border-bg-border">
+                    <CheckCircle className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
+                    <span className="text-text-primary font-medium text-sm md:text-base">{item}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
 
             {/* Expected Outcomes */}
-            <div className="bg-white rounded-3xl p-8 sm:p-10 border border-border shadow-sm">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold mb-6">
-                <TrendingUp className="w-6 h-6" />
+            <div>
+              <div className="flex items-center gap-3 mb-8">
+                <TrendingUp className="w-6 h-6 text-text-primary" />
+                <h2 className="text-2xl md:text-3xl font-bold text-text-primary">Expected Outcomes</h2>
               </div>
-              <h3 className="text-2xl font-bold text-charcoal-900 mb-6">
-                Measurable Outcomes
-              </h3>
-              <ul className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {service.outcomes.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <Zap className="w-5 h-5 text-gold-500 shrink-0 mt-0.5" />
-                    <span className="text-charcoal-700 font-medium">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Detailed Deliverables List */}
-      <section className="py-16 md:py-24 bg-white border-b border-border/40">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal-900 mb-4">
-              What&apos;s Included In The Package
-            </h2>
-            <p className="text-gray-custom-500 max-w-2xl mx-auto">
-              Everything required to engineer an enterprise-grade, high-conversion digital asset from day one.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {service.features.map((feature, idx) => (
-              <div
-                key={idx}
-                className="flex items-center gap-3 p-4 rounded-2xl bg-cream-50/70 border border-border/60"
-              >
-                <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
-                  <Check className="w-3.5 h-3.5" />
-                </div>
-                <span className="text-sm font-semibold text-charcoal-800">{feature}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Engineering Process */}
-      <section className="py-16 md:py-24 bg-cream-50 border-b border-border/40">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal-900 mb-4">
-              How We Execute
-            </h2>
-            <p className="text-gray-custom-500 max-w-2xl mx-auto">
-              A transparent, phased delivery process with zero friction and continuous milestone updates.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {service.process.map((step, idx) => (
-              <div
-                key={idx}
-                className="bg-white p-7 rounded-2xl border border-border shadow-xs flex gap-5 items-start"
-              >
-                <div className="w-10 h-10 rounded-xl bg-gold-400/10 text-gold-700 font-bold flex items-center justify-center shrink-0 border border-gold-400/20">
-                  {idx + 1}
-                </div>
-                <div>
-                  <h4 className="text-lg font-bold text-charcoal-900 mb-1.5">{step.step}</h4>
-                  <p className="text-sm text-gray-custom-500 leading-relaxed">{step.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Tech Stack */}
-      <section className="py-14 bg-white border-b border-border/40">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-xs font-mono uppercase tracking-widest text-gray-custom-400 block mb-6">
-            Engineered With Modern Technologies
-          </span>
-          <div className="flex flex-wrap justify-center items-center gap-3">
-            {service.techStack.map((tech, idx) => (
-              <span
-                key={idx}
-                className="px-4 py-2 rounded-xl bg-cream-100 text-charcoal-800 text-xs sm:text-sm font-semibold border border-border/80"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQs */}
-      <section className="py-16 md:py-24 bg-cream-50 border-b border-border/40">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-charcoal-900 mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-gray-custom-500">
-              Clear answers to the most common questions regarding {service.title}.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {service.faqs.map((faq, idx) => (
-              <div key={idx} className="bg-white rounded-2xl p-6 border border-border shadow-xs">
-                <div className="flex items-start gap-3">
-                  <HelpCircle className="w-5 h-5 text-gold-500 shrink-0 mt-0.5" />
-                  <div>
-                    <h3 className="text-base font-bold text-charcoal-900 mb-2">{faq.q}</h3>
-                    <p className="text-sm text-gray-custom-500 leading-relaxed">{faq.a}</p>
+                  <div key={idx} className="flex items-start gap-3 p-4 rounded-2xl bg-bg-card border border-bg-border">
+                    <CheckCircle className="w-5 h-5 text-accent-primary shrink-0 mt-0.5" />
+                    <span className="text-text-primary font-medium text-sm md:text-base">{item}</span>
                   </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      
+      {/* 5. WHAT'S INCLUDED */}
+      <section className="py-16 md:py-20 bg-bg-card border-b border-bg-border">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">What's Included</h2>
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto">Everything you need to succeed, built completely done-for-you.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {service.features.map((feature, idx) => (
+              <div key={idx} className="group flex items-center gap-4 p-5 rounded-2xl bg-background border border-bg-border hover:border-accent-primary/40 transition-colors">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center">
+                  <ShieldCheck className="w-5 h-5 text-green-500" />
+                </div>
+                <h3 className="text-base font-semibold text-text-primary leading-tight">{feature}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. OUR PROCESS */}
+      <section className="py-16 md:py-20 bg-background border-b border-bg-border">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">Our Process</h2>
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto">A proven, structured approach to ensure flawless execution.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {service.process.map((step, idx) => (
+              <div key={idx} className="relative p-8 rounded-[2rem] bg-bg-card border border-bg-border">
+                <div className="absolute top-8 right-8 text-4xl font-black text-text-muted/30">0{idx + 1}</div>
+                <h3 className="text-xl font-bold text-text-primary mb-4 relative z-10">{step.step}</h3>
+                <p className="text-text-secondary leading-relaxed relative z-10">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. OUR PROMISE & 8. TECH STACK */}
+      <section className="py-16 md:py-20 bg-bg-card border-b border-bg-border">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
+            
+            {/* Our Promise */}
+            <div>
+              <h2 className="text-3xl font-bold text-text-primary mb-8">Our Promise</h2>
+              <div className="space-y-5">
+                {[
+                  "Clean, honest implementation",
+                  "Business-first strategic thinking",
+                  "Clear, proactive communication",
+                  "Performance & speed optimization",
+                  "Scalable technical architecture",
+                  "Long-term support guidance"
+                ].map((promise, idx) => (
+                  <div key={idx} className="flex items-center gap-4">
+                    <div className="w-8 h-8 rounded-full bg-accent-primary/10 flex items-center justify-center shrink-0">
+                      <Check className="w-4 h-4 text-accent-primary" />
+                    </div>
+                    <span className="text-text-secondary font-medium text-lg">{promise}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Tech Stack */}
+            <div>
+              <h2 className="text-3xl font-bold text-text-primary mb-8">Technology Stack</h2>
+              <p className="text-text-secondary mb-8 leading-relaxed">
+                We use enterprise-grade, modern tools to ensure your business systems are secure, scalable, and lightning fast.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {service.techStack.map((tech, idx) => (
+                  <span key={idx} className="px-5 py-2.5 rounded-full bg-background border border-bg-border text-text-primary font-medium text-sm shadow-sm">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 9. FAQs */}
+      <section className="py-16 md:py-20 bg-background border-b border-bg-border">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">Frequently Asked Questions</h2>
+            <p className="text-lg text-text-secondary">Everything you need to know about this service.</p>
+          </div>
+
+          <div className="grid gap-6">
+            {service.faqs.map((faq, idx) => (
+              <div key={idx} className="p-8 rounded-[2rem] bg-bg-card border border-bg-border flex gap-6">
+                <HelpCircle className="w-6 h-6 text-accent-primary shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-bold text-text-primary mb-3">{faq.q}</h3>
+                  <p className="text-text-secondary leading-relaxed">{faq.a}</p>
                 </div>
               </div>
             ))}
@@ -506,12 +864,59 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         </div>
       </section>
 
-      {/* Bottom Conversion Section: 30-Min Strategy Call OR Direct Written Form */}
-      <section id="service-enquiry" className="py-20 md:py-28 bg-slate-50 border-t border-slate-200">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 10. ADD-ONS & 11. RELATED SERVICES */}
+      <section className="py-16 md:py-20 bg-bg-card">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            {/* Add-ons */}
+            <div className="lg:col-span-4">
+              <h3 className="text-xl font-bold text-text-primary mb-6">Optional Add-ons</h3>
+              <div className="flex flex-col gap-3">
+                {service.addons.map((addon, idx) => (
+                  <div key={idx} className="flex items-center gap-3 p-4 rounded-xl bg-background border border-bg-border">
+                    <Layers className="w-5 h-5 text-text-muted" />
+                    <span className="text-text-secondary font-medium text-sm">{addon}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Related Services */}
+            <div className="lg:col-span-8">
+              <h3 className="text-xl font-bold text-text-primary mb-6">Explore Related Services</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {otherServices.map((other) => (
+                  <Link 
+                    key={other.slug} 
+                    href={`/services/${other.slug}`}
+                    className="group block p-6 rounded-2xl bg-background border border-bg-border hover:border-accent-primary/40 transition-colors"
+                  >
+                    <div className="flex items-center justify-between mb-2">
+                      <h4 className="font-bold text-text-primary">{other.title}</h4>
+                      <ArrowUpRight className="w-5 h-5 text-text-muted group-hover:text-accent-primary transition-colors" />
+                    </div>
+                    <p className="text-sm text-text-secondary line-clamp-2">{other.description}</p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 12. DUAL CONVERSION SUITE: 30-MIN STRATEGY CALL + INSTANT INBOUND ENQUIRY FORM */}
+      <section className="py-20 md:py-28 bg-slate-50/80 border-t border-slate-200/80 relative overflow-hidden" id="enquiry">
+        
+        {/* Subtle Ambient Background Gradients */}
+        <div className="absolute -top-[200px] right-0 w-[500px] h-[500px] bg-blue-100/50 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-50/60 rounded-full blur-[100px] pointer-events-none" />
+        
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#0067F4] text-xs font-mono font-bold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-[#0067F4] border border-blue-200/60 text-xs font-mono font-bold tracking-wider uppercase mb-4 shadow-2xs">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Next Step: Start Your Project</span>
             </div>
