@@ -89,6 +89,15 @@ export default function Footer() {
                   {siteConfig.phone}
                 </a>
               </li>
+              <li>
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="flex items-center gap-2.5 text-sm text-text-secondary hover:text-foreground transition-colors"
+                >
+                  <Mail className="w-4 h-4" />
+                  {siteConfig.email}
+                </a>
+              </li>
               <li className="pt-2">
                 <a
                   href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`}

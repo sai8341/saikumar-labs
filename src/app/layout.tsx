@@ -6,12 +6,14 @@ import Footer from "@/components/layout/Footer";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import ScrollDepthTracker from "@/components/analytics/ScrollDepthTracker";
 import SmoothScroll from "@/components/layout/SmoothScroll";
+import FloatingWhatsApp from "@/components/ui/FloatingWhatsApp";
 import { siteConfig } from "@/lib/config";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
   subsets: ["latin"],
   display: "swap",
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {
@@ -240,6 +242,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-1 pt-16 md:pt-20">{children}</main>
           <Footer />
+          <FloatingWhatsApp />
         </SmoothScroll>
       </body>
     </html>

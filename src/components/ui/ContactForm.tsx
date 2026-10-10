@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Send, CheckCircle, ChevronDown, ShieldCheck } from "lucide-react";
 import Button from "./Button";
 import { analytics } from "@/lib/analytics";
+import { siteConfig } from "@/lib/config";
 
 type FormData = {
   name: string;
@@ -102,7 +103,7 @@ export default function ContactForm({
 
         <div className="pt-2">
           <a
-            href={`https://wa.me/919390123367?text=${encodeURIComponent(`Hi Sai Kumar, I just submitted an enquiry for ${formData.business || formData.name} (${formData.service}). Looking forward to discussing next steps.`)}`}
+            href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(`Hi Sai Kumar, I just submitted an enquiry for ${formData.business || formData.name} (${formData.service}). Looking forward to discussing next steps.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-bold transition-all shadow-sm hover:shadow-md cursor-pointer"
