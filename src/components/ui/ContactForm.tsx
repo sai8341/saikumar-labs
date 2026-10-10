@@ -60,7 +60,7 @@ export default function ContactForm({
     setIsSubmitting(true);
 
     try {
-      const opsApiUrl = process.env.NEXT_PUBLIC_OPS_API_URL || 'https://ops.sydxai.com';
+      const opsApiUrl = process.env.NEXT_PUBLIC_OPS_API_URL || 'https://ops.saikumarlabs.com';
       await fetch(`${opsApiUrl}/api/leads`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
