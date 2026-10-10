@@ -27,6 +27,9 @@ export const siteConfig = {
     twitter: "https://twitter.com/saikumarlabs",
   },
 
+  // Google Tag Manager
+  gtmId: process.env.NEXT_PUBLIC_GTM_ID || "GTM-NG5DMFLZ",
+
   // Analytics
   ga4Id: process.env.NEXT_PUBLIC_GA4_ID || "",
 

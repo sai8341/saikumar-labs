@@ -9,18 +9,33 @@ type GAEvent = {
   value?: number;
 };
 
-// Safely send GA4 events
+// Safely send events to GTM dataLayer and GA4
 export function trackEvent({ action, category, label, value }: GAEvent) {
   if (typeof window === "undefined") return;
 
-  const w = window as Window & { gtag?: (...args: unknown[]) => void };
-  if (!w.gtag) return;
+  const w = window as Window & { 
+    gtag?: (...args: unknown[]) => void;
+    dataLayer?: Array<Record<string, unknown>>;
+  };
 
-  w.gtag("event", action, {
-    event_category: category,
-    event_label: label,
-    value,
-  });
+  // Push to GTM dataLayer
+  if (w.dataLayer) {
+    w.dataLayer.push({
+      event: action,
+      event_category: category,
+      event_label: label,
+      value,
+    });
+  }
+
+  // Push to GA4 gtag if active
+  if (w.gtag) {
+    w.gtag("event", action, {
+      event_category: category,
+      event_label: label,
+      value,
+    });
+  }
 }
 
 // Pre-built event helpers
