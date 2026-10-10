@@ -3,49 +3,60 @@ import { siteConfig } from "@/lib/config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url;
+  const lastModDate = new Date("2026-10-10");
 
   return [
     {
       url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
+      lastModified: lastModDate,
     },
     {
       url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
+      lastModified: lastModDate,
+    },
+    {
+      url: `${baseUrl}/services/clinic-lead-systems`,
+      lastModified: lastModDate,
+    },
+    {
+      url: `${baseUrl}/services/web-applications`,
+      lastModified: lastModDate,
+    },
+    {
+      url: `${baseUrl}/services/digital-foundation`,
+      lastModified: lastModDate,
+    },
+    {
+      url: `${baseUrl}/services/lead-engine`,
+      lastModified: lastModDate,
+    },
+    {
+      url: `${baseUrl}/services/business-automation`,
+      lastModified: lastModDate,
+    },
+    {
+      url: `${baseUrl}/services/brand-authority`,
+      lastModified: lastModDate,
     },
     {
       url: `${baseUrl}/work`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
+      lastModified: lastModDate,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
+      lastModified: lastModDate,
     },
     {
       url: `${baseUrl}/blog/why-service-businesses-lose-leads`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
+      lastModified: lastModDate,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
+      lastModified: lastModDate,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
+      lastModified: lastModDate,
     },
   ];
 }

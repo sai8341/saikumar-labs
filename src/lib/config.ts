@@ -9,7 +9,7 @@ export const siteConfig = {
   tagline: "Lead Systems for Service Businesses",
   description:
     "Helping service businesses fix lead leaks and turn their online presence into a lead system that brings more enquiries, better follow-up, and fewer missed leads.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://saikumar-labs.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://saikumarlabs.com",
   ogImage: "/og-image.jpg",
 
   // Contact
