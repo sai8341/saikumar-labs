@@ -1,31 +1,13 @@
 import { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/config";
 
-export const dynamic = "force-static";
-
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/*"],
-      },
-      {
-        userAgent: ["Googlebot", "Bingbot", "Applebot"],
-        allow: "/",
-      },
-      {
-        userAgent: [
-          "GPTBot",
-          "OAI-SearchBot",
-          "ChatGPT-User",
-          "PerplexityBot",
-          "ClaudeBot",
-          "anthropic-ai",
-          "Google-Extended",
-        ],
-        allow: "/",
+        disallow: ["/api/"],
       },
     ],
     sitemap: `${siteConfig.url}/sitemap.xml`,

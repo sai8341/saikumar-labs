@@ -1,64 +1,87 @@
 import { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/config";
 
-export const dynamic = "force-static";
-
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = siteConfig.url;
-  const lastModDate = new Date("2026-10-10");
 
   return [
     {
       url: baseUrl,
-      lastModified: lastModDate,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 1.0,
     },
     {
       url: `${baseUrl}/services`,
-      lastModified: lastModDate,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/services/clinic-lead-systems`,
-      lastModified: lastModDate,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/services/web-applications`,
-      lastModified: lastModDate,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/services/digital-foundation`,
-      lastModified: lastModDate,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/services/lead-engine`,
-      lastModified: lastModDate,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/services/business-automation`,
-      lastModified: lastModDate,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/services/brand-authority`,
-      lastModified: lastModDate,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/work`,
-      lastModified: lastModDate,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: lastModDate,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/blog/why-service-businesses-lose-leads`,
-      lastModified: lastModDate,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: lastModDate,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: lastModDate,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
   ];
 }
