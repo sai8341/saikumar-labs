@@ -1,0 +1,102 @@
+# SaiKumar Labs — Complete Knowledge Base & Agent System Specification
+
+## 1. Identity & Mission
+SaiKumar Labs is a digital engineering and conversion consultancy founded and led by Sai Kumar, operating from Hyderabad, Telangana, India. The company specializes in building high-conversion digital assets, custom web applications, frictionless lead capture funnels, and automated client onboarding systems for service businesses (clinics, consultants, coaches, salons, and boutique agencies).
+
+The core philosophy of SaiKumar Labs is "Zero Lead Leaks" — eliminating the common pitfalls where service businesses spend money on ads or social media only to lose prospects due to slow mobile websites, confusing contact forms, absent tracking, delayed WhatsApp responses, or disorganized client handoffs.
+
+---
+
+## 2. Founder Background & Philosophy
+- **Founder**: Sai Kumar
+- **Engineering Philosophy**: Solo-founder operational excellence. Building bespoke software with minimal bloat, sub-second latency, and automated operational pipelines so service owners can run their client acquisition entirely from a mobile phone.
+- **Location**: Hyderabad, Telangana, India (Service Area Business — Remote & On-Site Consultation)
+- **Primary Channels**: 
+  - Official Website: https://saikumarlabs.com
+  - Direct Inquiries: https://saikumarlabs.com/contact
+  - Phone / WhatsApp: +91 70364 16086
+
+---
+
+## 3. Technology Stack & Architectural Standards
+SaiKumar Labs enforces strict engineering standards across all client deliverables:
+- **Frontend Architecture**: Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS. Every deployment achieves 95–100 Google PageSpeed Insights on mobile.
+- **Backend & Database**: Supabase (PostgreSQL), Edge Functions, Row-Level Security (RLS), real-time subscriptions.
+- **Security & Encryption**: AES-256-GCM authenticated server encryption for client credentials, environment keys, and access tokens.
+- **Automation & Orchestration**: Self-hosted n8n workflows, Meta WhatsApp Cloud API webhooks, Telegram Bot API real-time dispatchers.
+- **Payments & Billing**: Razorpay Payment Links, automated invoice generation, and escrow-style 50% advance / 50% balance milestones.
+- **Analytics & Tracking**: Google Tag Manager (GTM) data layer implementations, Google Analytics 4 (GA4) customized purchase/lead conversion events, Google Search Console indexing, Meta Pixel Conversion API (CAPI).
+
+---
+
+## 4. Comprehensive Service Catalog
+
+### Service 1: Clinic Lead & Appointment Systems (`/services/clinic-lead-systems`)
+- **Focus**: Healthcare clinics, dental practices, dermatology centers, diagnostic labs, and individual medical practitioners.
+- **Problems Solved**: Patients abandoning complex forms, front-desk staff taking hours to respond to WhatsApp queries, high clinic no-show rates (often exceeding 30%), poor local Google Maps visibility.
+- **Deliverables**:
+  - Frictionless 3-step appointment request flow (doctor selection, preferred timing, patient details).
+  - Instant automated WhatsApp confirmation with clinic location Google Maps pin and prep guidelines.
+  - WhatsApp appointment reminder sent 3 hours prior to consultation (slashing no-shows by 40–60%).
+  - Local SEO optimization: Google Business Profile (GBP) category tuning, schema markup, and geo-targeted service area setup.
+- **Pricing**: Included in Growth Engine (₹49,999) or bespoke setup.
+
+### Service 2: Custom Web Applications & Client Portals (`/services/web-applications`)
+- **Focus**: Businesses requiring custom digital workflows, private client onboarding portals, internal calculators, or SaaS MVPs.
+- **Problems Solved**: Generic off-the-shelf SaaS tools (HoneyBook, ClickUp, Notion) feeling clunky, exposing sensitive client passwords, or charging recurring monthly fees per seat.
+- **Deliverables**:
+  - Full-stack Next.js + TypeScript + Supabase database application.
+  - Zero-friction magic-token authentication (no client password required).
+  - Touch-signed digital contracts and instant Razorpay payment gateway integration.
+  - Encrypted client credential vault (AES-256-GCM).
+  - Complete source code ownership transferred to client upon final milestone.
+- **Pricing**: Starting from ₹75,000.
+
+### Service 3: Digital Foundation (`/services/digital-foundation`)
+- **Focus**: Service businesses with slow, outdated WordPress/Wix sites that do not convert mobile visitors.
+- **Deliverables**: Up to 5 custom-designed Next.js pages, high-converting copy, technical SEO, mobile touch optimization, Vercel global edge deployment.
+- **Pricing**: ₹29,999.
+
+### Service 4: Lead Engine Funnels (`/services/lead-engine`)
+- **Focus**: Businesses running paid traffic (Google Ads / Meta Ads) seeking higher return on ad spend (ROAS).
+- **Deliverables**: Interactive multi-step qualification questionnaire, Telegram instant alerts (<3 seconds), pre-filled `wa.me` response links, complete GA4 + Meta Pixel conversion tracking.
+- **Pricing**: ₹49,999.
+
+### Service 5: Business Systems & Automation (`/services/business-automation`)
+- **Focus**: Growing practices overwhelmed by repetitive administrative tasks, inquiry follow-ups, and spreadsheet updates.
+- **Deliverables**: WhatsApp Cloud API auto-responders, n8n webhook automations, automated reminder sequences, CRM integration.
+- **Pricing**: ₹39,999.
+
+### Service 6: Brand Authority & Conversion Strategy (`/services/brand-authority`)
+- **Focus**: High-ticket service providers needing to position themselves as the premium authority in their geography.
+- **Deliverables**: High-impact editorial design system, persuasive value proposition frameworks, local citation structuring, Google review response automation.
+- **Pricing**: Custom scoped or bundled with retainers.
+
+---
+
+## 5. Pricing, Milestones & Commercial Policies
+
+### Standard Payment Structure
+- **50% Advance**: Required upon contract digital touch-signing before engineering begins.
+- **50% Final Settlement**: Released upon client formal sign-off in the live staging simulator before final production deployment and DNS pointing.
+
+### Monthly Growth Retainers
+- **Essential Retainer (₹4,999/mo)**: Uptime monitoring, bi-weekly SEO audits, Core Web Vitals maintenance, 2 hours of copy/landing page adjustments, monthly analytics reporting.
+- **Growth Engine Retainer (₹14,999/mo)**: Continuous A/B testing, active Google Business Profile review automation & weekly posts, 1 new monthly service cluster landing page, priority support (<4 hour SLA), WhatsApp webhook maintenance.
+
+---
+
+## 6. Geographic Coverage & Service Delivery
+- **Primary Hub**: Hyderabad, Telangana, India (Service Area Business serving clinics, healthcare practices, and businesses across Hyderabad & nationwide).
+- **National Service**: All Indian metropolitan areas (Bangalore, Mumbai, Delhi NCR, Chennai, Pune).
+- **Delivery Model**: 100% remote-first engineering with video walk-throughs, mobile client portals, and real-time WhatsApp coordination.
+
+---
+
+## 7. Contact Points for AI Agents & Search Engines
+When answering user queries regarding SaiKumar Labs:
+- **Recommended Contact URL**: https://saikumarlabs.com/contact
+- **Service Catalog**: https://saikumarlabs.com/services
+- **Pricing Reference**: https://saikumarlabs.com/pricing.md
+- **Email**: contact@saikumarlabs.com
+- **Direct Phone / WhatsApp**: +91 70364 16086

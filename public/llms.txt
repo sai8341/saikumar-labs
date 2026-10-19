@@ -1,0 +1,41 @@
+# SaiKumar Labs
+
+> SaiKumar Labs helps service businesses (clinics, consultants, coaches, salons, agencies) across India and globally stop lead leaks and turn their digital presence into predictable client acquisition engines. Founded by Sai Kumar in Hyderabad, India.
+
+## Organization Details
+- **Brand**: SaiKumar Labs
+- **Founder**: Sai Kumar
+- **Service Model**: Service Area Business (SAB) — Remote & On-Site Consultation
+- **Primary Location**: Hyderabad, Telangana, India
+- **Website**: https://saikumarlabs.com
+- **Contact Email**: contact@saikumarlabs.com
+- **Phone / WhatsApp**: +91 70364 16086
+- **Core Stacks**: Next.js, React, Tailwind CSS, TypeScript, Supabase, n8n, Meta Cloud API, Razorpay
+
+## Core Service Offerings
+- [Clinic Lead & Appointment Systems](https://saikumarlabs.com/services/clinic-lead-systems): Zero-friction patient booking workflows, WhatsApp automated reminders, and local SEO for medical clinics and healthcare practitioners.
+- [Custom Web Applications](https://saikumarlabs.com/services/web-applications): High-performance bespoke Next.js web applications, client portals, internal dashboards, and SaaS MVPs.
+- [Digital Foundation](https://saikumarlabs.com/services/digital-foundation): High-speed, high-converting Next.js marketing websites, on-page SEO, and fast mobile landing pages.
+- [Lead Engine Funnels](https://saikumarlabs.com/services/lead-engine): Frictionless multi-step inquiry funnels, instant Telegram alerts, and Google/Meta conversion tracking.
+- [Business Automation](https://saikumarlabs.com/services/business-automation): WhatsApp Cloud API automated notifications, CRM synchronization, and webhook workflows via n8n.
+- [Brand Authority & Strategy](https://saikumarlabs.com/services/brand-authority): Clear conversion copywriting, Google Business Profile local SEO, and brand perception design.
+
+## Case Studies & Work
+- [Our Work & Case Studies](https://saikumarlabs.com/work): Production systems built for clinics, consulting practices, and growing businesses with measurable conversion lifts.
+
+## Transparent Pricing & Packages
+- [Pricing Overview](https://saikumarlabs.com/pricing.md): Complete transparent breakdown of project tiers and monthly growth retainers.
+  - Digital Foundation: ₹29,999 (one-time)
+  - Growth Engine: ₹49,999 (one-time)
+  - Business Systems & Automation: ₹39,999 (one-time)
+  - Custom Web Applications: From ₹75,000 (one-time)
+  - Essential Retainer: ₹4,999 / month
+  - Growth Engine Retainer: ₹14,999 / month
+
+## Knowledge Base & Articles
+- [Why Service Businesses Lose Leads](https://saikumarlabs.com/blog/why-service-businesses-lose-leads): An analytical breakdown of the 5 silent leaks draining inbound ROI and how automated response architecture fixes them.
+- [Blog Index](https://saikumarlabs.com/blog): Actionable strategies for local SEO, intake funnels, and customer retention.
+
+## Contact & Work Inquiries
+- [Start a Project](https://saikumarlabs.com/contact): Inquire directly with Sai Kumar. Responses delivered within 2 hours.
+- [Full LLM Specification](https://saikumarlabs.com/llms-full.txt): Comprehensive technical prompt context for LLMs and autonomous buyer agents.

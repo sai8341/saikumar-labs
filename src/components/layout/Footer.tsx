@@ -19,16 +19,23 @@ export default function Footer() {
                 alt="SaiKumar Labs Logo"
                 width={36}
                 height={36}
-                className="rounded-lg"
+                className="rounded-full object-cover"
               />
               <span className="font-heading font-bold text-lg text-foreground">
                 SaiKumar Labs
               </span>
             </Link>
-            <p className="text-sm text-text-secondary leading-relaxed mb-6">
+            <p className="text-sm text-text-secondary leading-relaxed mb-4">
               Helping service businesses fix lead leaks and turn their online
               presence into a system that brings more enquiries.
             </p>
+            {/* Government MSME Recognition Badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 text-xs font-medium mb-6">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Govt. of India Registered MSME</span>
+              <span className="text-emerald-400 font-mono">•</span>
+              <span className="font-mono font-semibold">{siteConfig.udyamNumber}</span>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -115,8 +122,8 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="py-6 border-t border-bg-border flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-text-muted">
-            © {currentYear} SaiKumar Labs. All rights reserved.
+                    <p className="text-xs text-text-muted">
+            &copy; {currentYear} SaiKumar Labs (A Unit of {siteConfig.legalName}). All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             {Object.entries(siteConfig.social).map(([platform, url]) => (

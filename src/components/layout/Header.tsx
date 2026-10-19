@@ -42,7 +42,7 @@ export default function Header() {
               alt="SaiKumar Labs Logo"
               width={40}
               height={40}
-              className="rounded-lg"
+              className="rounded-full object-cover"
               priority
             />
           </Link>

@@ -104,6 +104,28 @@ const jsonLd = {
       "@type": "Organization",
       "@id": `${siteConfig.url}/#organization`,
       name: "SaiKumar Labs",
+      legalName: siteConfig.legalName,
+      alternateName: "SaiKumar Labs",
+      parentOrganization: {
+        "@type": "Organization",
+        name: siteConfig.legalName,
+        identifier: siteConfig.udyamNumber,
+      },
+      taxID: siteConfig.udyamNumber,
+      identifier: {
+        "@type": "PropertyValue",
+        name: "Udyam Registration Number",
+        value: siteConfig.udyamNumber,
+      },
+      hasCredential: {
+        "@type": "EducationalOccupationalCredential",
+        name: "Government of India MSME Udyam Registration",
+        credentialCategory: "Micro Enterprise (Services)",
+        recognizedBy: {
+          "@type": "GovernmentOrganization",
+          name: "Ministry of Micro, Small and Medium Enterprises, Government of India",
+        },
+      },
       url: siteConfig.url,
       logo: `${siteConfig.url}/logo.jpg`,
       description: siteConfig.description,

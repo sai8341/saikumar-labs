@@ -6,6 +6,8 @@
 
 export const siteConfig = {
   name: "SaiKumar Labs",
+  legalName: "Sydx AI",
+  udyamNumber: "UDYAM-TS-11-0061133",
   tagline: "Lead Systems for Service Businesses",
   description:
     "Helping service businesses fix lead leaks and turn their online presence into a lead system that brings more enquiries, better follow-up, and fewer missed leads.",
