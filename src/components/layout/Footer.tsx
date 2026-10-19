@@ -120,7 +120,7 @@ export default function Footer() {
               &copy; {currentYear} SaiKumar Labs (A Unit of {siteConfig.legalName}). All rights reserved.
             </p>
             <span className="hidden sm:inline text-bg-border">•</span>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 text-xs font-medium whitespace-nowrap shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 text-[10.5px] sm:text-xs font-medium whitespace-nowrap shadow-sm">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
               <span>Govt. of India Registered MSME</span>
               <span className="text-emerald-400 font-mono">•</span>
