@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+
+
 import GoogleTagManager from "@/components/analytics/GoogleTagManager";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import ScrollDepthTracker from "@/components/analytics/ScrollDepthTracker";
 import SmoothScroll from "@/components/layout/SmoothScroll";
-import FloatingWhatsApp from "@/components/ui/FloatingWhatsApp";
+import { AppShell } from "@/components/layout/AppShell";
 import { siteConfig } from "@/lib/config";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -278,10 +278,7 @@ export default function RootLayout({
         <SmoothScroll>
           <GoogleAnalytics />
           <ScrollDepthTracker />
-          <Header />
-          <main className="flex-1 pt-16 md:pt-20">{children}</main>
-          <Footer />
-          <FloatingWhatsApp />
+          <AppShell>{children}</AppShell>
         </SmoothScroll>
       </body>
     </html>
