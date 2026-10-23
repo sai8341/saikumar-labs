@@ -81,4 +81,25 @@ export const analytics = {
       category: "engagement",
       value: percentage,
     }),
+
+  visitingCardScan: () =>
+    trackEvent({
+      action: "visiting_card_scan",
+      category: "offline_conversion",
+      label: "qr_code",
+    }),
+
+  visitingCardWhatsApp: () =>
+    trackEvent({
+      action: "visiting_card_whatsapp_click",
+      category: "offline_conversion",
+      label: "qr_code",
+    }),
+
+  visitingCardSaveContact: () =>
+    trackEvent({
+      action: "visiting_card_save_contact",
+      category: "offline_conversion",
+      label: "qr_code",
+    }),
 };
