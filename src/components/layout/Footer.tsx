@@ -26,8 +26,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-text-secondary leading-relaxed mb-6">
-              Helping service businesses fix lead leaks and turn their online
-              presence into a system that brings more enquiries.
+              Engineering intelligent AI automations, high-speed websites, and custom software for service businesses.
             </p>
           </div>
 
@@ -50,24 +49,24 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Core Systems */}
           <div>
             <h4 className="font-heading font-semibold text-foreground mb-5 text-sm uppercase tracking-wider">
-              Services
+              Core Systems
             </h4>
             <ul className="space-y-3">
               {[
-                "Online Presence Setup",
-                "Tracking & Analytics",
-                "Lead Capture Systems",
-                "Follow-up & Automation",
+                { label: "AI Automation & Agents", href: "/services/ai-automation" },
+                { label: "High-Speed Websites", href: "/services/websites" },
+                { label: "Custom Software & Portals", href: "/services/custom-software" },
+                { label: "Agentic Ads Infrastructure", href: "/services/social-ads-infrastructure" },
               ].map((service) => (
-                <li key={service}>
+                <li key={service.href}>
                   <Link
-                    href="/services"
+                    href={service.href}
                     className="text-sm text-text-secondary hover:text-foreground transition-colors duration-200"
                   >
-                    {service}
+                    {service.label}
                   </Link>
                 </li>
               ))}
@@ -113,7 +112,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar with Single-Line Professional MSME Badge */}
+        {/* Bottom Bar with MSME Badge */}
         <div className="py-6 border-t border-bg-border flex flex-col lg:flex-row items-center justify-between gap-4">
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-2 text-xs text-text-muted">
             <p>
