@@ -24,12 +24,12 @@ export function ServiceFeaturesProcess({ service }: ServiceFeaturesProcessProps)
             {service.features.map((feature, idx) => (
               <div
                 key={idx}
-                className="p-4 rounded-2xl bg-bg-card/70 border border-bg-border flex items-start gap-3.5"
+                className="p-4 sm:p-5 rounded-2xl bg-bg-card/70 border border-bg-border flex items-start gap-3.5"
               >
                 <div className="w-5 h-5 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 mt-0.5">
                   <Check className="w-3.5 h-3.5" />
                 </div>
-                <span className="text-xs sm:text-sm font-medium text-text-primary">{feature}</span>
+                <span className="text-sm sm:text-base font-semibold text-text-primary leading-snug">{feature}</span>
               </div>
             ))}
           </div>
@@ -37,10 +37,10 @@ export function ServiceFeaturesProcess({ service }: ServiceFeaturesProcessProps)
 
         {/* Process */}
         <div className="mb-16">
-          <h2 className="text-2xl sm:text-3xl font-bold text-text-primary tracking-tight mb-3">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-text-primary tracking-tight mb-3">
             Our 4-Step Implementation Sprint
           </h2>
-          <p className="text-sm sm:text-base text-text-secondary mb-8">
+          <p className="text-base text-text-secondary mb-8">
             How we take you from current bottlenecks to live production within 1 to 2 weeks.
           </p>
 
@@ -48,13 +48,13 @@ export function ServiceFeaturesProcess({ service }: ServiceFeaturesProcessProps)
             {service.process.map((step, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-bg-card border border-bg-border flex flex-col justify-between"
+                className="p-6 sm:p-7 rounded-2xl bg-bg-card border border-bg-border flex flex-col justify-between"
               >
                 <div>
-                  <div className="text-xs font-bold uppercase tracking-wider text-blue-600 mb-2">
+                  <div className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-blue-600 mb-2">
                     {step.step}
                   </div>
-                  <p className="text-xs sm:text-sm text-text-secondary leading-relaxed font-normal">
+                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed font-normal">
                     {step.desc}
                   </p>
                 </div>

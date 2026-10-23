@@ -66,18 +66,18 @@ export default function ServicesContent() {
                       </span>
                     </div>
 
-                    <h2 className="text-2xl font-bold text-text-primary tracking-tight mb-2">
+                    <h2 className="text-2xl sm:text-[28px] font-extrabold text-text-primary tracking-tight mb-2">
                       {service.title}
                     </h2>
-                    <p className="text-sm font-semibold text-blue-600 mb-4">{service.tagline}</p>
-                    <p className="text-sm text-text-secondary leading-relaxed mb-6 font-normal">
+                    <p className="text-base font-bold text-blue-600 mb-3">{service.tagline}</p>
+                    <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-6 font-normal">
                       {service.description}
                     </p>
 
-                    <div className="space-y-2.5 mb-8">
+                    <div className="space-y-3 mb-8">
                       {service.features.slice(1, 5).map((f, fIdx) => (
-                        <div key={fIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-text-secondary">
-                          <CheckCircle className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                        <div key={fIdx} className="flex items-start gap-3 text-sm sm:text-[15px] text-text-primary font-medium">
+                          <CheckCircle className="w-5 h-5 text-blue-600 shrink-0 mt-0.5" />
                           <span>{f}</span>
                         </div>
                       ))}
@@ -87,12 +87,12 @@ export default function ServicesContent() {
                   <div className="pt-6 border-t border-bg-border flex items-center justify-between">
                     <Link
                       href={`/services/${service.slug}`}
-                      className="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-700"
+                      className="inline-flex items-center text-base font-bold text-blue-600 hover:text-blue-700 group-hover:translate-x-1 transition-transform"
                     >
                       View Full Specifications
                       <ArrowRight className="w-4 h-4 ml-1.5" />
                     </Link>
-                    <span className="text-xs text-text-muted">{service.metricHighlight.stat} {service.metricHighlight.label}</span>
+                    <span className="text-xs sm:text-sm font-semibold text-text-muted">{service.metricHighlight.stat} {service.metricHighlight.label}</span>
                   </div>
                 </div>
               );

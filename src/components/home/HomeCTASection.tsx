@@ -21,14 +21,14 @@ export function HomeCTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="inline-flex items-center gap-2 px-3.5 py-1 mb-6 text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 rounded-full border border-blue-200"
+          className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 rounded-full border border-blue-200/80 shadow-sm"
         >
           <Sparkles className="w-3.5 h-3.5" />
           Ready to Upgrade Your Operations?
         </motion.div>
 
         <motion.h2
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-text-primary tracking-tight max-w-3xl mx-auto leading-tight mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-text-primary tracking-tight max-w-3xl mx-auto leading-[1.12] mb-6"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -38,7 +38,7 @@ export function HomeCTASection() {
         </motion.h2>
 
         <motion.p
-          className="text-base sm:text-lg text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed font-normal"
+          className="text-base sm:text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed font-normal"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -58,7 +58,7 @@ export function HomeCTASection() {
             href="https://cal.com/saikumarlabs/discovery-call?theme=light"
             external
             variant="primary"
-            className="w-full sm:w-auto !px-8 !py-4 !text-base font-semibold shadow-[0_8px_25px_rgba(0,103,244,0.3)] hover:shadow-[0_12px_32px_rgba(0,103,244,0.4)]"
+            className="w-full sm:w-auto !px-8 !py-4 !text-base font-bold shadow-[0_8px_25px_rgba(0,103,244,0.3)] hover:shadow-[0_12px_35px_rgba(0,103,244,0.45)] hover:-translate-y-0.5 transition-all"
             trackLabel="final_discovery_cta"
           >
             Book Your Free 30-Min Audit
@@ -71,7 +71,7 @@ export function HomeCTASection() {
             )}`}
             external
             variant="outline"
-            className="w-full sm:w-auto !px-8 !py-4 !text-base font-semibold border-bg-border hover:border-emerald-500 hover:text-emerald-600"
+            className="w-full sm:w-auto !px-8 !py-4 !text-base font-bold border-bg-border hover:border-emerald-500 hover:text-emerald-600 bg-white"
             trackLabel="final_whatsapp_cta"
           >
             <MessageCircle className="w-4 h-4 mr-2 text-emerald-600" />
@@ -80,10 +80,12 @@ export function HomeCTASection() {
         </motion.div>
 
         {/* Assurance Pills */}
-        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-text-muted">
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-sm font-semibold text-text-secondary">
           {assurances.map((item, idx) => (
-            <div key={idx} className="flex items-center gap-1.5">
-              <Check className="w-3.5 h-3.5 text-blue-600" />
+            <div key={idx} className="flex items-center gap-2">
+              <div className="w-4 h-4 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <Check className="w-3 h-3" />
+              </div>
               <span>{item}</span>
             </div>
           ))}

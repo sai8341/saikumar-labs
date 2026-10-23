@@ -35,7 +35,7 @@ export function ServiceFaqSection({ service }: ServiceFaqSectionProps) {
                     onClick={() => setOpenIndex(isOpen ? null : idx)}
                     className="w-full p-5 sm:p-6 text-left font-bold text-text-primary flex items-center justify-between gap-4"
                   >
-                    <span className="text-sm sm:text-base">{faq.q}</span>
+                    <span className="text-base sm:text-lg font-bold text-text-primary">{faq.q}</span>
                     <ChevronDown
                       className={`w-5 h-5 text-text-muted transition-transform duration-200 shrink-0 ${
                         isOpen ? "rotate-180 text-blue-600" : ""
@@ -52,7 +52,7 @@ export function ServiceFaqSection({ service }: ServiceFaqSectionProps) {
                         transition={{ duration: 0.2 }}
                         className="overflow-hidden"
                       >
-                        <div className="px-5 pb-6 sm:px-6 text-xs sm:text-sm text-text-secondary leading-relaxed border-t border-bg-border/40 pt-4">
+                        <div className="px-5 pb-6 sm:px-6 text-sm sm:text-base text-text-secondary leading-relaxed border-t border-bg-border/60 pt-4 font-normal">
                           {faq.a}
                         </div>
                       </motion.div>
@@ -66,7 +66,7 @@ export function ServiceFaqSection({ service }: ServiceFaqSectionProps) {
 
         {/* Optional Add-ons */}
         {service.addons && service.addons.length > 0 && (
-          <div className="p-6 rounded-2xl bg-background border border-bg-border mb-16">
+          <div className="p-6 sm:p-7 rounded-2xl bg-background border border-bg-border mb-16">
             <h3 className="text-sm font-bold text-text-primary uppercase tracking-wider mb-4">
               Optional System Add-ons:
             </h3>
@@ -74,7 +74,7 @@ export function ServiceFaqSection({ service }: ServiceFaqSectionProps) {
               {service.addons.map((addon, aIdx) => (
                 <span
                   key={aIdx}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-bg-card text-xs font-semibold text-text-secondary border border-bg-border"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-bg-card text-xs sm:text-sm font-semibold text-text-secondary border border-bg-border"
                 >
                   <Plus className="w-3.5 h-3.5 text-blue-600" />
                   {addon}
@@ -85,11 +85,11 @@ export function ServiceFaqSection({ service }: ServiceFaqSectionProps) {
         )}
 
         {/* Final Service CTA Card */}
-        <div className="p-8 sm:p-10 rounded-3xl bg-background border-2 border-blue-600/30 text-center shadow-md">
-          <h3 className="text-2xl font-bold text-text-primary mb-3">
+        <div className="p-8 sm:p-12 rounded-3xl bg-background border-2 border-blue-600/30 text-center shadow-md">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-text-primary mb-3">
             Ready to deploy {service.title}?
           </h3>
-          <p className="text-sm text-text-secondary max-w-lg mx-auto mb-8 font-normal">
+          <p className="text-base text-text-secondary max-w-lg mx-auto mb-8 font-normal">
             Book a 30-minute systems discovery call. We will review your current architecture and give you an exact, fixed-scope proposal.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

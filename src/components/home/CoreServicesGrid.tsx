@@ -50,38 +50,38 @@ export function CoreServicesGrid() {
 
                 <div>
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 shadow-sm border border-blue-100">
-                      <Icon className="w-7 h-7" />
+                    <div className="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 shadow-sm border border-blue-100">
+                      <Icon className="w-8 h-8" />
                     </div>
                     <div>
                       <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
                         {service.badge}
                       </span>
-                      <h3 className="text-2xl font-bold text-text-primary tracking-tight">
+                      <h3 className="text-2xl sm:text-[28px] font-extrabold text-text-primary tracking-tight">
                         {service.title}
                       </h3>
                     </div>
                   </div>
 
-                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed mb-6">
+                  <p className="text-base text-text-secondary leading-relaxed mb-6 font-normal">
                     {service.tagline}
                   </p>
 
-                  <div className="p-3.5 mb-8 rounded-xl bg-bg-card/70 border border-bg-border flex items-center justify-between">
-                    <span className="text-xs text-text-muted">Target Outcome:</span>
-                    <span className="text-xs sm:text-sm font-semibold text-text-primary">
+                  <div className="p-4 mb-8 rounded-2xl bg-bg-card border border-bg-border flex items-center justify-between">
+                    <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-text-muted">Target Outcome:</span>
+                    <span className="text-sm sm:text-base font-extrabold text-blue-700">
                       {service.metricHighlight.stat} {service.metricHighlight.label}
                     </span>
                   </div>
 
                   {/* Highlights List */}
-                  <div className="space-y-3 mb-8">
+                  <div className="space-y-4 mb-8">
                     {service.features.slice(1, 5).map((feature, fIdx) => (
-                      <div key={fIdx} className="flex items-start gap-3">
-                        <div className="mt-1 w-4 h-4 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-                          <Check className="w-3 h-3" />
+                      <div key={fIdx} className="flex items-start gap-3.5">
+                        <div className="mt-1 w-5 h-5 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                          <Check className="w-3.5 h-3.5" />
                         </div>
-                        <span className="text-xs sm:text-sm text-text-secondary font-medium">
+                        <span className="text-[15px] sm:text-base text-text-primary font-medium leading-relaxed">
                           {feature}
                         </span>
                       </div>
@@ -92,13 +92,13 @@ export function CoreServicesGrid() {
                 <div className="pt-6 border-t border-bg-border/80 flex items-center justify-between">
                   <Link
                     href={`/services/${service.slug}`}
-                    className="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-700 transition-colors group-hover:translate-x-1 duration-200"
+                    className="inline-flex items-center text-base font-bold text-blue-600 hover:text-blue-700 transition-colors group-hover:translate-x-1 duration-200"
                   >
                     Explore System Specifications
                     <ArrowRight className="w-4 h-4 ml-1.5" />
                   </Link>
 
-                  <span className="text-xs text-text-muted">Fixed Scope Delivery</span>
+                  <span className="text-xs sm:text-sm font-medium text-text-muted">Fixed Scope Delivery</span>
                 </div>
               </motion.div>
             );

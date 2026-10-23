@@ -50,15 +50,15 @@ export function LeadLeakCalculator() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Controls */}
           <div className="lg:col-span-7 bg-background p-6 sm:p-8 rounded-3xl border border-bg-border shadow-sm">
-            <label className="text-xs font-bold uppercase tracking-wider text-text-muted mb-3 block">
+            <label className="text-xs sm:text-sm font-bold uppercase tracking-wider text-text-muted mb-3.5 block">
               1. Select Your Business Type:
             </label>
-            <div className="grid grid-cols-2 gap-2 mb-8">
+            <div className="grid grid-cols-2 gap-2.5 mb-8">
               {businessPresets.map((b, idx) => (
                 <button
                   key={idx}
                   onClick={() => handlePresetChange(idx)}
-                  className={`py-2.5 px-3 text-xs sm:text-sm font-semibold rounded-xl border text-left transition-all ${
+                  className={`py-3 px-3.5 text-xs sm:text-sm font-bold rounded-xl border text-left transition-all ${
                     selectedPreset === idx
                       ? "bg-blue-50 border-blue-600 text-blue-700 shadow-sm"
                       : "bg-bg-card border-bg-border text-text-secondary hover:border-gray-300"
@@ -71,9 +71,9 @@ export function LeadLeakCalculator() {
 
             {/* Inquiries Slider */}
             <div className="mb-6">
-              <div className="flex justify-between text-sm font-semibold text-text-primary mb-2">
+              <div className="flex justify-between text-sm sm:text-base font-bold text-text-primary mb-2">
                 <span>Monthly Inquiries (Calls/Forms/DMs):</span>
-                <span className="text-blue-600 font-bold text-base">{inquiries} / mo</span>
+                <span className="text-blue-600 font-extrabold text-base sm:text-lg">{inquiries} / mo</span>
               </div>
               <input
                 type="range"
@@ -82,9 +82,9 @@ export function LeadLeakCalculator() {
                 step="5"
                 value={inquiries}
                 onChange={(e) => setInquiries(Number(e.target.value))}
-                className="w-full accent-blue-600 cursor-pointer"
+                className="w-full accent-blue-600 cursor-pointer h-2"
               />
-              <div className="flex justify-between text-[11px] text-text-muted mt-1">
+              <div className="flex justify-between text-xs text-text-muted mt-1 font-medium">
                 <span>10 Inquiries</span>
                 <span>500 Inquiries</span>
               </div>
@@ -92,9 +92,9 @@ export function LeadLeakCalculator() {
 
             {/* Avg Deal Value Slider */}
             <div className="mb-6">
-              <div className="flex justify-between text-sm font-semibold text-text-primary mb-2">
+              <div className="flex justify-between text-sm sm:text-base font-bold text-text-primary mb-2">
                 <span>Average Consultation / Service Fee:</span>
-                <span className="text-blue-600 font-bold text-base">₹{avgDeal.toLocaleString("en-IN")}</span>
+                <span className="text-blue-600 font-extrabold text-base sm:text-lg">₹{avgDeal.toLocaleString("en-IN")}</span>
               </div>
               <input
                 type="range"
@@ -103,9 +103,9 @@ export function LeadLeakCalculator() {
                 step="500"
                 value={avgDeal}
                 onChange={(e) => setAvgDeal(Number(e.target.value))}
-                className="w-full accent-blue-600 cursor-pointer"
+                className="w-full accent-blue-600 cursor-pointer h-2"
               />
-              <div className="flex justify-between text-[11px] text-text-muted mt-1">
+              <div className="flex justify-between text-xs text-text-muted mt-1 font-medium">
                 <span>₹500</span>
                 <span>₹1,00,000+</span>
               </div>
@@ -113,28 +113,28 @@ export function LeadLeakCalculator() {
           </div>
 
           {/* Result Card */}
-          <div className="lg:col-span-5 bg-gradient-to-br from-slate-900 to-slate-950 p-6 sm:p-8 rounded-3xl text-white shadow-xl relative overflow-hidden">
-            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-400 mb-4">
+          <div className="lg:col-span-5 bg-gradient-to-br from-slate-900 to-slate-950 p-7 sm:p-9 rounded-3xl text-white shadow-xl relative overflow-hidden">
+            <div className="flex items-center gap-2 text-xs sm:text-sm font-bold uppercase tracking-wider text-amber-400 mb-4">
               <AlertTriangle className="w-4 h-4" />
               Estimated Monthly Bleed
             </div>
 
-            <div className="text-3xl sm:text-4xl font-extrabold text-white mb-1">
+            <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-1.5">
               ₹{monthlyLostRevenue.toLocaleString("en-IN")}
-              <span className="text-sm font-medium text-slate-400"> / month</span>
+              <span className="text-sm sm:text-base font-medium text-slate-400"> / month</span>
             </div>
-            <p className="text-xs text-slate-400 mb-6">Lost to slow replies (&gt;2h) and unattended no-shows.</p>
+            <p className="text-sm text-slate-300 mb-6">Lost to slow replies (&gt;2h) and unattended no-shows.</p>
 
-            <div className="p-4 rounded-2xl bg-white/5 border border-white/10 mb-6">
-              <div className="flex items-center gap-2 text-xs text-emerald-400 font-bold mb-1">
+            <div className="p-5 rounded-2xl bg-white/5 border border-white/10 mb-6">
+              <div className="flex items-center gap-2 text-xs sm:text-sm text-emerald-400 font-bold mb-1">
                 <TrendingUp className="w-4 h-4" />
                 Annual Recoverable Revenue
               </div>
-              <div className="text-2xl font-black text-emerald-300">
+              <div className="text-2xl sm:text-3xl font-black text-emerald-300">
                 ₹{annualRecoverable.toLocaleString("en-IN")}
-                <span className="text-xs font-normal text-slate-400"> / year</span>
+                <span className="text-xs sm:text-sm font-normal text-slate-300"> / year</span>
               </div>
-              <p className="text-[11px] text-slate-400 mt-1">
+              <p className="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
                 Revenue recovered simply by answering in &lt;10s and sending automated WhatsApp reminders.
               </p>
             </div>
@@ -143,7 +143,7 @@ export function LeadLeakCalculator() {
               href="https://cal.com/saikumarlabs/discovery-call?theme=light"
               external
               variant="primary"
-              className="w-full !py-3 font-bold !bg-blue-600 hover:!bg-blue-500 shadow-md"
+              className="w-full !py-3.5 !text-base font-bold !bg-blue-600 hover:!bg-blue-500 shadow-md"
               trackLabel="calculator_cta"
             >
               Plug This Leak — Free Audit

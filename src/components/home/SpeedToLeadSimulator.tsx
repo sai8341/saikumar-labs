@@ -77,20 +77,20 @@ export function SpeedToLeadSimulator() {
             </p>
 
             <div className="mt-8 space-y-4">
-              <div className="flex items-center gap-3 text-sm text-text-primary font-medium">
-                <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+              <div className="flex items-center gap-3 text-sm sm:text-base text-text-primary font-semibold">
+                <div className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 text-sm font-bold">
                   ✓
                 </div>
                 <span>Official Meta Cloud API — Zero risk of number bans</span>
               </div>
-              <div className="flex items-center gap-3 text-sm text-text-primary font-medium">
-                <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+              <div className="flex items-center gap-3 text-sm sm:text-base text-text-primary font-semibold">
+                <div className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 text-sm font-bold">
                   ✓
                 </div>
                 <span>Connects seamlessly with Google Calendar, Cal.com & your CRM</span>
               </div>
-              <div className="flex items-center gap-3 text-sm text-text-primary font-medium">
-                <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+              <div className="flex items-center gap-3 text-sm sm:text-base text-text-primary font-semibold">
+                <div className="w-7 h-7 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 text-sm font-bold">
                   ✓
                 </div>
                 <span>Founder receives real-time Telegram alert with 1-tap wa.me link</span>

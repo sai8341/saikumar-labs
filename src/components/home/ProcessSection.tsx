@@ -63,15 +63,15 @@ export function ProcessSection() {
                   <span className="text-2xl font-black text-blue-600/30">{step.num}</span>
                 </div>
 
-                <div className="inline-block px-2.5 py-0.5 mb-3 rounded-md bg-blue-50 text-blue-700 text-[11px] font-bold tracking-wide uppercase">
+                <div className="inline-block px-3 py-1 mb-3.5 rounded-md bg-blue-50 text-blue-700 text-xs font-bold tracking-wide uppercase">
                   {step.time}
                 </div>
 
-                <h3 className="text-xl font-bold text-text-primary mb-3">{step.title}</h3>
-                <p className="text-sm text-text-secondary leading-relaxed">{step.desc}</p>
+                <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-2.5">{step.title}</h3>
+                <p className="text-sm sm:text-base text-text-secondary leading-relaxed">{step.desc}</p>
               </div>
 
-              <div className="mt-8 pt-4 border-t border-bg-border/60 text-xs text-text-muted">
+              <div className="mt-8 pt-4 border-t border-bg-border/60 text-xs sm:text-sm font-semibold text-text-muted">
                 Step {step.num} of 04
               </div>
             </motion.div>

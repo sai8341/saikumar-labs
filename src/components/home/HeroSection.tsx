@@ -1,21 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, MessageCircle, Zap, Shield, Clock, Sparkles } from "lucide-react";
+import { ArrowRight, MessageCircle, Zap, Shield, Clock, Sparkles, Bot, MonitorPlay } from "lucide-react";
 import Button from "@/components/ui/Button";
 import { siteConfig } from "@/lib/config";
 
 const metrics = [
-  { icon: Clock, label: "Speed-to-Lead", value: "<10 Seconds" },
-  { icon: Zap, label: "Page Load Speed", value: "<1 Second" },
-  { icon: Shield, label: "No-Show Reduction", value: "Up to 40%" },
-  { icon: Sparkles, label: "Code Ownership", value: "100% Yours" },
+  { icon: Clock, label: "Speed-to-Lead Response", value: "<10 Seconds" },
+  { icon: Zap, label: "Edge Page Load Speed", value: "<1 Second" },
+  { icon: Shield, label: "Appointment No-Shows", value: "Slashed by 40%" },
+  { icon: Sparkles, label: "Intellectual Property", value: "100% Client Owned" },
 ];
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-background pt-20 pb-14 md:pt-28 md:pb-20 border-b border-bg-border">
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+    <section className="relative overflow-hidden bg-background pt-28 pb-16 md:pt-36 md:pb-24 lg:pt-40 lg:pb-28 border-b border-bg-border">
+      {/* Background Subtle Grid Pattern */}
+      <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
         <div
           className="absolute inset-0"
           style={{
@@ -23,6 +24,84 @@ export function HeroSection() {
             backgroundSize: "36px 36px",
           }}
         />
+      </div>
+
+      {/* Subtle Ambient Glow */}
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-600/5 rounded-full blur-[120px] pointer-events-none" />
+
+      {/* Floating Icons & Doodles (Desktop wide only) */}
+      <div className="absolute inset-0 max-w-[1400px] mx-auto hidden xl:block pointer-events-none z-0">
+        {/* Left Side: AI Bot Badge */}
+        <motion.div
+          className="absolute top-[28%] left-[7%] flex items-center justify-center w-14 h-14 bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-gray-100 rotate-[-12deg]"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1, rotate: -12 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <Bot className="w-7 h-7 text-blue-600" />
+        </motion.div>
+        {/* Doodle Line from Bot */}
+        <motion.svg
+          className="absolute top-[36%] left-[11%] w-24 h-24 text-gray-300 opacity-60"
+          viewBox="0 0 100 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: 1, opacity: 0.6 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          <path
+            d="M10 10 C 40 50, 60 70, 90 90"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeDasharray="6 6"
+          />
+        </motion.svg>
+
+        {/* Right Side: Figma / Design Tool Badge */}
+        <motion.div
+          className="absolute top-[24%] right-[8%] flex items-center justify-center w-16 h-16 bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-gray-100 rotate-[8deg]"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1, rotate: 8 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <svg className="w-8 h-8" viewBox="0 0 38 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 28.5A9.5 9.5 0 1 1 38 28.5A9.5 9.5 0 0 1 19 28.5Z" fill="#1ABCFE" />
+            <path d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19V57H9.5A9.5 9.5 0 0 1 0 47.5Z" fill="#0ACF83" />
+            <path d="M19 0L9.5 0A9.5 9.5 0 0 0 0 9.5L0 9.5A9.5 9.5 0 0 0 9.5 19L19 19L19 0Z" fill="#F24E1E" />
+            <path d="M0 28.5A9.5 9.5 0 0 0 9.5 38L19 38L19 19L9.5 19A9.5 9.5 0 0 0 0 28.5Z" fill="#A259FF" />
+            <path d="M38 9.5A9.5 9.5 0 0 0 28.5 0L19 0L19 19L28.5 19A9.5 9.5 0 0 0 38 9.5Z" fill="#FF7262" />
+          </svg>
+        </motion.div>
+        {/* Doodle Line from Figma */}
+        <motion.svg
+          className="absolute top-[34%] right-[12%] w-20 h-20 text-gray-300 opacity-60"
+          viewBox="0 0 100 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: 1, opacity: 0.6 }}
+          transition={{ duration: 1, delay: 0.6 }}
+        >
+          <path
+            d="M90 10 C 60 40, 40 60, 10 80"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeDasharray="6 6"
+          />
+        </motion.svg>
+
+        {/* Left Bottom: Systems & Engineering Badge */}
+        <motion.div
+          className="absolute bottom-[22%] left-[12%] flex items-center justify-center w-12 h-12 bg-white rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.08)] border border-gray-100 rotate-[15deg]"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1, rotate: 15 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
+          <MonitorPlay className="w-6 h-6 text-slate-800" />
+        </motion.div>
       </div>
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
@@ -40,18 +119,18 @@ export function HeroSection() {
         </motion.div>
 
         <motion.h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-[800] tracking-[-0.035em] text-text-primary leading-[1.08] mb-6"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-[66px] font-[800] tracking-[-0.04em] text-text-primary leading-[1.06] mb-6"
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, delay: 0.1 }}
         >
-          We build <span className="text-blue-600">AI automations</span>,{" "}
+          We build <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">AI automations</span>,{" "}
           <br className="hidden sm:block" />
           high-speed websites & custom software.
         </motion.h1>
 
         <motion.p
-          className="text-lg sm:text-xl text-text-secondary mb-10 max-w-3xl mx-auto leading-relaxed font-normal"
+          className="text-base sm:text-lg md:text-xl text-text-secondary mb-10 max-w-3xl mx-auto leading-relaxed font-normal"
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, delay: 0.18 }}
@@ -69,7 +148,7 @@ export function HeroSection() {
             href="https://cal.com/saikumarlabs/discovery-call?theme=light"
             external
             variant="primary"
-            className="w-full sm:w-auto !px-7 !py-3.5 !text-base font-semibold shadow-[0_8px_25px_rgba(0,103,244,0.25)] hover:shadow-[0_12px_32px_rgba(0,103,244,0.35)]"
+            className="w-full sm:w-auto !px-8 !py-4 !text-base font-bold shadow-[0_8px_25px_rgba(0,103,244,0.3)] hover:shadow-[0_12px_35px_rgba(0,103,244,0.45)] hover:-translate-y-0.5 transition-all"
             trackLabel="hero_discovery_cta"
           >
             Book a Free 30-Min Systems Audit
@@ -82,7 +161,7 @@ export function HeroSection() {
             )}`}
             external
             variant="outline"
-            className="w-full sm:w-auto !px-7 !py-3.5 !text-base font-semibold border-bg-border hover:border-emerald-500 hover:text-emerald-600"
+            className="w-full sm:w-auto !px-8 !py-4 !text-base font-bold border-bg-border hover:border-emerald-500 hover:text-emerald-600 bg-white"
             trackLabel="hero_whatsapp_cta"
           >
             <MessageCircle className="w-4 h-4 mr-2 text-emerald-600" />
@@ -92,7 +171,7 @@ export function HeroSection() {
 
         {/* Metric Badges Strip */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto pt-6 border-t border-bg-border/60"
+          className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto pt-8 border-t border-bg-border/60"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.35 }}
@@ -100,16 +179,16 @@ export function HeroSection() {
           {metrics.map((item, idx) => (
             <div
               key={idx}
-              className="p-3 sm:p-4 rounded-2xl bg-bg-card/70 border border-bg-border text-left flex items-center gap-3"
+              className="p-4 sm:p-5 rounded-2xl bg-white border border-bg-border text-left flex items-center gap-3.5 shadow-sm hover:border-blue-200 transition-colors"
             >
-              <div className="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-                <item.icon className="w-4 h-4" />
+              <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                <item.icon className="w-5 h-5" />
               </div>
               <div>
-                <div className="text-sm sm:text-base font-bold text-text-primary leading-tight">
+                <div className="text-base sm:text-lg font-extrabold text-text-primary leading-tight">
                   {item.value}
                 </div>
-                <div className="text-xs text-text-muted mt-0.5">{item.label}</div>
+                <div className="text-xs sm:text-sm text-text-muted mt-0.5 font-medium">{item.label}</div>
               </div>
             </div>
           ))}

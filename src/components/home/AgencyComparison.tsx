@@ -57,33 +57,33 @@ export function AgencyComparison() {
           <table className="w-full text-left border-collapse bg-background rounded-3xl overflow-hidden shadow-sm border border-bg-border">
             <thead>
               <tr className="border-b border-bg-border bg-bg-card/50">
-                <th className="p-4 sm:p-6 text-sm font-bold text-text-primary">Key Dimension</th>
-                <th className="p-4 sm:p-6 text-sm font-bold text-blue-700 bg-blue-50/60 border-x border-blue-100">
+                <th className="p-5 sm:p-6 text-sm sm:text-base font-extrabold text-text-primary">Key Dimension</th>
+                <th className="p-5 sm:p-6 text-sm sm:text-base font-extrabold text-blue-700 bg-blue-50/60 border-x border-blue-100">
                   SaiKumar Labs
                 </th>
-                <th className="p-4 sm:p-6 text-sm font-medium text-text-secondary">Typical Agencies</th>
-                <th className="p-4 sm:p-6 text-sm font-medium text-text-muted">DIY / Freelancers</th>
+                <th className="p-5 sm:p-6 text-sm sm:text-base font-bold text-text-secondary">Typical Agencies</th>
+                <th className="p-5 sm:p-6 text-sm sm:text-base font-bold text-text-muted">DIY / Freelancers</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-bg-border text-xs sm:text-sm">
+            <tbody className="divide-y divide-bg-border text-sm sm:text-base">
               {comparisonRows.map((row, idx) => (
                 <tr key={idx} className="hover:bg-bg-card/30 transition-colors">
-                  <td className="p-4 sm:p-6 font-semibold text-text-primary">{row.feature}</td>
-                  <td className="p-4 sm:p-6 font-bold text-blue-700 bg-blue-50/30 border-x border-blue-100">
-                    <div className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-blue-600 shrink-0" />
+                  <td className="p-5 sm:p-6 font-bold text-text-primary">{row.feature}</td>
+                  <td className="p-5 sm:p-6 font-extrabold text-blue-700 bg-blue-50/30 border-x border-blue-100">
+                    <div className="flex items-center gap-2.5">
+                      <Check className="w-5 h-5 text-blue-600 shrink-0" />
                       <span>{row.ours}</span>
                     </div>
                   </td>
-                  <td className="p-4 sm:p-6 text-text-secondary">
-                    <div className="flex items-center gap-2">
-                      <X className="w-4 h-4 text-red-400 shrink-0" />
+                  <td className="p-5 sm:p-6 text-text-secondary font-medium">
+                    <div className="flex items-center gap-2.5">
+                      <X className="w-5 h-5 text-red-400 shrink-0" />
                       <span>{row.others}</span>
                     </div>
                   </td>
-                  <td className="p-4 sm:p-6 text-text-muted">
-                    <div className="flex items-center gap-2">
-                      <X className="w-4 h-4 text-gray-400 shrink-0" />
+                  <td className="p-5 sm:p-6 text-text-muted font-normal">
+                    <div className="flex items-center gap-2.5">
+                      <X className="w-5 h-5 text-gray-400 shrink-0" />
                       <span>{row.diy}</span>
                     </div>
                   </td>

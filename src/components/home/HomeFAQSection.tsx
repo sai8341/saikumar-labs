@@ -54,9 +54,9 @@ export function HomeFAQSection() {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full p-5 sm:p-6 text-left font-bold text-text-primary flex items-center justify-between gap-4"
+                  className="w-full p-6 sm:p-7 text-left font-bold text-text-primary flex items-center justify-between gap-4 hover:bg-bg-card/40 transition-colors"
                 >
-                  <span className="text-base sm:text-lg">{faq.q}</span>
+                  <span className="text-base sm:text-xl font-extrabold text-text-primary">{faq.q}</span>
                   <ChevronDown
                     className={`w-5 h-5 text-text-muted transition-transform duration-200 shrink-0 ${
                       isOpen ? "rotate-180 text-blue-600" : ""
@@ -73,7 +73,7 @@ export function HomeFAQSection() {
                       transition={{ duration: 0.2 }}
                       className="overflow-hidden"
                     >
-                      <div className="px-5 pb-6 sm:px-6 text-sm sm:text-base text-text-secondary leading-relaxed border-t border-bg-border/40 pt-4">
+                      <div className="px-6 pb-7 sm:px-7 text-base text-text-secondary leading-relaxed border-t border-bg-border/60 pt-5 font-normal">
                         {faq.a}
                       </div>
                     </motion.div>

@@ -28,13 +28,15 @@ export default function SectionHeading({
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       {badge && (
-        <span className="inline-block px-4 py-1.5 mb-4 text-xs font-medium uppercase tracking-wider text-text-primary bg-bg-card rounded-full border border-bg-border">
+        <span className="inline-block px-4 py-1.5 mb-5 text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 rounded-full border border-blue-200/80 shadow-sm">
           {badge}
         </span>
       )}
-      <h2 className="mb-4 text-text-primary">{title}</h2>
+      <h2 className="mb-4 text-3xl sm:text-4xl md:text-[42px] font-extrabold tracking-tight text-text-primary leading-[1.15]">
+        {title}
+      </h2>
       {subtitle && (
-        <p className="text-lg text-text-secondary leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl text-text-secondary leading-relaxed font-normal">
           {subtitle}
         </p>
       )}
