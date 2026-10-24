@@ -24,21 +24,21 @@ function WhatsAppIcon({ className = "w-5 h-5" }: { className?: string }) {
 export function WhatsAppButton({ whatsappUrl }: WhatsAppButtonProps) {
   return (
     <div className="relative group w-full">
-      {/* 1. Luminous Ambient Glow (Soft pulsing aura behind button) */}
-      <div className="absolute -inset-1 rounded-[22px] bg-gradient-to-r from-emerald-400 via-[#25D366] to-teal-400 opacity-50 blur-lg group-hover:opacity-85 transition-opacity duration-500 animate-pulse pointer-events-none" />
+      {/* 1. Subtle, controlled aura (No bloated blur) */}
+      <div className="absolute -inset-0.5 rounded-[18px] bg-[#25D366] opacity-25 blur-sm group-hover:opacity-40 transition-opacity duration-300 pointer-events-none" />
 
-      {/* 2. Rotating Neon Border Beam Track */}
-      <div className="relative rounded-[20px] p-[2.5px] overflow-hidden shadow-[0_10px_28px_rgba(37,211,102,0.3)] group-hover:shadow-[0_14px_36px_rgba(37,211,102,0.45)] transition-shadow duration-300">
-        {/* Animated 360° Neon Traveling Laser Beam */}
+      {/* 2. Rotating Neon Border Beam */}
+      <div className="relative rounded-[18px] p-[1.5px] overflow-hidden shadow-[0_4px_18px_rgba(37,211,102,0.22)]">
+        {/* Crisp Traveling Neon Beam */}
         <span
-          className="absolute inset-[-250%] animate-[spin_2.8s_linear_infinite] pointer-events-none"
+          className="absolute inset-[-200%] animate-[spin_2.5s_linear_infinite] pointer-events-none"
           style={{
             background:
-              "conic-gradient(from 0deg, transparent 0deg 280deg, #25D366 310deg, #a7f3d0 340deg, #ffffff 360deg)",
+              "conic-gradient(from 0deg, transparent 0deg 270deg, #25D366 310deg, #bbf7d0 345deg, #ffffff 360deg)",
           }}
         />
 
-        {/* 3. Core Tactile Button */}
+        {/* 3. Sleek, Balanced Tactile Button */}
         <a
           id="card-whatsapp-cta"
           data-analytics="card_whatsapp"
@@ -46,26 +46,18 @@ export function WhatsAppButton({ whatsappUrl }: WhatsAppButtonProps) {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => analytics.visitingCardWhatsApp()}
-          className="relative z-10 flex items-center justify-between w-full py-3.5 px-5 rounded-[17.5px] bg-gradient-to-r from-[#20bd5a] to-[#25D366] hover:from-[#1eb154] hover:to-[#22c55e] active:scale-[0.98] text-white font-extrabold text-[15px] transition-all duration-200 cursor-pointer shadow-inner"
+          className="relative z-10 flex items-center justify-between w-full py-3 px-4 rounded-[16.5px] bg-[#25D366] hover:bg-[#20bd5a] active:scale-[0.98] text-white font-extrabold text-[14.5px] transition-all duration-150 cursor-pointer"
         >
-          {/* Left: Icon & Label */}
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0 backdrop-blur-xs shadow-xs">
-              <WhatsAppIcon className="w-5 h-5 text-white" />
-            </div>
-            <div className="text-left">
-              <div className="leading-tight font-black tracking-tight text-[15px]">
-                Chat on WhatsApp
-              </div>
-              <div className="text-[10px] font-semibold text-emerald-100/90 leading-none mt-0.5">
-                Instant Direct Connect
-              </div>
-            </div>
+          <div className="flex items-center gap-2.5">
+            <WhatsAppIcon className="w-5 h-5 text-white shrink-0" />
+            <span className="tracking-tight font-extrabold text-[15px]">
+              Chat on WhatsApp
+            </span>
           </div>
 
-          {/* Right: Action Arrow in circle */}
-          <div className="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center group-hover:bg-white/25 group-hover:translate-x-0.5 transition-all">
-            <ArrowRight className="w-3.5 h-3.5 text-white" />
+          <div className="flex items-center gap-1 text-emerald-100 text-[11px] font-semibold">
+            <span>Fast reply</span>
+            <ArrowRight className="w-3.5 h-3.5 text-white group-hover:translate-x-0.5 transition-transform" />
           </div>
         </a>
       </div>
