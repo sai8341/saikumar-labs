@@ -25,6 +25,7 @@ export const siteConfig = {
   // Social
   social: {
     instagram: "https://instagram.com/saikumar.labs",
+    facebook: "https://facebook.com/saikumarlabs",
     linkedin: "https://linkedin.com/company/saikumarlabs",
     twitter: "https://twitter.com/saikumarlabs",
   },
