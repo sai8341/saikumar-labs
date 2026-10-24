@@ -40,6 +40,8 @@ export function WhatsAppButton({ whatsappUrl }: WhatsAppButtonProps) {
 
         {/* 3. Core Tactile Button */}
         <a
+          id="card-whatsapp-cta"
+          data-analytics="card_whatsapp"
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"

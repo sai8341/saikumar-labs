@@ -44,6 +44,7 @@ export function DigitalCardClient() {
   }, []);
 
   const handleShare = async () => {
+    analytics.visitingCardShare();
     if (navigator.share) {
       try {
         await navigator.share({
@@ -78,9 +79,9 @@ export function DigitalCardClient() {
         />
       </div>
 
-      {/* Main Single-Screen Mobile Card Container (No Scroll) */}
+      {/* Main Spacious Mobile Card (Sticks to full viewport without vertical scroll) */}
       <motion.div
-        className="w-full max-w-[370px] bg-white rounded-[28px] border border-slate-200/90 shadow-[0_16px_45px_rgba(0,103,244,0.08),0_4px_16px_rgba(0,0,0,0.04)] p-5 sm:p-6 text-center relative overflow-hidden flex flex-col justify-between my-auto"
+        className="w-full max-w-[385px] h-[calc(100dvh-20px)] max-h-[740px] bg-white rounded-[32px] border border-slate-200/90 shadow-[0_20px_60px_rgba(0,103,244,0.08),0_4px_20px_rgba(0,0,0,0.04)] px-5 py-5 sm:px-6 sm:py-6 text-center relative overflow-hidden flex flex-col justify-between my-auto"
         initial={{ opacity: 0, y: 14 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.35 }}
@@ -91,7 +92,7 @@ export function DigitalCardClient() {
         {/* 1. TOP HEADER SECTION */}
         <div>
           {/* Header Badge & Share */}
-          <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center justify-between mb-2">
             <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 text-[10px] font-bold border border-blue-200/80 uppercase tracking-wider">
               <span className="relative flex h-1.5 w-1.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
@@ -101,6 +102,8 @@ export function DigitalCardClient() {
             </span>
 
             <button
+              id="card-share-btn"
+              data-analytics="card_share"
               onClick={handleShare}
               className="p-1.5 rounded-lg bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-500 hover:text-slate-900 transition-colors cursor-pointer"
               title="Share card"
@@ -110,13 +113,13 @@ export function DigitalCardClient() {
             </button>
           </div>
 
-          {/* Logo with Verified Ring */}
-          <div className="relative w-16 h-16 mx-auto mb-2">
+          {/* Logo with Verified Ring + Ample Breathing Room */}
+          <div className="relative w-[68px] h-[68px] mx-auto mt-2 mb-3.5">
             <Image
               src="/logo.jpg"
               alt="SaiKumar Labs"
-              width={64}
-              height={64}
+              width={68}
+              height={68}
               className="rounded-2xl object-cover border border-slate-200 shadow-sm"
               priority
             />
@@ -129,69 +132,84 @@ export function DigitalCardClient() {
           <h1 className="!text-slate-900 text-2xl font-black tracking-tight leading-tight">
             Sai Kumar
           </h1>
-          <p className="text-xs font-bold text-blue-600 mt-0.5">
+          <p className="text-xs font-bold text-blue-600 mt-1">
             Founder & Systems Architect
           </p>
-          <p className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mt-0.5">
+          <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mt-0.5">
             SaiKumar Labs
           </p>
 
-          <p className="text-[11px] text-slate-500 max-w-[290px] mx-auto mt-2 leading-relaxed">
-            AI Automations · High-Speed Websites · Custom Software
+          <p className="text-[12px] font-medium text-slate-600 max-w-[290px] mx-auto mt-2.5 leading-relaxed">
+            Automation, High-speed Websites, Custom Software for Businesses
           </p>
         </div>
 
-        {/* 2. CENTER ACTION: HIGH-CONVERSION WHATSAPP CTA WITH ROTATING NEON BEAM */}
-        <div className="my-4 py-3 border-y border-slate-100">
+        {/* 2. CENTER ACTION: WHATSAPP CTA WITH ROTATING NEON BEAM */}
+        <div className="my-auto py-2">
           <WhatsAppButton whatsappUrl={whatsappUrl} />
         </div>
 
         {/* 3. BOTTOM SECTION: DIRECT CALL, EMAIL & SOCIALS */}
-        <div className="space-y-2">
-          {/* Phone & Email Rows with tactile click states */}
-          <div className="grid grid-cols-1 gap-1.5">
+        <div className="space-y-3">
+          {/* Phone & Email Rows with tactile click states & analytics */}
+          <div className="grid grid-cols-1 gap-2">
             <a
+              id="card-phone-btn"
+              data-analytics="card_phone"
               href="tel:+917036416086"
-              className="flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-slate-50 hover:bg-slate-100/90 active:scale-[0.98] border border-slate-200/80 text-slate-800 text-xs font-bold transition-all"
+              onClick={() => analytics.visitingCardPhone()}
+              className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-slate-50 hover:bg-slate-100/90 active:scale-[0.98] border border-slate-200/80 text-slate-800 text-xs font-bold transition-all shadow-xs"
             >
               <Phone className="w-3.5 h-3.5 text-blue-600" />
               <span>+91 70364 16086</span>
             </a>
 
             <a
+              id="card-email-btn"
+              data-analytics="card_email"
               href="mailto:contact@saikumarlabs.com"
-              className="flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-slate-50 hover:bg-slate-100/90 active:scale-[0.98] border border-slate-200/80 text-slate-800 text-xs font-medium transition-all"
+              onClick={() => analytics.visitingCardEmail()}
+              className="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-slate-50 hover:bg-slate-100/90 active:scale-[0.98] border border-slate-200/80 text-slate-800 text-xs font-medium transition-all shadow-xs"
             >
               <Mail className="w-3.5 h-3.5 text-blue-600" />
               <span>contact@saikumarlabs.com</span>
             </a>
           </div>
 
-          {/* Social Links: Instagram, Facebook & Website */}
-          <div className="flex items-center justify-center gap-2 pt-1">
+          {/* Social Links: Instagram, Facebook & Website with distinct spacing */}
+          <div className="flex items-center justify-center gap-2.5 pt-1">
             <a
+              id="card-instagram-btn"
+              data-analytics="card_instagram"
               href={siteConfig.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-pink-50/80 hover:bg-pink-100 active:scale-[0.96] text-pink-700 text-[11px] font-bold border border-pink-200/60 transition-all"
+              onClick={() => analytics.visitingCardSocial("instagram")}
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-pink-50/80 hover:bg-pink-100 active:scale-[0.96] text-pink-700 text-[11px] font-bold border border-pink-200/60 transition-all shadow-2xs"
             >
               <InstagramIcon className="w-3.5 h-3.5 text-pink-600" />
               <span>Instagram</span>
             </a>
 
             <a
+              id="card-facebook-btn"
+              data-analytics="card_facebook"
               href={siteConfig.social.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50/80 hover:bg-blue-100 active:scale-[0.96] text-blue-700 text-[11px] font-bold border border-blue-200/60 transition-all"
+              onClick={() => analytics.visitingCardSocial("facebook")}
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-blue-50/80 hover:bg-blue-100 active:scale-[0.96] text-blue-700 text-[11px] font-bold border border-blue-200/60 transition-all shadow-2xs"
             >
               <FacebookIcon className="w-3.5 h-3.5 text-blue-600" />
               <span>Facebook</span>
             </a>
 
             <Link
+              id="card-website-btn"
+              data-analytics="card_website"
               href="/"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 hover:bg-slate-100 active:scale-[0.96] text-slate-700 text-[11px] font-bold border border-slate-200/60 transition-all"
+              onClick={() => analytics.visitingCardSocial("website")}
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-slate-50 hover:bg-slate-100 active:scale-[0.96] text-slate-700 text-[11px] font-bold border border-slate-200/60 transition-all shadow-2xs"
             >
               <Globe className="w-3.5 h-3.5 text-slate-600" />
               <span>Website</span>
@@ -199,8 +217,8 @@ export function DigitalCardClient() {
           </div>
 
           {/* Official Trust Footnote: Govt. of India MSME Registered */}
-          <div className="pt-1 space-y-0.5">
-            <p className="text-[10.5px] font-bold text-slate-700 tracking-tight">
+          <div className="pt-1.5 space-y-0.5">
+            <p className="text-[11px] font-bold text-slate-700 tracking-tight">
               Govt. of India MSME Registered
             </p>
             <p className="text-[10px] text-slate-400 font-medium">

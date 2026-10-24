@@ -96,6 +96,34 @@ export const analytics = {
       label: "qr_code",
     }),
 
+  visitingCardPhone: () =>
+    trackEvent({
+      action: "visiting_card_phone_click",
+      category: "offline_conversion",
+      label: "phone_call",
+    }),
+
+  visitingCardEmail: () =>
+    trackEvent({
+      action: "visiting_card_email_click",
+      category: "offline_conversion",
+      label: "email_inquiry",
+    }),
+
+  visitingCardSocial: (platform: "instagram" | "facebook" | "website") =>
+    trackEvent({
+      action: "visiting_card_social_click",
+      category: "offline_conversion",
+      label: platform,
+    }),
+
+  visitingCardShare: () =>
+    trackEvent({
+      action: "visiting_card_share_click",
+      category: "offline_conversion",
+      label: "share_card",
+    }),
+
   visitingCardSaveContact: () =>
     trackEvent({
       action: "visiting_card_save_contact",
