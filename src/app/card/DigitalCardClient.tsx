@@ -10,27 +10,13 @@ import {
   Globe,
   Share2,
   Check,
-  ArrowRight,
 } from "lucide-react";
 import { analytics } from "@/lib/analytics";
 import { siteConfig } from "@/lib/config";
+import { WhatsAppButton } from "./WhatsAppButton";
 
 const WHATSAPP_PREFILLED_MESSAGE =
   "Hi SaiKumar Labs, I scanned your visiting card and want to connect";
-
-// Official Authentic WhatsApp Vector Logo
-function WhatsAppIcon({ className = "w-5 h-5" }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.05 24l6.348-1.665a11.832 11.832 0 005.65 1.441h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 00-3.48-8.411z" />
-    </svg>
-  );
-}
 
 function InstagramIcon({ className = "w-3.5 h-3.5" }: { className?: string }) {
   return (
@@ -155,28 +141,18 @@ export function DigitalCardClient() {
           </p>
         </div>
 
-        {/* 2. CENTER ACTION: CLEAN OFFICIAL WHATSAPP CTA */}
-        <div className="my-5 py-4 border-y border-slate-100">
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => analytics.visitingCardWhatsApp()}
-            className="group inline-flex items-center justify-center gap-2.5 w-full py-3 px-5 rounded-2xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold text-[15px] shadow-[0_6px_20px_rgba(37,211,102,0.32)] hover:shadow-[0_8px_26px_rgba(37,211,102,0.45)] hover:-translate-y-0.5 transition-all duration-200"
-          >
-            <WhatsAppIcon className="w-5 h-5 text-white shrink-0" />
-            <span>Chat on WhatsApp</span>
-            <ArrowRight className="w-4 h-4 text-white/80 group-hover:translate-x-0.5 transition-transform" />
-          </a>
+        {/* 2. CENTER ACTION: HIGH-CONVERSION WHATSAPP CTA WITH ROTATING NEON BEAM */}
+        <div className="my-4 py-3 border-y border-slate-100">
+          <WhatsAppButton whatsappUrl={whatsappUrl} />
         </div>
 
-        {/* 3. BOTTOM SECTION: DIRECT PHONE, EMAIL & SOCIALS */}
+        {/* 3. BOTTOM SECTION: DIRECT CALL, EMAIL & SOCIALS */}
         <div className="space-y-2">
-          {/* Phone & Email Rows */}
+          {/* Phone & Email Rows with tactile click states */}
           <div className="grid grid-cols-1 gap-1.5">
             <a
               href="tel:+917036416086"
-              className="flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-slate-50 hover:bg-slate-100/90 border border-slate-200/80 text-slate-800 text-xs font-bold transition-colors"
+              className="flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-slate-50 hover:bg-slate-100/90 active:scale-[0.98] border border-slate-200/80 text-slate-800 text-xs font-bold transition-all"
             >
               <Phone className="w-3.5 h-3.5 text-blue-600" />
               <span>+91 70364 16086</span>
@@ -184,7 +160,7 @@ export function DigitalCardClient() {
 
             <a
               href="mailto:contact@saikumarlabs.com"
-              className="flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-slate-50 hover:bg-slate-100/90 border border-slate-200/80 text-slate-800 text-xs font-medium transition-colors"
+              className="flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-slate-50 hover:bg-slate-100/90 active:scale-[0.98] border border-slate-200/80 text-slate-800 text-xs font-medium transition-all"
             >
               <Mail className="w-3.5 h-3.5 text-blue-600" />
               <span>contact@saikumarlabs.com</span>
@@ -192,12 +168,12 @@ export function DigitalCardClient() {
           </div>
 
           {/* Social Links: Instagram, Facebook & Website */}
-          <div className="flex items-center justify-center gap-2 pt-1.5">
+          <div className="flex items-center justify-center gap-2 pt-1">
             <a
               href={siteConfig.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-pink-50/80 hover:bg-pink-100 text-pink-700 text-[11px] font-bold border border-pink-200/60 transition-colors"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-pink-50/80 hover:bg-pink-100 active:scale-[0.96] text-pink-700 text-[11px] font-bold border border-pink-200/60 transition-all"
             >
               <InstagramIcon className="w-3.5 h-3.5 text-pink-600" />
               <span>Instagram</span>
@@ -207,7 +183,7 @@ export function DigitalCardClient() {
               href={siteConfig.social.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50/80 hover:bg-blue-100 text-blue-700 text-[11px] font-bold border border-blue-200/60 transition-colors"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50/80 hover:bg-blue-100 active:scale-[0.96] text-blue-700 text-[11px] font-bold border border-blue-200/60 transition-all"
             >
               <FacebookIcon className="w-3.5 h-3.5 text-blue-600" />
               <span>Facebook</span>
@@ -215,17 +191,22 @@ export function DigitalCardClient() {
 
             <Link
               href="/"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 hover:bg-slate-100 text-slate-700 text-[11px] font-bold border border-slate-200/60 transition-colors"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 hover:bg-slate-100 active:scale-[0.96] text-slate-700 text-[11px] font-bold border border-slate-200/60 transition-all"
             >
               <Globe className="w-3.5 h-3.5 text-slate-600" />
               <span>Website</span>
             </Link>
           </div>
 
-          {/* Trust Footnote */}
-          <p className="text-[10px] text-slate-400 font-medium pt-1">
-            © {new Date().getFullYear()} SaiKumar Labs · MSME UDYAM-TS-11-0061133
-          </p>
+          {/* Official Trust Footnote: Govt. of India MSME Registered */}
+          <div className="pt-1 space-y-0.5">
+            <p className="text-[10.5px] font-bold text-slate-700 tracking-tight">
+              Govt. of India MSME Registered
+            </p>
+            <p className="text-[10px] text-slate-400 font-medium">
+              © {new Date().getFullYear()} SaiKumar Labs
+            </p>
+          </div>
         </div>
       </motion.div>
     </main>
